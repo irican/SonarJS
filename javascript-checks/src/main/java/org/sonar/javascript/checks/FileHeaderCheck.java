@@ -35,19 +35,19 @@ import org.sonar.plugins.javascript.api.visitors.JavaScriptFile;
 @Rule(key = "S1451")
 public class FileHeaderCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Add or update the header of this file.";
+  private static final String MESSAGE = "添加或更新此文件的头文件";
   private static final String DEFAULT_HEADER_FORMAT = "";
 
   @RuleProperty(
     key = "headerFormat",
-    description = "Expected copyright and license header",
+    description = "预期的版权和许可头",
     defaultValue = DEFAULT_HEADER_FORMAT,
     type = "TEXT")
   public String headerFormat = DEFAULT_HEADER_FORMAT;
 
   @RuleProperty(
     key = "isRegularExpression",
-    description = "Whether the headerFormat is a regular expression",
+    description = "headerFormat 是否为正则表达式",
     defaultValue = "false")
   public boolean isRegularExpression = false;
 
@@ -80,14 +80,14 @@ public class FileHeaderCheck extends DoubleDispatchVisitorCheck {
       try {
         searchPattern = Pattern.compile(headerFormat, Pattern.DOTALL);
       } catch (IllegalArgumentException e) {
-        throw new IllegalArgumentException("[" + getClass().getSimpleName() + "] Unable to compile the regular expression: " + headerFormat, e);
+        throw new IllegalArgumentException("[" + getClass().getSimpleName() + "] 无法编译正则表达式: " + headerFormat, e);
       }
     }
     String fileContent;
     try {
       fileContent = getContext().getJavaScriptFile().contents();
     } catch (IOException e) {
-      throw new IllegalStateException("Unable to read file " + getContext().getJavaScriptFile().toString(), e);
+      throw new IllegalStateException("无法读取文件 " + getContext().getJavaScriptFile().toString(), e);
     }
 
     Matcher matcher = searchPattern.matcher(fileContent);

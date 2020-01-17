@@ -1,16 +1,15 @@
-<p>When using the Backbone.js framework with model <code>defaults</code> that contain arrays or objects, <code>defaults</code> should be defined as a
-function rather than an object. This is because objects and arrays are passed by reference in JavaScript. So a <code>defaults</code> object that
-contains arrays or objects is going to set the default value of every instance to point to the same shared object or array.</p>
-<p>Use a function instead and a fresh copy of the object or array will be peeled off for each instance.</p>
-<h2>Noncompliant Code Example</h2>
+<p>当使用模型<code>defaults</code>(包含数组或对象)的Backbone.js框架时，<code>defaults</code>应该定义为函数而不是对象。这是因为对象和数组是通过JavaScript中的引用传递的。
+一个包含数组或对象的<code>defaults</code>对象会设置每个实例的默认值指向相同的共享对象或数组。</p>
+<p>相反，使用一个函数，将为每个实例剥离对象或数组的新副本。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var Person = Backbone.Model.extend({
-    defaults: {  // Noncompliant; every instance of Person will share the same instance of favoriteColors
+    defaults: {  // 不合规;Person的每个实例都将共享favoriteColors的相同实例
         favoriteColors: ["blue","purple","raspberry"]
     }
 });
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var Person = Backbone.Model.extend({
     defaults: function() {

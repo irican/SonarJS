@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2208")
 public class WildcardImportCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Explicitly import the specific member needed.";
+  private static final String MESSAGE = "明确import所需的特定内容";
 
   @Override
   public void visitNameSpaceExportDeclaration(NameSpaceExportDeclarationTree tree) {

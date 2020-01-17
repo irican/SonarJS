@@ -38,7 +38,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S1154")
 public class UselessStringOperationCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "%s is an immutable object; you must either store or return the result of the operation.";
+  private static final String MESSAGE = "%s是不可变的对象； 您必须保存或返回操作结果。";
 
   @Override
   public Set<Kind> nodesToVisit() {

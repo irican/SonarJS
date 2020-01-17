@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.tree.expression.CallExpressionTree;
 @Rule(key = "S2898")
 public class ElementTypeSelectorCheck extends AbstractJQuerySelectorOptimizationCheck {
 
-  private static final String MESSAGE = "Use the \"[type='%s']\" selector here instead of \":%s\".";
+  private static final String MESSAGE = "在此处使用 \"[type='%s']\" 选择器，而不是 \":%s\"。";
   private static final Pattern elementUsedWithClassSelectorPattern = Pattern.compile(":(radio|checkbox|file|image|password|reset|text)", Pattern.CASE_INSENSITIVE);
 
   @Override

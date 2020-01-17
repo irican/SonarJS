@@ -38,7 +38,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S1143")
 public class JumpStatementInFinallyCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this \"%s\" statement from this \"finally\" block.";
+  private static final String MESSAGE = "从此 \"finally\" 块中删除此 \"%s\" 语句";
 
   private static final EnumSet<Kind> SAFE_PARENTS_FOR_RETURN;
   private static final EnumSet<Kind> SAFE_PARENTS_FOR_CONTINUE;

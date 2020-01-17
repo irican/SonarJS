@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3513")
 public class ArgumentsUsageCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use the rest syntax to declare this function's arguments.";
+  private static final String MESSAGE = "使用rest语法声明此函数的参数";
 
   @Override
   public void visitScript(ScriptTree tree) {

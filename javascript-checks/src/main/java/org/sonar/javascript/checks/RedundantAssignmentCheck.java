@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.tree.expression.IdentifierTree;
 @Rule(key = "S4165")
 public class RedundantAssignmentCheck extends AbstractAllPathSeCheck<AssignmentExpressionTree> {
 
-  private static final String MESSAGE = "Review this useless assignment: \"%s\" already holds the assigned value along all execution paths.";
+  private static final String MESSAGE = "查看此无用赋值: \"%s\"已经保存了所有执行路径中的赋值。";
 
   @Override
   AssignmentExpressionTree getTree(Tree element) {

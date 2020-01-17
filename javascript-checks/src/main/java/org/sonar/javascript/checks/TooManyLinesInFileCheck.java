@@ -32,12 +32,12 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S104")
 public class TooManyLinesInFileCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "File \"%s\" has %d lines, which is greater than %d authorized. Split it into smaller files.";
+  private static final String MESSAGE = "文件\"%s\"具有%d行，超过了授权的%d。请将其拆分为较小的文件。";
   private static final int DEFAULT = 1000;
 
   @RuleProperty(
     key = "maximum",
-    description = "Maximum authorized lines in a file.",
+    description = "文件中的授权行数上限。",
     defaultValue = "" + DEFAULT)
   public int maximum = DEFAULT;
 

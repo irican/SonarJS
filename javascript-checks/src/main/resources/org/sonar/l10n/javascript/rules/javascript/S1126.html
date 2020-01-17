@@ -1,8 +1,7 @@
-<p>Return of boolean literal statements wrapped into <code>if-then-else</code> ones should be simplified. </p>
-<p>Note that if the result of the expression is not a boolean but for instance an integer, then double negation should be used for proper
-conversion.</p>
-<p><em>Note that this rule requires Node.js to be available during analysis.</em></p>
-<h2>Noncompliant Code Example</h2>
+<p>返回包装成 <code>if-then-else</code> 的布尔文字语句应该简化。 </p>
+<p>注意，如果表达式的结果不是布尔值，而是整数，那么应该使用双重否定来进行正确的转换。</p>
+<p><em>注意，此规则要求Node.js在分析期间可用。</em></p>
+<h2>不合规的代码示例</h2>
 <pre>
 if (expression) {
   return true;
@@ -10,7 +9,7 @@ if (expression) {
   return false;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 return expression;
 </pre>

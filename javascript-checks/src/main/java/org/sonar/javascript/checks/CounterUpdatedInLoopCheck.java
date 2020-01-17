@@ -45,8 +45,8 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2310")
 public class CounterUpdatedInLoopCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this assignment of \"%s\".";
-  private static final String SECONDARY_MESSAGE = "Counter variable update";
+  private static final String MESSAGE = "删除对 \"%s\" 的分配 ";
+  private static final String SECONDARY_MESSAGE = "计数器变量更新";
 
   /**
    * Map<IdentifierTree, IdentifierTree> contains pairs <Usage identifier, Identifier used in for loop update clause>

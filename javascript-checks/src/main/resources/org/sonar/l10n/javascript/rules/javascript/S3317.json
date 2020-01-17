@@ -1,5 +1,5 @@
 {
-  "title": "Default export names and file names should match",
+  "title": "默认导出名称和文件名应该匹配",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

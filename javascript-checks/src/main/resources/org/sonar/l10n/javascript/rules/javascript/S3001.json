@@ -1,5 +1,5 @@
 {
-  "title": "\"delete\" should be used only with object properties",
+  "title": "\"delete\" 应该只与对象属性一起使用",
   "type": "BUG",
   "status": "ready",
   "remediation": {

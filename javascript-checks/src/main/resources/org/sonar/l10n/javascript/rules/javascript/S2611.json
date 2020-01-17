@@ -1,5 +1,5 @@
 {
-  "title": "Untrusted content should not be included",
+  "title": "不应该包含不可信的内容",
   "type": "VULNERABILITY",
   "status": "ready",
   "remediation": {
@@ -13,7 +13,7 @@
   ],
   "standards": [
     "CWE",
-    "OWASP Top 10",
+    "OWASP Top Ten",
     "SANS Top 25"
   ],
   "defaultSeverity": "Critical",

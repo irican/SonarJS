@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "BitwiseOperators")
 public class BitwiseOperatorsCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Review this use of bitwise \"%s\" operator; conditional \"%<s%<s\" might have been intended.";
+  private static final String MESSAGE = "查看按位 \"%s\" 运算符的用法; 有条件的 \"%<s%<s\" might have been intended.";
 
   private SyntaxToken lonelyBitwiseAndOr = null;
   private boolean fileContainsBitwiseOperations = false;

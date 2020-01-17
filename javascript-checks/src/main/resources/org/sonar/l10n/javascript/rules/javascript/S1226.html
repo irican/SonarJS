@@ -1,18 +1,16 @@
-<p>While it is technically correct to assign to parameters from within function bodies, it reduces code readability because developers won't be able
-to tell whether the original parameter or some temporary variable is being accessed without going through the whole function. Moreover, some
-developers might also expect assignments of function parameters to be visible to callers, which is not the case, and this lack of visibility could
-confuse them. Instead, all parameters, caught exceptions, and foreach parameters should be treated as constants.</p>
-<h2>Noncompliant Code Example</h2>
+<p>虽然从技术上讲，从函数体内部分配参数是正确的，但这降低了代码的可读性，因为开发人员无法在不遍历整个函数的情况下判断原始参数或某个临时变量是否被访问。此外,一些
+开发人员还可能希望函数参数的分配对调用者可见，但实际情况并非如此，这种不可见性可能会使调用者感到困惑。相反，所有参数、捕获的异常和foreach参数都应该作为常量处理。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function MyClass(name, strings) {
-  name = foo;                    // Noncompliant
+  name = foo;                    // 不合规
 
   for (var str of strings) {
-    str = "";  // Noncompliant
+    str = "";  // 不合规
   }
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2012, 17.8 - A function parameter should not be modified </li>
 </ul>

@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.tree.expression.CallExpressionTree;
 @Rule(key = "S2715")
 public class IdChildrenSelectorCheck extends AbstractJQuerySelectorOptimizationCheck {
 
-  private static final String MESSAGE = "Move \"%s\" into \"find\" method.";
+  private static final String MESSAGE = "将 \"%s\" 移至 \"find\" 方法";
   private static final Pattern idChildrenSelectorPattern = Pattern.compile("(#[\\w_-]+)[ ]+([^ ]+)");
 
   @Override

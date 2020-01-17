@@ -1,51 +1,47 @@
-<p>Array literals should always be preferred to Array constructors.</p>
-<p>Array constructors are error-prone due to the way their arguments are interpreted. If more than one argument is used, the array length will be
-equal to the number of arguments. However, using a single argument will have one of three consequences:</p>
+<p>数组文本总是优先于数组构造函数。</p>
+<p>数组构造函数由于其参数的解释方式而容易出错。如果使用多个参数，则数组长度将等于参数的数量。然而，使用一个参数会产生以下三种结果之一:</p>
 <ul>
-  <li> If the argument is a number and it is a natural number the length will be equal to the value of the argument. </li>
+  <li> 如果参数是一个自然数长度将等于参数的值。</li>
 </ul>
 <pre>
 let arr = new Array(3); // [empty × 3]
 </pre>
 <ul>
-  <li> If the argument is a number, but not a natural number an exception will be thrown. </li>
+  <li> 如果参数是一个数字，但不是一个自然数，则会引发异常。 </li>
 </ul>
 <pre>
-let arr = new Array(3.14);  // RangeError: Invalid array length
+let arr = new Array(3.14);  // RangeError:数组长度无效
 </pre>
 <ul>
-  <li> Otherwise the array will have one element with the argument as its value. </li>
+  <li> 否则数组将有一个元素，该元素的参数为其值。 </li>
 </ul>
 <pre>
 let arr = new Array("3");  // ["3"]
 </pre>
-<p>Note that even if you set the length of an array, it will be empty. That is, it will have the number of elements you declared, but they won't
-contain anything, so no callbacks will be applied to the array elements.</p>
-<p>For these reasons, if someone changes the code to pass 1 argument instead of 2 arguments, the array might not have the expected length. To avoid
-these kinds of weird cases, always use the more readable array literal initialization format.</p>
-<h2>Noncompliant Code Example</h2>
+<p>注意，即使您设置了数组的长度，它也将是空的。也就是说，它将有您声明的元素数量，但是它们不包含任何内容，因此不会对数组元素应用回调。</p>
+<p>由于这些原因，如果有人将代码更改为传递一个参数而不是传递两个参数，那么数组可能没有预期的长度。为了避免这种奇怪的情况，请始终使用可读性更好的数组文本初始化格式。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-let myArray = new Array(x1, x2, x3);   // Noncompliant. Results in 3-element array.
-let emptyArray = new Array();          // Noncompliant. Results in 0-element array.
+let myArray = new Array(x1, x2, x3);   // 不合规。结果为3元素数组。
+let emptyArray = new Array();          // 不合规。结果为0元素数组。
 
-let unstableArray = new Array(n);      // Noncompliant. Variable in results.
-
-let arr = new Array(3); // Noncompliant; empty array of length 3
-arr.foreach((x) =&gt; alert("Hello " + x)); // callback is not executed because there's nothing in arr
-let anotherArr = arr.map(() =&gt; 42); // anotherArr is also empty because callback didn't execute
+let unstableArray = new Array(n);      // 不合规。结果是可变的。
+let arr = new Array(3); // 不合规;长度为3的空数组
+arr.foreach((x) =&gt; alert("Hello " + x)); // 回调没有执行，因为在arr中什么都没有
+let anotherArr = arr.map(() =&gt; 42); // anotherArr也是空的，因为回调没有执行
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 let myArray = [x1, x2, x3];
 let emptyArray = [];
 
-// if "n" is the only array element
+// 如果“n”是唯一的数组元素
 let unstableArray = [n];
-// or,  if "n" is the array length (since ES 2015)
+// 或者，如果“n”是数组长度(自ES 2015年起)
 let unstableArray = Array.from({length: n});
 
 let arr = ["Elena", "Mike", "Sarah"];
 arr.foreach((x) =&gt; alert("Hello " + x));
-let anotherArr = arr.map(() =&gt; 42);  // anotherArr now holds 42 in each element
+let anotherArr = arr.map(() =&gt; 42);  // anotherArr现在每个元素包含42个元素
 </pre>
 

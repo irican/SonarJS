@@ -1,13 +1,12 @@
-<p>The result of an expression with an arithmetic operator <code>/, *, %, ++, --, -, +=, -=, *=, /=, %=, +</code> or unary operator <code>+, -</code>
-when at least one operand is <code>Object</code> or <code>Undefined</code> will be always a <code>NaN</code> (Not a Number).</p>
-<h2>Noncompliant Code Example</h2>
+<p>使用算术运算符<code>/， *， %， ++，——，-，+=，-=，*=，/=，%=，+</code>或一元运算符<code>+， -< code>，当至少有一个操作数是<code>Object</code>或<code>Undefined</code> </code> NaN</code>(不是数字)时，表达式的结果将始终是<code>NaN</code>(不是数字)。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 x = [1, 2];
-var y = x / 4;  //Noncompliant
+var y = x / 4;  //不合规
 </pre>
-<h2>Exceptions</h2>
+<h2>例外</h2>
 <ul>
-  <li> <code>Date</code> operands: they are implicitly converted to numbers. </li>
-  <li> The binary <code>+</code> operator with <code>Object</code> operand (concatenation). </li>
+  <li> <code>Date</code>操作数:它们被隐式转换为数字。 </li>
+  <li> 二进制<code>+</code>操作符与<code>Object</code>操作数(连接)。 </li>
 </ul>
 

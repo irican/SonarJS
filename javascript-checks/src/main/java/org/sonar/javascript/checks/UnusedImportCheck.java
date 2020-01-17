@@ -51,11 +51,11 @@ public class UnusedImportCheck extends DoubleDispatchVisitorCheck {
     List<Usage> declarations = s.usages().stream().filter(Usage::isDeclaration).collect(Collectors.toList());
     if (s.usages().size() == 1 && declarations.size() == 1) {
       IdentifierTree identifierTree = Iterables.getOnlyElement(declarations).identifierTree();
-      addIssue(identifierTree, String.format("Remove this unused import of '%s'.", identifierTree.name()));
+      addIssue(identifierTree, String.format("删除未使用的'%s'导入。", identifierTree.name()));
     }
     if (declarations.size() > 1) {
       declarations.stream().skip(1).forEach(u -> addIssue(u.identifierTree(),
-        String.format("'%s' is already imported; remove this redundant import.", u.identifierTree().name())));
+        String.format("'%s'已经导入；删除此冗余导入。", u.identifierTree().name())));
     }
   }
 }

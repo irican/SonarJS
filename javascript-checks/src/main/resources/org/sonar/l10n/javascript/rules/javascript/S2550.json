@@ -1,5 +1,5 @@
 {
-  "title": "\"defaults\" should be a function when objects or arrays are used",
+  "title": "当使用对象或数组时，\"defaults\"应该是一个函数",
   "type": "BUG",
   "status": "ready",
   "remediation": {

@@ -1,5 +1,5 @@
 {
-  "title": "Results of \"in\" and \"instanceof\" should be negated rather than operands",
+  "title": "应该否定\"in\”和\"instanceof\"的结果，而不是操作数",
   "type": "BUG",
   "status": "ready",
   "remediation": {

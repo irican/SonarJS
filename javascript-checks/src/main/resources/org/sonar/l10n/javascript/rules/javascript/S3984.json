@@ -1,5 +1,5 @@
 {
-  "title": "Errors should not be created without being thrown",
+  "title": "不抛出错误就不应该创建错误",
   "type": "BUG",
   "status": "ready",
   "remediation": {
@@ -7,7 +7,7 @@
     "constantCost": "2min"
   },
   "tags": [
-    "error-handling"
+    
   ],
   "defaultSeverity": "Major",
   "ruleSpecification": "RSPEC-3984",

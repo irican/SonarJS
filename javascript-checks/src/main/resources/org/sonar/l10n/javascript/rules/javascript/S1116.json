@@ -1,5 +1,5 @@
 {
-  "title": "Extra semicolons should be removed",
+  "title": "应该去掉多余的分号",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
@@ -7,7 +7,7 @@
     "constantCost": "2min"
   },
   "tags": [
-    "based-on-misra",
+    "misra",
     "cert",
     "unused"
   ],

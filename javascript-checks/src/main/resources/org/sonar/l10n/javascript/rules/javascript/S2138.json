@@ -1,5 +1,5 @@
 {
-  "title": "\"undefined\" should not be assigned",
+  "title": "不应该分配\"undefined\" ",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

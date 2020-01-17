@@ -39,7 +39,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "FunctionDefinitionInsideLoop")
 public class FunctionDefinitionInsideLoopCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Define this function outside of a loop.";
+  private static final String MESSAGE = "在循环外定义此函数";
   private static final Set<String> ALLOWED_CALLBACKS = ImmutableSet.of(
     "replace",
     "forEach",

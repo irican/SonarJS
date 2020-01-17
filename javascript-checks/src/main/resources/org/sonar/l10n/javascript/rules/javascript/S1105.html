@@ -1,23 +1,22 @@
-<p>Shared naming conventions allow teams to collaborate effectively. This rule raises an issue when an open curly brace is not placed at the end of a
-line of code.</p>
-<h2>Noncompliant Code Example</h2>
+<p>共享命名约定允许团队有效地协作。当没有将左大括号放在一行代码的末尾时，此规则会引发一个问题。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 if (condition)
-{                                                      //Noncompliant
+{                                                      //不合规
   doSomething();
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
-if (condition) {                                   //Compliant
+if (condition) {                                   //合规
   doSomething();
 }
 </pre>
-<h2>Exceptions</h2>
-<p>Object literals appearing as arguments can start on their own line.</p>
+<h2>例外</h2>
+<p>作为参数出现的对象字面量可以从它们自己的行开始。</p>
 <pre>
 functionWithObject(
-   {                                                 //Compliant
+   {                                                 //合规
         g: "someValue"
    }
 );

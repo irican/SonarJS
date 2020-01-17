@@ -1,5 +1,5 @@
 {
-  "title": "Functions should not be defined inside loops",
+  "title": "函数不应该在循环中定义",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

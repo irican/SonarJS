@@ -1,24 +1,22 @@
-<p>Any variable or function declared in the global scope implicitly becomes attached to the global object (the <code>window</code> object in a browser
-environment). To make it explicit this variable or function should be a property of <code>window</code>. When it is meant to be used just locally, it
-should be declared with the <code>const</code> or <code>let</code> keywords (since ECMAScript 2015) or within an Immediately-Invoked Function
-Expression (IIFE).</p>
-<p>This rule should not be activated when modules are used.</p>
-<h2>Noncompliant Code Example</h2>
+<p>全局作用域中声明的任何变量或函数都会隐式地附加到全局对象 (浏览器环境中的<code>window</code> 对象). 
+要使其显式，这个变量或函数应该是 <code>window</code>属性。 当仅在本地使用它时，应该使用<code>const</code> 或 <code>let</code> 关键字声明它(自ECMAScript 2015以来)，或者在一个立即调用的函数表达式(IIFE)中声明它。</p>
+<p>使用模块时不应激活此规则。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-var myVar = 42;       // Noncompliant
-function myFunc() { } // Noncompliant
+var myVar = 42;       // 不合规
+function myFunc() { } // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 window.myVar = 42;
 window.myFunc = function() { };
 </pre>
-<p>or</p>
+<p>或</p>
 <pre>
 let myVar = 42;
 let myFunc = function() { }
 </pre>
-<p>or </p>
+<p>或 </p>
 <pre>
 // IIFE
 (function() {

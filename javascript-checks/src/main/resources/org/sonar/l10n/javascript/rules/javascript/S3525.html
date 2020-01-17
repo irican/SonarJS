@@ -1,18 +1,16 @@
-<p>Originally JavaScript didn't support <code>class</code>es, and class-like behavior had to be kludged using things like <code>prototype</code>
-assignments for "class" functions. Fortunately, ECMAScript 2015 added classes, so any lingering <code>prototype</code> uses should be converted to
-true <code>class</code>es. The new syntax is more expressive and clearer, especially to those with experience in other languages.</p>
-<p>Specifically, with ES2015, you should simply declare a <code>class</code> and define its methods inside the class declaration.</p>
-<h2>Noncompliant Code Example</h2>
+<p>最初JavaScript不支持<code>class</code>es，类行为必须使用类似于<code>prototype</code>赋值给"class"函数这样的东西进行组合。幸运的是，ECMAScript 2015增加了类，所以任何残留的<code>prototype</code>使用的都应该转换为真正的<code>class</code>es。新的语法更有表现力和更清晰，尤其是对那些有其他语言经验的人来说。</p>
+<p>具体来说，对于ES2015，您应该简单地声明一个<code>类</code>，并在类声明中定义它的方法。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function MyNonClass(initializerArgs = []) {
   this._values = [...initializerArgs];
 }
 
-MyNonClass.prototype.doSomething = function () {  // Noncompliant
+MyNonClass.prototype.doSomething = function () {  // 不合规
   // ...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 class MyClass {
   constructor(initializerArgs = []) {

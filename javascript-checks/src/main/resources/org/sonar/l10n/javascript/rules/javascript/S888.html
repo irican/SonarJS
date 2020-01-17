@@ -1,27 +1,25 @@
-<p>Testing <code>for</code> loop termination using an equality operator (<code>==</code> and <code>!=</code>) is dangerous, because it could set up an
-infinite loop. Using a broader relational operator instead casts a wider net, and makes it harder (but not impossible) to accidentally write an
-infinite loop.</p>
-<h2>Noncompliant Code Example</h2>
+<p>使用相等运算符(<code>==</code> and <code>!=</code>)测试<code>for</code> 循环终止是危险的， 因为它可以建立一个无限循环。相反，使用更广泛的关系运算符可以投射更广泛的网络，从而使意外地编写无限循环变得更困难(但并非不可能)。</p>
+<h2>不合格的代码示例</h2>
 <pre>
-for (var i = 1; i != 10; i += 2)  // Noncompliant. Infinite; i goes from 9 straight to 11.
+for (var i = 1; i != 10; i += 2)  // 不合规. 无限的;i从9直接到11。
 {
   //...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
-for (var i = 1; i &lt;= 10; i += 2)  // Compliant
+for (var i = 1; i &lt;= 10; i += 2)  // 合规
 {
   //...
 }
 </pre>
-<h2>Exceptions</h2>
-<p>Equality operators are ignored if the loop counter is not modified within the body of the loop and either:</p>
+<h2>例外</h2>
+<p>如果循环计数器在循环体中没有修改，则忽略相等运算符，并且:</p>
 <ul>
-  <li> starts below the ending value and is incremented by 1 on each iteration. </li>
-  <li> starts above the ending value and is decremented by 1 on each iteration. </li>
+  <li> 从结束值以下开始，每次迭代递增1。</li>
+  <li> 从结束值以上开始，每次迭代递减1。 </li>
 </ul>
-<p>Equality operators are also ignored when the test is against <code>null</code>.</p>
+<p>当测试针对 <code>null</code>时，相等运算符也会被忽略。</p>
 <pre>
 for (var i = 0; arr[i] != null; i++) {
   // ...
@@ -31,7 +29,7 @@ for (var i = 0; (item = arr[i]) != null; i++) {
   // ...
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C++:2008, 6-5-2 </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/835">MITRE, CWE-835</a> - Loop with Unreachable Exit Condition ('Infinite Loop') </li>

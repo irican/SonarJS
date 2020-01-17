@@ -1,5 +1,5 @@
 {
-  "title": "Web SQL databases should not be used",
+  "title": "不应该使用Web SQL数据库",
   "type": "VULNERABILITY",
   "status": "ready",
   "remediation": {
@@ -12,7 +12,7 @@
     "owasp-a3"
   ],
   "standards": [
-    "OWASP Top 10"
+    "OWASP Top Ten"
   ],
   "defaultSeverity": "Blocker",
   "ruleSpecification": "RSPEC-2817",

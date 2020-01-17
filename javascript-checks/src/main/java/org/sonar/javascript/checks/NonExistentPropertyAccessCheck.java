@@ -37,7 +37,7 @@ import org.sonar.plugins.javascript.api.tree.expression.IdentifierTree;
 @Rule(key = "S3759")
 public class NonExistentPropertyAccessCheck extends AbstractAnyPathSeCheck {
 
-  private static final String MESSAGE = "Remove this access to \"%s\" property, it doesn't exist, as a built-in, on %s.";
+  private static final String MESSAGE = "收回对 \"%s\" 属性的访问权限, 因为它是内置的，在 %s上不存在。";
 
   private static final Map<Type, String> TYPE_NAMES = ImmutableMap.<Type, String>builder()
     .put(Type.NUMBER_PRIMITIVE, "Number")

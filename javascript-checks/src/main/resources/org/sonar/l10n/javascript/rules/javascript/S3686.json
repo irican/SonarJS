@@ -1,5 +1,5 @@
 {
-  "title": "Functions should not be called both with and without \"new\"",
+  "title": "函数不能同时使用和不使用\"new\"来调用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

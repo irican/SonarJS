@@ -1,5 +1,5 @@
 {
-  "title": "Local storage should not be used",
+  "title": "不应使用本地存储",
   "type": "VULNERABILITY",
   "status": "ready",
   "remediation": {
@@ -12,7 +12,7 @@
     "owasp-a3"
   ],
   "standards": [
-    "OWASP Top 10"
+    "OWASP Top Ten"
   ],
   "defaultSeverity": "Critical",
   "ruleSpecification": "RSPEC-3271",

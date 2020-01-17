@@ -1,18 +1,17 @@
-<p>JavaScript variable scope can be particularly difficult to understand and get right. The situation gets even worse when you consider the
-<em>accidental</em> creation of global variables, which is what happens when you declare a variable inside a function or the <code>for</code> clause
-of a for-loop without using the <code>let</code>, <code>const</code> or <code>var</code> keywords. </p>
-<p><code>let</code> and <code>const</code> were introduced in ECMAScript 2015, and are now the preferred keywords for variable declaration.</p>
-<h2>Noncompliant Code Example</h2>
+<p>JavaScript变量范围可能特别难以理解和正确。当您考虑
+<em>accidental</em> 创建全局变量时，情况会变得更糟，这是在函数中声明变量或在<code>for</code> 子句，不使用<code>let</code>, <code>const</code> 或 <code>var</code> 关键字。 </p>
+<p>ECMAScript 2015引入了 <code>let</code> 和 <code>const</code>，现在是变量声明的首选关键字。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function f(){
-  i = 1;         // Noncompliant; i is global
+  i = 1;         // 不合规; i 是全局的
 
-  for (j = 0; j &lt; array.length; j++) {  // Noncompliant; j is global now too
+  for (j = 0; j &lt; array.length; j++) {  // 不合规; j 现在也是全局的
     // ...
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function f(){
   var i = 1;

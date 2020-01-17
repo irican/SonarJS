@@ -1,22 +1,21 @@
-<p><code>undefined</code> is the value you get for variables and properties which have not yet been created. Use the same value to reset an existing
-variable and you lose the ability to distinguish between a variable that exists but has no value and a variable that does not yet exist. Instead,
-<code>null</code> should be used, allowing you to tell the difference between a property that has been reset and one that was never created.</p>
-<h2>Noncompliant Code Example</h2>
+<p><code>undefined</code> 是尚未创建的变量和属性的值。使用相同的值重置现有变量，您将失去区分存在但没有值的变量和不存在的变量的能力。相反，应该使用
+<code>null</code> ，允许您区分已重置的属性和从未创建的属性。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var myObject = {};
 
 // ...
-myObject.fname = undefined;  // Noncompliant
+myObject.fname = undefined;  // 不合规
 // ...
 
 if (myObject.lname == undefined) {
-  // property not yet created
+  // 尚未创建的属性
 }
 if (myObject.fname == undefined) {
-  // no real way of knowing the true state of myObject.fname
+  // 无法知道myObject.fname的真实状态
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var myObject = {};
 
@@ -25,10 +24,10 @@ myObject.fname = null;
 // ...
 
 if (myObject.lname == undefined) {
-  // property not yet created
+  // 尚未创建的属性
 }
 if (myObject.fname == undefined) {
-  // no real way of knowing the true state of myObject.fname
+  // 无法知道myObject.fname的真实状态
 }
 </pre>
 

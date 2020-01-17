@@ -1,5 +1,5 @@
 {
-  "title": "JQuery cache variables should comply with a convention name",
+  "title": "JQuery缓存变量应该符合约定名称",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

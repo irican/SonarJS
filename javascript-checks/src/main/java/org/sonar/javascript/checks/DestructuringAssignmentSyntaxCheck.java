@@ -48,7 +48,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3514")
 public class DestructuringAssignmentSyntaxCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use destructuring syntax for these assignments from \"%s\".";
+  private static final String MESSAGE = "对 \"%s\"中的这些赋值使用析构语法";
 
   private static final Set<String> ALLOWED_INDEXES = ImmutableSet.of("0", "1", "2", "3", "4");
 

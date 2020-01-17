@@ -1,5 +1,5 @@
 {
-  "title": "Executing XPath expressions is security-sensitive",
+  "title": "执行XPath表达式是安全敏感的",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "tags": [
@@ -8,8 +8,7 @@
     "cert"
   ],
   "standards": [
-    "CWE",
-    "OWASP Top 10"
+    "CWE"
   ],
   "defaultSeverity": "Critical",
   "ruleSpecification": "RSPEC-4817",
@@ -18,9 +17,6 @@
   "securityStandards": {
     "CWE": [
       643
-    ],
-    "OWASP": [
-      "A1"
     ]
   }
 }

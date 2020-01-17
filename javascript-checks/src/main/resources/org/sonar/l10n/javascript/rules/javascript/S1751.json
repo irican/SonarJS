@@ -1,5 +1,5 @@
 {
-  "title": "Jump statements should not be used unconditionally",
+  "title": "跳转语句不应该无条件地使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

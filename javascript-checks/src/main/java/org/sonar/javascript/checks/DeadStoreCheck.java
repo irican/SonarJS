@@ -59,7 +59,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S1854")
 public class DeadStoreCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this useless assignment to local variable \"%s\"";
+  private static final String MESSAGE = "删除对局部变量 \"%s\" 的无用分配 ";
   private static final Set<String> BASIC_LITERAL_VALUES = ImmutableSet.of("true", "false", "1", "0", "-1", "null", "''", "\"\"");
 
   @Override

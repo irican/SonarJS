@@ -1,17 +1,13 @@
-<p>ECMAScript 2015 introduced the <code>let</code> and <code>const</code> keywords for block-scope variable declaration. Using <code>const</code>
-creates a read-only (constant) variable.</p>
-<p>The distinction between the variable types created by <code>var</code> and by <code>let</code> is significant, and a switch to <code>let</code>
-will help alleviate many of the variable scope issues which have caused confusion in the past. </p>
-<p>Because these new keywords create more precise variable types, they are preferred in environments that support ECMAScript 2015. However, some
-refactoring may be required by the switch from <code>var</code> to <code>let</code>, and you should be aware that they raise <code>SyntaxError</code>s
-in pre-ECMAScript 2015 environments.</p>
-<p>This rule raises an issue when <code>var</code> is used instead of <code>const</code> or <code>let</code>.</p>
-<h2>Noncompliant Code Example</h2>
+<p>ECMAScript 2015引入了用于块范围变量声明的<code>let</code>和<code>const</code>关键字。使用<code>const</code>创建只读(常量)变量。</p>
+<p>由<code>var</code>创建的变量类型与由<code>let</code>创建的变量类型之间的区别是很重要的，切换到<code>let</code>将有助于缓解许多变量范围问题，这些问题在过去曾引起混淆。 </p>
+<p>因为这些新的关键字创建了更精确的变量类型，所以它们在支持ECMAScript 2015的环境中更受欢迎。但是，从<code>var</code>切换到<code>let</code>可能需要进行一些重构，您应该知道，在ecmascript 2015之前的环境中，它们会引发<code>SyntaxError</code>s。</p>
+<p>当使用<code>var</code>而不是<code>const</code>或<code>let</code>时，该规则会引发一个问题。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var color = "blue";
 var size = 4;
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 const color = "blue";
 let size = 4;

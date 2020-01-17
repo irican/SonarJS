@@ -1,14 +1,13 @@
-<p>According to the Backbone.js docs</p>
+<p>根据Backbone.js文档</p>
 <blockquote>
-  The
-  <strong>changed</strong> property is the internal hash containing all the attributes that have changed since the last set. Please do not update
-  <strong>changed</strong> directly since its state is internally maintained by set. A copy of
-  <strong>changed</strong> can be acquired from changedAttributes.
+
+  <strong>changed</strong> 属性是一个内部散列，包含自上次设置以来所有已更改的属性。请不要更新
+  <strong>changed</strong> 因为它的状态由set. A的副本在内部维护
+  <strong>changed</strong> 可以从changedAttributes中获取。
 </blockquote>
-<p>The <code>changed</code> property is involved in decisions about whether or not a collection should be resorted when it is updated. If you modify
-it manually, you can break the resorting of the collection.</p>
-<h2>Noncompliant Code Example</h2>
+<p> <code>changed</code> 属性涉及到关于更新集合时是否应该求助于集合的决策。如果您手动修改它，则可以中断对集合的依赖。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-myModel.changed = { myProperty: 1 }; // Non-compliant
+myModel.changed = { myProperty: 1 }; // 不合规
 </pre>
 

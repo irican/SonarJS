@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3863")
 public class SameModuleImportsCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Merge this import with another one from the same module on line %s.";
+  private static final String MESSAGE = "将此导入与在第%s行中同一模块的另一个导入合并。";
 
   private ListMultimap<String, ImportDeclarationTree> simpleImportsByModule;
   private ListMultimap<String, ImportDeclarationTree> typeOfImportsByModule;

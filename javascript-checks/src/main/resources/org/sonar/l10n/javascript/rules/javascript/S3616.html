@@ -1,22 +1,19 @@
-<p>The comma operator (<code>,</code>) evaluates its operands, from left to right, and returns the second one. That's useful in some situations, but
-just wrong in a <code>switch</code> <code>case</code>. You may think you're compactly handling multiple values in the case, but only the last one in
-the comma-list will ever be handled. The rest will fall through to the default.</p>
-<p>Similarly the logical OR operator (<code>||</code>) will not work in a <code>switch</code> <code>case</code>, only the first argument will be
-considered at execution time.</p>
-<h2>Noncompliant Code Example</h2>
+<p>逗号运算符(<code>，</code>)从左到右计算其操作数，并返回第二个操作数。这在某些情况下很有用，但是在<code>switch</code> <code>case</code>中就错了。在这种情况下，您可能认为您正在紧凑地处理多个值，但是只会处理逗号列表中的最后一个值。剩下的将会变成默认值。</p>
+<p>类似地，逻辑或运算符(<code>||</code>)将不能在<code>switch</code> <code>case</code>)中工作，在执行时只考虑第一个参数。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 switch a {
-  case 1,2:  // Noncompliant; only 2 is ever handled by this case
+  case 1,2:  // 不合规; 这个案例只处理过2个
     doTheThing(a);
-  case 3 || 4: // Noncompliant; only '3' is handled
+  case 3 || 4: // 不合规; 只处理“3”
     doThatThing(a);
   case 5:
     doTheOtherThing(a);
   default:
-    console.log("Neener, neener!");  // this happens when a==1 or a == 4
+    console.log("Neener, neener!");  // 这发生在a==1或a== 4时
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 switch a {
   case 1:

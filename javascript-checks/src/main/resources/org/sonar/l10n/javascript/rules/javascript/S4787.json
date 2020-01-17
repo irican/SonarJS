@@ -1,5 +1,5 @@
 {
-  "title": "Encrypting data is security-sensitive",
+  "title": "加密数据是安全敏感的",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "tags": [
@@ -10,7 +10,7 @@
   ],
   "standards": [
     "CWE",
-    "OWASP Top 10",
+    "OWASP Top Ten",
     "SANS Top 25"
   ],
   "defaultSeverity": "Critical",

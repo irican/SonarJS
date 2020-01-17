@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3828")
 public class YieldOutsideGeneratorCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this \"yield\" expression or move it into a generator.";
+  private static final String MESSAGE = "删除此 \"yield\" 表达式或将其移至生成器中。";
 
   @Override
   public void visitYieldExpression(YieldExpressionTree tree) {

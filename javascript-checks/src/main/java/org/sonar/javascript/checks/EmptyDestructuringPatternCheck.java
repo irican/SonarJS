@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3799")
 public class EmptyDestructuringPatternCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Change this pattern to not be empty.";
+  private static final String MESSAGE = "将此模式更改为非空";
 
   @Override
   public void visitArrayBindingPattern(ArrayBindingPatternTree tree) {

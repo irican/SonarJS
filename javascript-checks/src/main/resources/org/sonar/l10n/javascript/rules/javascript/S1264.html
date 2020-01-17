@@ -1,11 +1,11 @@
-<p>When only the condition expression is defined in a <code>for</code> loop, and the initialization and increment expressions are missing, a
-<code>while</code> loop should be used instead to increase readability. </p>
-<p><em>Note that this rule requires Node.js to be available during analysis.</em></p>
-<h2>Noncompliant Code Example</h2>
+<p>当<code>for</code> 循环中只定义了条件表达式，并且缺少初始化和增量表达式时，应该使用
+<code>while</code> 循环来增加可读性。 </p>
+<p><em>注意，此规则要求Node.js在分析期间可用。</em></p>
+<h2>不合规的代码示例</h2>
 <pre>
 for (;condition;) { /*...*/ }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 while (condition) { /*...*/ }
 </pre>

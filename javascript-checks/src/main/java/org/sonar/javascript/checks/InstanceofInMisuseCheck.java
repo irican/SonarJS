@@ -34,7 +34,7 @@ import static org.sonar.plugins.javascript.api.tree.Tree.Kind.RELATIONAL_IN;
 @Rule(key = "S3812")
 public class InstanceofInMisuseCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Add parentheses to perform \"%s\" operator before logical NOT operator.";
+  private static final String MESSAGE = "在逻辑运算符NOT之前添加括号以执行 \"%s\" 运算符";
 
   @Override
   public Set<Kind> nodesToVisit() {

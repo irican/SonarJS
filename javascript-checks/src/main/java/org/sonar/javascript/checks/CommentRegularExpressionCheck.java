@@ -35,18 +35,18 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "CommentRegularExpression")
 public class CommentRegularExpressionCheck extends SubscriptionVisitorCheck {
 
-  private static final String DEFAULT_MESSAGE = "The regular expression matches this comment.";
+  private static final String DEFAULT_MESSAGE = "正则表达式与此注释匹配。";
   private static final String DEFAULT_REGULAR_EXPRESSION = "";
 
   @RuleProperty(
     key = "regularExpression",
-    description = "The regular expression",
+    description = "正则表达式",
     defaultValue = "" + DEFAULT_REGULAR_EXPRESSION)
   private String regularExpression = DEFAULT_REGULAR_EXPRESSION;
 
   @RuleProperty(
     key = "message",
-    description = "The issue message",
+    description = "问题描述",
     defaultValue = "" + DEFAULT_MESSAGE)
   private String message = DEFAULT_MESSAGE;
 
@@ -66,7 +66,7 @@ public class CommentRegularExpressionCheck extends SubscriptionVisitorCheck {
       try {
         pattern = Pattern.compile(regularExpression, Pattern.DOTALL);
       } catch (RuntimeException e) {
-        throw new IllegalArgumentException("Unable to compile regular expression: " + regularExpression, e);
+        throw new IllegalArgumentException("无法编译正则表达式：" + regularExpression, e);
       }
     }
 

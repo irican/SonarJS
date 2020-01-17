@@ -1,18 +1,18 @@
-<p>Having all branches in a <code>switch</code> or <code>if</code> chain with the same implementation is an error. Either a copy-paste error was made
-and something different should be executed, or there shouldn't be a <code>switch</code>/<code>if</code> chain at all.</p>
-<p><em>Note that this rule requires Node.js to be available during analysis.</em></p>
-<h2>Noncompliant Code Example</h2>
+<p>在<code>switch</code> 或 <code>if</code> 链中具有相同实现的所有分支是错误的。 要么复制粘贴错误，应该执行一些不同的操作，要么根本不应该有
+ <code>switch</code>/<code>if</code> 链。 注意，此规则不适用于没有 <code>else</code>-s 的<code>if</code> 链,也不适用于没有<code>default</code>子句的<code>switch</code>-es 。</p>
+<p><em>注意，此规则要求Node.js在分析期间可用。</em></p>
+<h2>不合规的代码示例</h2>
 <pre>
-if (b == 0) {  // Noncompliant
+if (b == 0) {  // 不合规
   doOneMoreThing();
 }
 else {
   doOneMoreThing();
 }
 
-let a = (b == 0) ? getValue() : getValue();   // Noncompliant
+let a = (b == 0) ? getValue() : getValue();   // 不合规
 
-switch (i) {  // Noncompliant
+switch (i) {  // 不合规
   case 1:
     doSomething();
     break;
@@ -24,16 +24,6 @@ switch (i) {  // Noncompliant
     break;
   default:
     doSomething();
-}
-</pre>
-<h2>Exceptions</h2>
-<p>This rule does not apply to <code>if</code> chains without <code>else</code>-s, or to <code>switch</code>-es without <code>default</code>
-clauses.</p>
-<pre>
-if(b == 0) {    //no issue, this could have been done on purpose to make the code more readable
-  doSomething();
-} else if(b == 1) {
-  doSomething();
 }
 </pre>
 

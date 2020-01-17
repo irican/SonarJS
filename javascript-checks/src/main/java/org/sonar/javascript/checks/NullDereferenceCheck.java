@@ -42,8 +42,8 @@ import static org.sonar.javascript.se.Constraint.NULL_OR_UNDEFINED;
 @Rule(key = "S2259")
 public class NullDereferenceCheck extends SeCheck {
 
-  private static final String MESSAGE = "TypeError can be thrown as \"%s\" might be null or undefined here.";
-  private static final String EXPRESSION_MESSAGE = "TypeError can be thrown as this expression might be null or undefined here.";
+  private static final String MESSAGE = "因为\"%s\"在此处可能为null或未定义，所以可以引发TypeError。";
+  private static final String EXPRESSION_MESSAGE = "因为此表达式在此处可能为null或未定义，所以可以引发TypeError。";
 
   private Set<Symbol> hasIssue;
 

@@ -1,5 +1,5 @@
 {
-  "title": "Strings and non-strings should not be added",
+  "title": "不应该添加字符串和非字符串",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

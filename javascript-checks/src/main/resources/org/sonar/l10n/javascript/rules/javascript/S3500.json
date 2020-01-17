@@ -1,5 +1,5 @@
 {
-  "title": "Attempts should not be made to update \"const\" variables",
+  "title": "不应该尝试更新\"const\"变量",
   "type": "BUG",
   "status": "ready",
   "remediation": {

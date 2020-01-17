@@ -1,5 +1,5 @@
 {
-  "title": "\"switch\" statements should not contain non-case labels",
+  "title": "\"switch\" 语句不应该包含非大小写标签",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
@@ -7,7 +7,7 @@
     "constantCost": "10min"
   },
   "tags": [
-    "based-on-misra",
+    "misra",
     "suspicious"
   ],
   "defaultSeverity": "Blocker",

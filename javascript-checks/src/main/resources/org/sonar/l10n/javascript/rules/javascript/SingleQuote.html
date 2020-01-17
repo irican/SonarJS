@@ -1,16 +1,16 @@
-<p>For consistency single-quotes (') are preferred to double-quotes ("). This is helpful when creating strings that include HTML. </p>
-<h2>Noncompliant Code Example</h2>
+<p>为了一致性，单引号(')优于双引号(")。这在创建包含HTML的字符串时非常有用。 </p>
+<h2>不合规的代码示例</h2>
 <pre>
 var firstParameter = "something";
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var firstParameter = 'something';
 </pre>
-<h2>Exceptions</h2>
-<p>JSX code and strings that contain quotes are ignored.</p>
+<h2>例外</h2>
+<p>包含引号的JSX代码和字符串将被忽略。</p>
 <pre>
-let heSaid = "Then he said 'What?'."  // ignored
-let sheSaid = '"Whatever!" she replied.'  // ignored
+let heSaid = "Then he said 'What?'."  // 忽略
+let sheSaid = '"Whatever!" she replied.'  // 忽略
 </pre>
 

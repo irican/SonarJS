@@ -40,7 +40,7 @@ import static org.sonar.javascript.checks.utils.FunctionReturns.getFunctionRetur
 @Rule(key = "S3801")
 public class ConsistentReturnsCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Refactor this function to use \"return\" consistently.";
+  private static final String MESSAGE = "重构此函数以始终使用 \"return\" 。";
 
   @Override
   public Set<Kind> nodesToVisit() {

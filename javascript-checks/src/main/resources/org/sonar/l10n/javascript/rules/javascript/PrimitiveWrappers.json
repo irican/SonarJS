@@ -1,5 +1,5 @@
 {
-  "title": "Wrapper objects should not be used for primitive types",
+  "title": "包装器对象不应该用于基本类型",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

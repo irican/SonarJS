@@ -1,5 +1,5 @@
 {
-  "title": "Boolean checks should not be inverted",
+  "title": "不应该反转布尔检查",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

@@ -1,5 +1,5 @@
 {
-  "title": "Functions should not have identical implementations",
+  "title": "函数不应该有相同的实现",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

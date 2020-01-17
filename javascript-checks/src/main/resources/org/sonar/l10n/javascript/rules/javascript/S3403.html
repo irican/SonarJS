@@ -1,16 +1,14 @@
-<p>Comparing dissimilar types using the strict equality operators <code>===</code> and <code>!==</code> will always return the same value,
-respectively <code>false</code> and <code>true</code>, because no type conversion is done before the comparison. Thus, such comparisons can only be
-bugs.</p>
-<h2>Noncompliant Code Example</h2>
+<p>使用严格的相等运算符比较不同的类型<code>===</code>和<code>!==</code>将始终返回相同的值，分别<code>false</code>和<code>true</code>，因为在进行比较之前没有进行类型转换。因此，这样的比较只能是错误。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var a = 8;
 var b = "8";
 
-if (a === b) {  // Noncompliant; always false
+if (a === b) {  // 不合规; 总是错误的
   // ...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var a = 8;
 var b = "8";

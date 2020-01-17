@@ -25,7 +25,7 @@ import org.sonar.plugins.javascript.api.tree.expression.CallExpressionTree;
 @Rule(key = "S2716")
 public class UniversalSelectorCheck extends AbstractJQuerySelectorOptimizationCheck {
 
-  private static final String MESSAGE = "Remove the use of this universal selector.";
+  private static final String MESSAGE = "取消此通用选择器的使用。";
 
   @Override
   protected void visitSelector(String selector, CallExpressionTree tree) {

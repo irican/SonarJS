@@ -1,16 +1,14 @@
-<p>Function arguments should all have different names to prevent any ambiguity. Indeed, if arguments have the same name, the last duplicated argument
-hides all the previous arguments with the same name (those previous arguments remain available through arguments[i], so they're not completely
-inaccessible).</p>
-<p>This hiding makes no sense, reduces understandability and maintainability, and obviously can be error prone. Furthermore, in strict mode, declaring
-arguments with the same name produces an error.</p>
-<h2>Noncompliant Code Example</h2>
+<p>函数参数应该有不同的名称，以防止任何歧义。实际上，如果参数具有相同的名称，最后一个重复的参数隐藏以前所有同名的参数
+(这些之前的参数通过参数[i]仍然可用，所以它们不是完全不可访问的)。</p>
+<p>这种隐藏毫无意义，降低了可理解性和可维护性，而且很明显很容易出错。此外，在严格模式下，用相同的名称声明参数会产生错误。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-function compute(a, a, c) { // Noncompliant
+function compute(a, a, c) { // 不合规
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
-function compute(a, b, c) { // Compliant
+function compute(a, b, c) { // 合规
 }
 </pre>
 

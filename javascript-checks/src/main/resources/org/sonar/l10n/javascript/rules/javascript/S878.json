@@ -1,5 +1,5 @@
 {
-  "title": "Comma operator should not be used",
+  "title": "不应使用逗号运算符",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
@@ -7,7 +7,7 @@
     "constantCost": "5min"
   },
   "tags": [
-    "based-on-misra"
+    "misra"
   ],
   "defaultSeverity": "Major",
   "ruleSpecification": "RSPEC-878",

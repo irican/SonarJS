@@ -1,33 +1,29 @@
-<p>Enabling Cross-Origin Resource Sharing (CORS) is security-sensitive. For example, it has led in the past to the following vulnerabilities:</p>
+<p>启用跨源资源共享(CORS)是安全敏感的。例如，它在过去导致了以下漏洞:</p>
 <ul>
   <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0269">CVE-2018-0269</a> </li>
   <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14460">CVE-2017-14460</a> </li>
 </ul>
-<p>Applications that enable CORS will effectively relax the same-origin policy in browsers, which is in place to prevent AJAX requests to hosts other
-than the one showing in the browser address bar. Being too permissive, CORS can potentially allow an attacker to gain access to sensitive
-information.</p>
-<p>This rule flags code that enables CORS or specifies any HTTP response headers associated with CORS. The goal is to guide security code reviews.</p>
-<h2>Ask Yourself Whether</h2>
+<p>启用CORS的应用程序将有效地在浏览器中放松同源策略，这是为了防止AJAX请求到主机而不是显示在浏览器地址栏中的主机。由于过于宽容，CORS可能会允许攻击者访问敏感信息。</p>
+<p>此规则标记启用CORS或指定与CORS关联的任何HTTP响应头的代码。目标是指导安全代码审查。</p>
+<h2>问问你自己是否</h2>
 <ul>
-  <li> Any URLs responding with <code>Access-Control-Allow-Origin: *</code> include sensitive content. </li>
-  <li> Any domains specified in <code>Access-Control-Allow-Origin</code> headers are checked against a whitelist. </li>
+  <li> 任何使用<code>Access-Control-Allow-Origin: *</code>响应的url都包含敏感内容。 </li>
+  <li>在<code>Access-Control-Allow-Origin</code>标头中指定的任何域都将根据白名单进行检查。 </li>
 </ul>
-<h2>Recommended Secure Coding Practices</h2>
+<h2>推荐的安全编码实践</h2>
 <ul>
-  <li> The <code>Access-Control-Allow-Origin</code> header should be set only on specific URLs that require access from other domains. Don't enable
-  the header on the entire domain. </li>
-  <li> Don't rely on the <code>Origin</code> header blindly without validation as it could be spoofed by an attacker. Use a whitelist to check that
-  the <code>Origin</code> domain (including protocol) is allowed before returning it back in the <code>Access-Control-Allow-Origin</code> header.
+  <li> <code> access - control - allow - origin </code>标头应该只设置在需要从其他域访问的特定url上。不要在整个域上启用header。 </li>
+  <li>不要盲目地依赖<code>Origin</code>报头而不进行验证，因为它可能被攻击者欺骗。在返回<code>Access-Control-Allow-Origin</code>头信息之前，使用白名单检查<code>Origin</code>域(包括协议)是否被允许。
   </li>
-  <li> Use <code>Access-Control-Allow-Origin: *</code> only if your application absolutely requires it, for example in the case of an open/public API.
-  For such endpoints, make sure that there is no sensitive content or information included in the response. </li>
+  <li> 只有在应用程序绝对需要时才使用<code>Access-Control-Allow-Origin: *</code>，例如在open/public API的情况下。
+对于此类端点，请确保响应中不包含敏感内容或信息。</li>
 </ul>
-<h2>Questionable Code Example</h2>
+<h2>有问题的代码示例</h2>
 <pre>
-// === NodeJS built-in modules ===
+// === NodeJS内置模块 ===
 const http = require('http');
 const srv = http.createServer((req, res) =&gt; {
-  res.writeHead(200, { 'Access-Control-Allow-Origin': '*' }); // Questionable
+  res.writeHead(200, { 'Access-Control-Allow-Origin': '*' }); // 有问题的
   res.end('ok');
 });
 srv.listen(3000);
@@ -37,20 +33,20 @@ srv.listen(3000);
 const express = require('express');
 const cors = require('cors');
 const app = express();
-app.use(cors()); // Questionable
-app.get('/product/:id', cors(), function (req, res, next) {}); // Questionable
+app.use(cors()); // 有问题的
+app.get('/product/:id', cors(), function (req, res, next) {}); // 有问题的
 app.listen(3000);
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
-  <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A6-Security_Misconfiguration">OWASP Top 10 2017 Category A6</a> - Security
+  <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A6-Security_Misconfiguration">OWASP Top 10 2017</a> - Category A6 - Security
   Misconfiguration </li>
   <li> <a href="https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet#Cross_Origin_Resource_Sharing">OWASP HTML5 Security Cheat Sheet</a> - Cross
   Origin Resource Sharing </li>
   <li> <a href="https://www.owasp.org/index.php/CORS_OriginHeaderScrutiny">OWASP CORS OriginHeaderScrutiny</a> </li>
   <li> <a href="https://www.owasp.org/index.php/CORS_RequestPreflighScrutiny">OWASP CORS RequestPreflighScrutiny</a> </li>
+  <li> <a href="https://www.sans.org/top25-software-errors/#cat3">SANS Top 25</a> - Porous Defenses </li>
   <li> <a href="https://cwe.mitre.org/data/definitions/346.html">MITRE, CWE-346</a> - Origin Validation Error </li>
   <li> <a href="https://cwe.mitre.org/data/definitions/942.html">MITRE, CWE-942</a> - Overly Permissive Cross-domain Whitelist </li>
-  <li> <a href="https://www.sans.org/top25-software-errors/#cat3">SANS Top 25</a> - Porous Defenses </li>
 </ul>
 

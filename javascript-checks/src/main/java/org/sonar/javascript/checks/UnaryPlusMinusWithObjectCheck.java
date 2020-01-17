@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.tree.lexical.SyntaxToken;
 @Rule(key = "S3002")
 public class UnaryPlusMinusWithObjectCheck extends AbstractAllPathSeCheck<UnaryExpressionTree> {
 
-  private static final String MESSAGE = "Remove this use of unary \"%s\".";
+  private static final String MESSAGE = "撤销对一元\"%s\"的使用";
 
   private static final EnumSet<Type> NOT_ALLOWED_TYPES = EnumSet.of(
     Type.ARRAY,

@@ -29,8 +29,8 @@ import org.sonar.plugins.javascript.api.tree.ScriptTree;
 @Rule(key = "S2137")
 public class GlobalsShadowingCheck extends AbstractSymbolNameCheck {
 
-  private static final String DECLARATION_MESSAGE = "Do not use \"%s\" to declare a %s - use another name.";
-  private static final String MODIFICATION_MESSAGE = "Remove the modification of \"%s\".";
+  private static final String DECLARATION_MESSAGE = "请勿使用 \"%s\" 声明 %s - 使用其他名称";
+  private static final String MODIFICATION_MESSAGE = "取消对 \"%s\"的修改";
 
   @Override
   List<String> illegalNames() {

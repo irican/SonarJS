@@ -1,5 +1,5 @@
 {
-  "title": "Using command line arguments is security-sensitive",
+  "title": "使用命令行参数是安全敏感的",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "tags": [
@@ -9,7 +9,7 @@
   ],
   "standards": [
     "CWE",
-    "OWASP Top 10"
+    "OWASP Top Ten"
   ],
   "defaultSeverity": "Critical",
   "ruleSpecification": "RSPEC-4823",

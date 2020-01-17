@@ -37,8 +37,8 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S878")
 public class CommaOperatorUseCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE_ONE_COMMA = "Remove use of this comma operator.";
-  private static final String MESSAGE_MANY_COMMAS = "Remove use of all comma operators in this expression.";
+  private static final String MESSAGE_ONE_COMMA = "删除该逗号运算符的使用。";
+  private static final String MESSAGE_MANY_COMMAS = "删除此表达式中所有逗号运算符的使用。";
 
   @Override
   public void visitBinaryExpression(BinaryExpressionTree tree) {

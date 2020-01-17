@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.LineIssue;
 @Rule(key = "TabCharacter")
 public class TabCharacterCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Replace all tab characters in this file by sequences of white-spaces.";
+  private static final String MESSAGE = "用空格序列替换此文件中的所有制表符。";
 
   @Override
   public void visitScript(ScriptTree tree) {

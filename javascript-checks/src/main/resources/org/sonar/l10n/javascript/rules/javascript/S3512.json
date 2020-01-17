@@ -1,5 +1,5 @@
 {
-  "title": "Template strings should be used instead of concatenation",
+  "title": "应该使用模板字符串而不是连接",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

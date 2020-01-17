@@ -1,5 +1,5 @@
 {
-  "title": "\"[type=...]\" should be used to select elements by type",
+  "title": "应该使用 \"[type=...]\" 按类型选择元素",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

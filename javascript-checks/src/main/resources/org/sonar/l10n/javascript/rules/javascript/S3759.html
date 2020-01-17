@@ -1,18 +1,13 @@
-<p>Reading a non-existent property on an object always returns <code>undefined</code>. Doing so is usually an error; either in the name of the
-property or the type of the variable being accessed.</p>
-<p>If an attempt is made to access properties of a primitive, the primitive is automatically encased in a primitive-wrapper object for the operation.
-But being "promoted" to an object doesn't mean that the primitive will actually have properties to access. The wrapper object still won't have the
-non-existent property and <code>undefined</code> will be returned instead. </p>
-<p>This rule raises an issue when an attempt is made to access properties of a primitive. Thus this rule should only be activated when you don't use
-monkey patching for standard objects, like <code>Number</code>, <code>Boolean</code> and <code>String</code>. </p>
-<h2>Noncompliant Code Example</h2>
+<p>读取对象上不存在的属性总是返回<code>undefined</code>。这样做通常是错误的;可以是属性的名称，也可以是被访问变量的类型。</p>
+<p>如果尝试访问原语的属性，则该原语将自动封装在操作的原语包装器对象中。但是，被“提升”到对象并不意味着原语实际上具有可访问的属性。包装器对象仍然没有不存在的属性，未定义的属性将返回。 </p>
+<p>当试图访问原语的属性时，此规则会引发问题。因此，只有当您不为标准对象(如<code>Number</code>、<code>Boolean</code>和<code>String</code>)使用monkey补丁时，才应该激活此规则。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 x = 42;
-y = x.length;   // Noncompliant, Number type doesn't have "length" property
+y = x.length;   // 不合规, Number类型没有“length”属性
 </pre>
-<h2>Exceptions</h2>
-<p>The Ember framework introduces a few extensions to <code>String</code>. Since it is a widely used package, the following <code>String</code>
-properties will not trigger this rule even though they are not built-in:</p>
+<h2>例外</h2>
+<p>Ember框架引入了对<code>String</code>的一些扩展。由于它是一个广泛使用的包，下面的<code>String</code>属性不会触发这个规则，即使它们不是内置的:</p>
 <ul>
   <li> <code>camelize</code> </li>
   <li> <code>capitalize</code> </li>

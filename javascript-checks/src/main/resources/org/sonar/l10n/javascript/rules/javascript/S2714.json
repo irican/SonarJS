@@ -1,5 +1,5 @@
 {
-  "title": "Element type selectors should not be used with class selectors",
+  "title": "元素类型选择器不应与类选择器一起使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

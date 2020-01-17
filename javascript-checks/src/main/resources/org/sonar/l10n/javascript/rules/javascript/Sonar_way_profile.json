@@ -1,5 +1,5 @@
 {
-  "name": "Sonar way",
+  "name": "Sonar 方式",
   "ruleKeys": [
     "BitwiseOperators",
     "DebuggerStatement",

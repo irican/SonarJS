@@ -46,7 +46,7 @@ import org.sonar.plugins.javascript.api.tree.expression.ExpressionTree;
 @Rule(key = "S3782")
 public class ArgumentTypesCheck extends SeCheck {
 
-  private static final String MESSAGE = "Change this argument to the documented type%s.";
+  private static final String MESSAGE = "将此参数更改为文档化的类型%s";
 
   private static final Map<Constraint, String> CONSTRAINT_TO_STRING_MAP = ImmutableMap.<Constraint, String>builder()
     .put(Constraint.ANY_NUMBER, "Number")

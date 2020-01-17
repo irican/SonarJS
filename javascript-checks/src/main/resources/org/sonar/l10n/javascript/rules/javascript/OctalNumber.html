@@ -1,14 +1,14 @@
-<p>Integer literals starting with a zero are octal rather than decimal values. While using octal values is fully supported, most developers do not
-have experience with them. They may not recognize octal values as such, mistaking them instead for decimal values.</p>
-<h2>Noncompliant Code Example</h2>
+<p>以零开始的整数字面值是八进制值，而不是十进制值。
+虽然完全支持使用八进制值，但是大多数开发人员没有使用八进制值的经验。他们可能不认识八进制值，而是把它们误认为十进制值。</p>
+<h2>不合格的代码示例</h2>
 <pre>
-var myNumber = 010;   // Noncompliant. myNumber will hold 8, not 10 - was this really expected?
+var myNumber = 010;   // 不合规.myNumber将为8，而不是10——这真的是预期的吗?
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var myNumber = 8;
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2004, 7.1 - Octal constants (other than zero) and octal escape sequences shall not be used. </li>
   <li> MISRA C++:2008, 2-13-2 - Octal constants (other than zero) and octal escape sequences (other than "\0") shall not be used </li>

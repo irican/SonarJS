@@ -1,18 +1,17 @@
-<p>Overriding an object changes its behavior and could potentially impact all code using that object. Overriding standard, built-in objects could
-therefore have broad, potentially catastrophic effects on previously-working code.</p>
-<p>This rule detects overrides of the following native objects:</p>
+<p>重写一个对象会改变其行为，并可能影响使用该对象的所有代码。因此，覆盖标准的内置对象可能会对以前工作的代码产生广泛的、潜在的灾难性影响。</p>
+<p>此规则检测下列本机对象的覆盖:</p>
 <ul>
-  <li> Fundamental objects - Object, Function, Boolean, Symbol, Error, EvalError, InternalError, RangeError, ReferenceError, SyntaxError, TypeError,
+  <li> 基本对象—— Object, Function, Boolean, Symbol, Error, EvalError, InternalError, RangeError, ReferenceError, SyntaxError, TypeError,
   URIError </li>
-  <li> Numbers and dates - Number, Math, Date </li>
-  <li> Text processing - String, RegExp </li>
-  <li> Indexed collections - Array, Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Unit16Array, Int32Array, Uint32Array, Float32Array,
+  <li> 数字和日期 - Number, Math, Date </li>
+  <li>文本处理 - String, RegExp </li>
+  <li> 索引集合 - Array, Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Unit16Array, Int32Array, Uint32Array, Float32Array,
   Float64Array </li>
-  <li> Keyed collections - Map, Set, WeakMap, WeakSet </li>
-  <li> Structured data - ArrayBuffer, DataView, JSON </li>
-  <li> Control abstraction objects - Promise </li>
-  <li> Reflection - Reflect, Proxy </li>
-  <li> Internationalization - Intl </li>
-  <li> Non-standard objects - Generator, Iterator, ParallelArray, StopIteration </li>
+  <li> 键集合 - Map, Set, WeakMap, WeakSet </li>
+  <li> 结构化数据 - ArrayBuffer, DataView, JSON </li>
+  <li> 控制抽象对象 - Promise </li>
+  <li> 反射 - Reflect, Proxy </li>
+  <li> 国际化 - Intl </li>
+  <li> 非标准的对象 - Generator, Iterator, ParallelArray, StopIteration </li>
 </ul>
 

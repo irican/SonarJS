@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.IssueLocation;
 @Rule(key = "S3785")
 public class InOperatorTypeErrorCheck extends AbstractAnyPathSeCheck {
 
-  private static final String MESSAGE = "TypeError can be thrown as this operand might have primitive type.";
+  private static final String MESSAGE = "当此操作数可能具有原始类型时会引发 TypeError ";
 
   @Override
   public void beforeBlockElement(ProgramState currentState, Tree element, ProgramPoint programPoint) {

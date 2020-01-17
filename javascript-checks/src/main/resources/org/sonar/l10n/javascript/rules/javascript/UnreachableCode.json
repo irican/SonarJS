@@ -1,5 +1,5 @@
 {
-  "title": "Jump statements should not be followed by dead code",
+  "title": "跳转语句后面不应该跟着死代码",
   "type": "BUG",
   "status": "ready",
   "remediation": {
@@ -8,7 +8,7 @@
   },
   "tags": [
     "cwe",
-    "based-on-misra",
+    "misra",
     "cert",
     "unused"
   ],

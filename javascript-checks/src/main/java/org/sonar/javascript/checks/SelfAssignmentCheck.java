@@ -36,7 +36,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S1656")
 public class SelfAssignmentCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove or correct this useless self-assignment.";
+  private static final String MESSAGE = "删除或更正此无用的自赋值。";
   private static final Set<String> METHODS_WITH_SIDE_EFFECTS = new HashSet<>(Arrays.asList("sort", "reverse"));
 
   @Override

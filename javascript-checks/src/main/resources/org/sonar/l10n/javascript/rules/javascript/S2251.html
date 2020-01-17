@@ -1,19 +1,17 @@
-<p>A <code>for</code> loop with a stop condition that can never be reached, such as one with a counter that moves in the wrong direction, will run
-infinitely. While there are occasions when an infinite loop is intended, the convention is to construct such loops as <code>while</code> loops. More
-typically, an infinite <code>for</code> loop is a bug. </p>
-<h2>Noncompliant Code Example</h2>
+<p>具有永远无法达到的停止条件的<code>for</code> 循环，例如计数器移动方向错误的for循环，将无限运行。虽然有时需要无限循环，但惯例是构造 <code>while</code> 循环之类的循环。更典型的情况是， 无限 <code>for</code> 循环是一个bug。 </p>
+<h2>不合规的代码示例</h2>
 <pre>
-for (var i = 0; i &lt; strings.length; i--) { // Noncompliant;
+for (var i = 0; i &lt; strings.length; i--) { // 不合规;
   //...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 for (var i = 0; i &lt; strings.length; i++) {
   //...
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/zYEzAg">CERT, MSC54-J.</a> - Avoid inadvertent wrapping of loop counters </li>
 </ul>

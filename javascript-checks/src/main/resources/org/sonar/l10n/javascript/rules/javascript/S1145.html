@@ -1,31 +1,31 @@
-<p><code>if</code> statements with conditions that are always false have the effect of making blocks of code non-functional. <code>if</code>
-statements with conditions that are always true are completely redundant, and make the code less readable.</p>
-<p>There are three possible causes for the presence of such code: </p>
+<p><code>if</code>语句的条件始终为false，则会使代码块失去功能。<code>if</code>
+语句的条件始终为true，则完全是冗余的，这会降低代码的可读性。</p>
+<p>出现这些守则的原因有三: </p>
 <ul>
-  <li> An if statement was changed during debugging and that debug code has been committed. </li>
-  <li> Some value was left unset. </li>
-  <li> Some logic is not doing what the programmer thought it did. </li>
+  <li>调试期间更改了if语句，并且提交了调试代码。 </li>
+  <li> 有些值没有设置。 </li>
+  <li>有些逻辑并没有做程序员认为它做的事情。</li>
 </ul>
-<p>In any of these cases, unconditional <code>if</code> statements should be removed.</p>
-<h2>Noncompliant Code Example</h2>
+<p>在这些情况中， 无条件<code>if</code> 语句应该被删除。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-if (true) {  // Noncompliant
+if (true) {  // 不合规
   doSomething();
 }
 ...
-if (false) {  // Noncompliant
+if (false) {  // 不合规
   doSomethingElse();
 }
 
-if (!options || options === true) { doThirdThing(); }  // Noncompliant; always true
+if (!options || options === true) { doThirdThing(); }  // 不合规; 总是为 true
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 doSomething();
 
 doThirdThing();
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> <a href="http://cwe.mitre.org/data/definitions/489.html">MITRE, CWE-489</a> - Leftover Debug Code </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/570.html">MITRE, CWE-570</a> - Expression is Always False </li>
@@ -33,6 +33,6 @@ doThirdThing();
   <li> MISRA C:2004, 13.7 - Boolean operations whose results are invariant shall not be permitted. </li>
   <li> MISRA C:2012, 14.3 - Controlling expressions shall not be invariant </li>
 </ul>
-<h2>Deprecated</h2>
-<p>This rule is deprecated; use {rule:javascript:S2583} instead.</p>
+<h2>弃用</h2>
+<p>这条规则是不宜用的;使用 {rule:javascript:S2583} 。</p>
 

@@ -43,7 +43,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2234")
 public class MisorderedParameterListCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE_FORMAT = "Arguments to %s have the same names but not the same order as the function parameters.";
+  private static final String MESSAGE_FORMAT = "%s 的参数与函数参数具有相同的名称，但顺序不同。";
 
   @Override
   public void visitCallExpression(CallExpressionTree callExpression) {

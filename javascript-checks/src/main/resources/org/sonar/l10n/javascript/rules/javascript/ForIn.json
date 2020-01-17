@@ -1,5 +1,5 @@
 {
-  "title": "\"for...in\" loops should filter properties before acting on them",
+  "title": "\"for...in\" 循环应该在作用于属性之前过滤它们",
   "type": "BUG",
   "status": "ready",
   "remediation": {

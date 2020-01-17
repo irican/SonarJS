@@ -1,5 +1,5 @@
 {
-  "title": "\"eval\" and \"arguments\" should not be bound or assigned",
+  "title": "不应该绑定或分配\"eval\" 和 \"arguments\" ",
   "type": "BUG",
   "status": "deprecated",
   "remediation": {

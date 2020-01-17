@@ -46,7 +46,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "CommentedCode")
 public class CommentedCodeCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Remove this commented out code.";
+  private static final String MESSAGE = "删除注释代码。";
   private static final JavaScriptCommentAnalyser COMMENT_ANALYSER = new JavaScriptCommentAnalyser();
   private static final ActionParser<Tree> PARSER = JavaScriptParserBuilder.createParser();
 

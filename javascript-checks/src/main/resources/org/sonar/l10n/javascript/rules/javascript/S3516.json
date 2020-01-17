@@ -1,5 +1,5 @@
 {
-  "title": "Function returns should not be invariant",
+  "title": "函数返回值不应该是不变的",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

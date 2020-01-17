@@ -1,26 +1,24 @@
-<p>The debugger statement can be placed anywhere in procedures to suspend execution. Using the debugger statement is similar to setting a breakpoint
-in the code. By definition such statement must absolutely be removed from the source code to prevent any unexpected behavior or added vulnerability to
-attacks in production.</p>
-<h2>Noncompliant Code Example</h2>
+<p>调试器语句可以放在过程中的任何位置以暂停执行。使用debugger语句类似于在代码中设置断点。
+根据定义，必须从源代码中删除这样的语句，以防止在生产中出现任何意外行为或添加对攻击的漏洞。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 for (i = 1; i&lt;5; i++) {
-  // Print i to the Output window.
+  // 将i打印到输出窗口。
   Debug.write("loop index is " + i);
-  // Wait for user to resume.
+  // 等待用户恢复。
   debugger;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 for (i = 1; i&lt;5; i++) {
-  // Print i to the Output window.
+  // 将i打印到输出窗口。
   Debug.write("loop index is " + i);
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
-  <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A3-Sensitive_Data_Exposure">OWASP Top 10 2017 Category A3</a> - Sensitive Data Exposure
-  </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/489.html">MITRE, CWE-489</a> - Leftover Debug Code </li>
+  <li> OWASP Top 10 2017 Category A3 - Sensitive Data Exposure </li>
 </ul>
 

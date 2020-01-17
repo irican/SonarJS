@@ -1,5 +1,5 @@
 {
-  "title": "Variables should be declared with \"let\" or \"const\"",
+  "title": "变量应该用\"let\"或\"const\"声明",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

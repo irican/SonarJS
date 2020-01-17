@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "Parentheses")
 public class ParenthesesCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove those useless parentheses.";
+  private static final String MESSAGE = "删除那些无用的括号。";
 
 
   @Override

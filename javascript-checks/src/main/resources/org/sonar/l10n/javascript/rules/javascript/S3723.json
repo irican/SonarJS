@@ -1,5 +1,5 @@
 {
-  "title": "Trailing commas should be used",
+  "title": "应该使用尾随逗号",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

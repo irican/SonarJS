@@ -1,5 +1,5 @@
 {
-  "title": "Bitwise operators should not be used in boolean contexts",
+  "title": "位运算符不应在布尔上下文中使用",
   "type": "BUG",
   "status": "ready",
   "remediation": {

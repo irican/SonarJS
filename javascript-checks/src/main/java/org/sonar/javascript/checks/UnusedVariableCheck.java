@@ -38,9 +38,9 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "UnusedVariable")
 public class UnusedVariableCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE_FOR_VARIABLE = "Remove the declaration of the unused '%s' variable.";
+  private static final String MESSAGE_FOR_VARIABLE = "删除未使用的'%s'变量的声明。";
   
-  private static final String MESSAGE_FOR_FUNCTION = "Remove unused function '%s'.";
+  private static final String MESSAGE_FOR_FUNCTION = "删除未使用的function函数'%s'。";
 
   private Set<Symbol> ignoredSymbols;
 

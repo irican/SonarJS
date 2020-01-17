@@ -1,5 +1,5 @@
 {
-  "title": "Object literal syntax should be used",
+  "title": "应该使用对象文本语法",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

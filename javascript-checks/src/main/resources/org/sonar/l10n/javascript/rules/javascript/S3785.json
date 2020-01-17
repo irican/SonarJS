@@ -1,5 +1,5 @@
 {
-  "title": "\"in\" should not be used with primitive types",
+  "title": "\“in”不应该与原始类型一起使用",
   "type": "BUG",
   "status": "ready",
   "remediation": {

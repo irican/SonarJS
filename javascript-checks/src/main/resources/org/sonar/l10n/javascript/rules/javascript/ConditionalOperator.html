@@ -1,13 +1,12 @@
-<p>While the ternary operator is pleasingly compact, its use can make code more difficult to read. It should therefore be avoided in favor of the more
-verbose <code>if</code>/<code>else</code> structure.</p>
-<h2>Noncompliant Code Example</h2>
+<p>虽然三元运算符非常紧凑，但它的使用可能使代码更难以阅读。因此，应该避免使用更冗长的 <code>if</code>/<code>else</code> 结构。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function foo(a) {
-  var b = (a === 'A') ? 'is A' : 'is not A'; // Noncompliant
+  var b = (a === 'A') ? 'is A' : 'is not A'; // 不合规
   // ...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function foo(a) {
   var b;

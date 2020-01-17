@@ -1,5 +1,5 @@
 {
-  "title": "Non-existent properties should not be read",
+  "title": "不存在的属性不应该被读取",
   "type": "BUG",
   "status": "ready",
   "remediation": {

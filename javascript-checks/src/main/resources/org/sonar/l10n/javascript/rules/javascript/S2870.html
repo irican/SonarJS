@@ -1,24 +1,23 @@
-<p>The <code>delete</code> operator can be used to remove a property from any object. Arrays are objects, so the <code>delete</code> operator can be
-used here too, but if it is, a hole will be left in the array because the indexes/keys won't be shifted to reflect the deletion. </p>
-<p>The proper method for removing an element at a certain index would be:</p>
+<p>可以使用<code>delete</code>操作符从任何对象中删除属性。数组是对象，所以这里也可以使用<code>delete</code>操作符，但是如果是，数组中就会留下一个洞，因为索引/键不会移动来反映删除。 </p>
+<p>删除某一指数项的适当方法如下:</p>
 <ul>
   <li> <code>Array.prototype.splice</code> - add/remove elements from the array </li>
   <li> <code>Array.prototype.pop</code> - add/remove elements from the end of the array </li>
   <li> <code>Array.prototype.shift</code> - add/remove elements from the beginning of the array </li>
 </ul>
-<h2>Noncompliant Code Example</h2>
+<h2>不合规的代码示例</h2>
 <pre>
 var myArray = ['a', 'b', 'c', 'd'];
 
-delete myArray[2];  // Noncompliant. myArray =&gt; ['a', 'b', undefined, 'd']
-console.log(myArray[2]); // expected value was 'd' but output is undefined
+delete myArray[2];  // 不合规. myArray =&gt; ['a', 'b', undefined, 'd']
+console.log(myArray[2]); // 期望值为“d”，但输出未定义
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var myArray = ['a', 'b', 'c', 'd'];
 
 // removes 1 element from index 2
 removed = myArray.splice(2, 1);  // myArray =&gt; ['a', 'b', 'd']
-console.log(myArray[2]); // outputs 'd'
+console.log(myArray[2]); // 输出 'd'
 </pre>
 

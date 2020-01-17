@@ -1,24 +1,22 @@
-<p>When a non-existent variable is referenced a <code>ReferenceError</code> is raised.</p>
-<p>Due to the dynamic nature of JavaScript this can happen in a number of scenarios:</p>
+<p>当引用一个不存在的变量时，会引发一个<code>ReferenceError</code>。</p>
+<p>由于JavaScript的动态特性，这可能发生在许多场景中:</p>
 <ul>
-  <li> When typo was made in a symbol's name. </li>
-  <li> When using variable declared with <code>let</code> or <code>const</code> before declaration (unlike <code>var</code>-declarations, they are not
-  hoisted to the top of the scope). </li>
-  <li> Due to confusion with scopes of <code>let</code>- and <code>const</code>-declarations (they have block scope, unlike
-  <code>var</code>-declarations, having function scope). </li>
-  <li> When accessing a property in the wrong scope (e.g. forgetting to specify <code>this.</code>). </li>
+  <li> 在符号名称中键入错误时。 </li>
+  <li> 当使用声明前使用<code>let</code>或<code>const</code>声明的变量时(不像<code>var</code>-declaration，它们不会被提升到作用域的顶部)。 </li>
+  <li> 由于混淆了<code>let</code>-和<code>const</code>-声明的作用域(它们具有块作用域，不同于<code>var</code>-声明，它们具有函数作用域)。 </li>
+  <li> 当访问错误范围内的属性时(例如忘记指定<code>this.</code>)。</li>
 </ul>
-<p>This rule does not raise issues on global variables which are defined with <code>sonar.javascript.globals</code> and
-<code>sonar.javascript.environments</code> properties.</p>
-<h2>Noncompliant Code Example</h2>
+<p>此规则不会对使用 <code>sonar.javascript.globals</code>和
+<code>sonar.javascript.environments</code> 属性定义的全局变量产生问题。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var john = {
   firstName: "john",
-  show: function() { console.log(firstName); } // Noncompliant: firstName is not defined
+  show: function() { console.log(firstName); } // 不合规: 没有定义firstName
 }
 john.show();
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var john = {
   firstName: "john",

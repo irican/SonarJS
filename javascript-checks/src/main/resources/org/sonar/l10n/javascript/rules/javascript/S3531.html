@@ -1,13 +1,12 @@
-<p>A generator without a <code>yield</code> statement is at best confusing, and at worst a bug in your code, since the iterator produced by your code
-will always be empty. </p>
-<h2>Noncompliant Code Example</h2>
+<p>如果生成器没有<code>yield</code>语句，那么往好里说就是令人困惑的，往坏里说就是代码中的bug，因为代码生成的迭代器总是空的。 </p>
+<h2>不合规的代码示例</h2>
 <pre>
-function* myGen(a, b) {  // Noncompliant
+function* myGen(a, b) {  // 不合规
   let answer = 0;
   answer += a * b;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function* myGen(a, b) {
   let answer = 0;

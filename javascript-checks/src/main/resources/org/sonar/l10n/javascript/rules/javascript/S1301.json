@@ -1,5 +1,5 @@
 {
-  "title": "\"switch\" statements should have at least 3 \"case\" clauses",
+  "title": "\"switch\" 语句应该至少有3个 \"case\" 子句",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
@@ -7,7 +7,7 @@
     "constantCost": "5min"
   },
   "tags": [
-    "based-on-misra",
+    "misra",
     "bad-practice"
   ],
   "defaultSeverity": "Minor",

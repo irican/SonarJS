@@ -1,14 +1,13 @@
-<p>A function that grows too large tends to aggregate too many responsibilities.</p>
-<p>Such functions inevitably become harder to understand and therefore harder to maintain. </p>
-<p>Above a specific threshold, it is strongly advised to refactor into smaller functions which focus on well-defined tasks.</p>
-<p>Those smaller functions will not only be easier to understand, but also probably easier to test.</p>
-<h2>Exceptions</h2>
-<p>This function ignores Immediately Invoked Function Expressions (IIFE), which are functions that are created and invoked without ever being assigned
-a name.</p>
+<p>一个函数增长得太大，往往会聚集太多的职责。</p>
+<p>这些函数不可避免地变得更难理解，因此也更难维护。 </p>
+<p>在特定阈值以上，强烈建议重构为更小的函数，这些函数专注于定义良好的任务。</p>
+<p>这些较小的函数不仅更容易理解，而且可能更容易测试。</p>
+<h2>例外</h2>
+<p>此函数忽略立即调用的函数表达式(IIFE)，这些函数是在没有分配名称的情况下创建和调用的。</p>
 <pre>
-(function () { // Ignored by this rule
+(function () { // 被这条规则忽略
 
-  function open() {  // Classic function declaration; not ignored
+  function open() {  // 经典函数声明;不忽略
     // ...
   }
 

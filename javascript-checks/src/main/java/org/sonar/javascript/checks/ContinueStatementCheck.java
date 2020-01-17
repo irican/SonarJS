@@ -26,7 +26,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "ContinueStatement")
 public class ContinueStatementCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this \"continue\" statement.";
+  private static final String MESSAGE = "删除此 \"continue\" 语句。";
 
   @Override
   public void visitContinueStatement(ContinueStatementTree tree) {

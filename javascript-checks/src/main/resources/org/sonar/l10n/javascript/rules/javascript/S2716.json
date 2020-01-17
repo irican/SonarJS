@@ -1,5 +1,5 @@
 {
-  "title": "Universal selectors should not be used",
+  "title": "不应该使用通用选择器",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

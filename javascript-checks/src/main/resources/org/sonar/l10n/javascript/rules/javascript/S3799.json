@@ -1,5 +1,5 @@
 {
-  "title": "Destructuring patterns should not be empty",
+  "title": "销毁模式不应为空",
   "type": "BUG",
   "status": "ready",
   "remediation": {

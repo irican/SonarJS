@@ -51,7 +51,7 @@ import static org.sonar.plugins.javascript.api.tree.Tree.Kind.PLUS_ASSIGNMENT;
 @Rule(key = "S3760")
 public class NonNumberInArithmeticExpressionCheck extends AbstractAnyPathSeCheck {
 
-  private static final String MESSAGE = "Convert this operand into a number.";
+  private static final String MESSAGE = "将此操作数转换为数字";
 
   private static final Kind[] UNARY_KINDS = {
     Kind.UNARY_MINUS,

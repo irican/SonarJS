@@ -1,5 +1,5 @@
 {
-  "title": "Named function expressions should not be used",
+  "title": "不应该使用命名函数表达式",
   "type": "BUG",
   "status": "ready",
   "remediation": {

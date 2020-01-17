@@ -1,5 +1,5 @@
 {
-  "title": "Only \"while\", \"do\" and \"for\" statements should be labelled",
+  "title": "只有 \"while\", \"do\" 和 \"for\" 语句应该被标记",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

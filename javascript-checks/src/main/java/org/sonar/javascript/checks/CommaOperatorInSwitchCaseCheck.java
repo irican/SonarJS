@@ -34,7 +34,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3616")
 public class CommaOperatorInSwitchCaseCheck extends DoubleDispatchVisitorCheck {
   
-  private static final String MESSAGE = "Explicitly specify %d separate cases that fall through; currently this case clause only works for \"%s\".";
+  private static final String MESSAGE = "明确指定 %d 个失败的单独案例; 当前，此case子句仅适用于 \"%s\"。";
   
   @Override
   public void visitCaseClause(CaseClauseTree tree) {

@@ -32,13 +32,13 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "TrailingComment")
 public class TrailingCommentCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Move this trailing comment on the previous empty line.";
+  private static final String MESSAGE = "将此尾随注释移到上一个空白行。";
 
   private static final String DEFAULT_LEGAL_COMMENT_PATTERN = "^//\\s*+[^\\s]++$";
 
   @RuleProperty(
     key = "legalCommentPattern",
-    description = "Pattern for text of trailing comments that are allowed.",
+    description = "被允许的尾随注释文本的模式。",
     defaultValue = DEFAULT_LEGAL_COMMENT_PATTERN)
   private String legalCommentPattern = DEFAULT_LEGAL_COMMENT_PATTERN;
 

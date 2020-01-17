@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S3504")
 public class VarDeclarationCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Replace \"var\" with \"let\" or \"const\"";
+  private static final String MESSAGE = "将\"var\" 替换为 \"let\" 或 \"const\"";
 
   @Override
   public Set<Kind> nodesToVisit() {

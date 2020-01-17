@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3972")
 public class SameLineConditionalCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Move this \"if\" to a new line or add the missing \"else\".";
+  private static final String MESSAGE = "将此\"if\"移至新行或添加缺少的\"else\"。";
 
   @Override
   public void visitModule(ModuleTree tree) {

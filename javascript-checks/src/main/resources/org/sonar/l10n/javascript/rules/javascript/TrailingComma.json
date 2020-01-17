@@ -1,6 +1,6 @@
 {
-  "title": "Trailing commas should not be used",
-  "type": "CODE_SMELL",
+  "title": "不应该使用尾随逗号",
+  "type": "BUG",
   "status": "ready",
   "remediation": {
     "func": "Constant\/Issue",

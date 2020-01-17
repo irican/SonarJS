@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3533")
 public class NonStandardImportCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use a standard \"import\" statement instead of \"%s(...)\".";
+  private static final String MESSAGE = "使用标准的 \"import\" 语句代替 \"%s(...)\".";
 
   private static final Set<String> AMD_IMPORT_FUNCTIONS = ImmutableSet.of("require", "define");
   private static final String COMMON_JS_IMPORT_FUNCTION = "require";

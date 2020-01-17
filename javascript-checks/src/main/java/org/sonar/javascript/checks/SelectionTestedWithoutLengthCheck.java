@@ -28,7 +28,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2769")
 public class SelectionTestedWithoutLengthCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use the \"length\" property to see whether this selection contains elements.";
+  private static final String MESSAGE = "使用\"length\" 属性查看此选择是否包含元素。";
 
   @Override
   public void visitIfStatement(IfStatementTree tree) {

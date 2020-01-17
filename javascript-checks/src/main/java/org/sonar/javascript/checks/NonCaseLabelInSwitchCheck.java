@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S1219")
 public class NonCaseLabelInSwitchCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Remove this misleading \"%s\" label.";
+  private static final String MESSAGE = "删除此误导性的 \"%s\" 标签";
   private Deque<Integer> stack = new ArrayDeque<>();
 
   @Override

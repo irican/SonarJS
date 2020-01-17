@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.visitors.FileIssue;
 @Rule(key = "MissingNewlineAtEndOfFile")
 public class MissingNewlineAtEndOfFileCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Add a new line at the end of this file.";
+  private static final String MESSAGE = "在此文件的末尾添加新行。";
 
   @Override
   public void visitScript(ScriptTree tree) {

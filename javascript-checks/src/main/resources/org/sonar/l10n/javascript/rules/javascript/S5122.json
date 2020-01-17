@@ -1,5 +1,5 @@
 {
-  "title": "Enabling Cross-Origin Resource Sharing is security-sensitive",
+  "title": "启用跨源资源共享是安全敏感的",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "tags": [
@@ -8,8 +8,7 @@
     "sans-top25-porous"
   ],
   "standards": [
-    "CWE",
-    "OWASP Top 10"
+    "CWE"
   ],
   "defaultSeverity": "Minor",
   "ruleSpecification": "RSPEC-5122",
@@ -19,9 +18,6 @@
     "CWE": [
       346,
       942
-    ],
-    "OWASP": [
-      "A6"
     ]
   }
 }

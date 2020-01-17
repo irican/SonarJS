@@ -1,5 +1,5 @@
 {
-  "title": "Array-mutating methods should not be used misleadingly",
+  "title": "不应该错误地使用数组变异方法",
   "type": "BUG",
   "status": "ready",
   "remediation": {

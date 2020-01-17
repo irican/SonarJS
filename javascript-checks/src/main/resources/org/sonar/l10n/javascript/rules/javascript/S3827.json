@@ -1,5 +1,5 @@
 {
-  "title": "Non-existent variables should not be referenced",
+  "title": "不应该引用不存在的变量",
   "type": "BUG",
   "status": "ready",
   "remediation": {

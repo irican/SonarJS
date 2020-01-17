@@ -1,5 +1,5 @@
 {
-  "title": "Callbacks of array methods should have return statements",
+  "title": "数组方法的回调应该有返回语句",
   "type": "BUG",
   "status": "ready",
   "remediation": {

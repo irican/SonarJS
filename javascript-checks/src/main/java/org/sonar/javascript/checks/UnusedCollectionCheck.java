@@ -45,7 +45,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S4030")
 public class UnusedCollectionCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Either use this collection's contents or remove the collection.";
+  private static final String MESSAGE = "使用此收藏集的内容或删除该收藏集。";
 
   private static final Set<String> COLLECTION_CONSTRUCTORS = ImmutableSet.of(
     "Array",

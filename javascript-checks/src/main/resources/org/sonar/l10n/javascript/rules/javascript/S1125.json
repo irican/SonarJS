@@ -1,5 +1,5 @@
 {
-  "title": "Boolean literals should not be used in comparisons",
+  "title": "不应该在比较中使用布尔文字",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

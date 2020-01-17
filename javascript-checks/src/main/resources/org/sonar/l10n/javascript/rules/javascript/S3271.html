@@ -1,16 +1,14 @@
-<p>Session storage and local storage are HTML 5 features which allow developers to easily store megabytes of data client-side, as opposed to the 4Kb
-cookies can accommodate. While useful to speed applications up on the client side, it can be dangerous to store sensitive information this way because
-the data is not encrypted by default and any script on the page may access it.</p>
-<p>This rule raises an issue when the <code>localStorage</code> and <code>sessionStorage</code> API's are used.</p>
-<h2>Noncompliant Code Example</h2>
+<p>会话存储和本地存储是HTML 5的特性，它允许开发人员轻松地在客户端存储兆字节的数据，而不是4Kb的cookie。虽然以这种方式存储敏感信息有助于加快客户端应用程序的速度，但以这种方式存储敏感信息可能是危险的，
+因为默认情况下数据没有加密，页面上的任何脚本都可能访问它。</p>
+<p>当使用<code>localStorage</code>和<code>sessionStorage</code> API时，该规则会引发一个问题。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-localStorage.setItem("login", login); // Noncompliant
-sessionStorage.setItem("sessionId", sessionId); // Noncompliant
+localStorage.setItem("login", login); // 不合规
+sessionStorage.setItem("sessionId", sessionId); // 不合规
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
-  <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A3-Sensitive_Data_Exposure">OWASP Top 10 2017 Category A3</a> - Sensitive Data Exposure
-  </li>
+  <li> OWASP Top 10 2017 Category A3 - Sensitive Data Exposure </li>
   <li> <a href="https://dl.packetstormsecurity.net/papers/attack/HTML5AttackVectors_RafayBaloch_UPDATED.pdf">Packet Storm Security</a> - HTML 5 Modern
   Day Attack And Defence Vectors </li>
 </ul>

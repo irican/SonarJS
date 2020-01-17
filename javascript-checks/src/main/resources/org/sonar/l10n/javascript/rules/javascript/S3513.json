@@ -1,5 +1,5 @@
 {
-  "title": "\"arguments\" should not be accessed directly",
+  "title": "\"arguments\" 不应被直接访问",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

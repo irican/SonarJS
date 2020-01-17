@@ -37,7 +37,7 @@ public class ExcessiveParameterListCheck extends DoubleDispatchVisitorCheck {
 
   @RuleProperty(
     key = "maximumFunctionParameters",
-    description = "The maximum authorized number of parameters",
+    description = "可授权参数的数量达到最大值",
     defaultValue = "" + DEFAULT_MAXIMUM_FUNCTION_PARAMETERS)
   private int maximumFunctionParameters = DEFAULT_MAXIMUM_FUNCTION_PARAMETERS;
 
@@ -74,7 +74,7 @@ public class ExcessiveParameterListCheck extends DoubleDispatchVisitorCheck {
     if (numberOfParameters > maximumFunctionParameters) {
       addIssue(
         tree,
-        "Function has " + numberOfParameters + " parameters which is greater than " + maximumFunctionParameters + " authorized.");
+        "函数的 " + numberOfParameters + " 参数大于最大授权 " + maximumFunctionParameters + "参数");
     }
   }
 

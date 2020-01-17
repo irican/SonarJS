@@ -1,5 +1,5 @@
 {
-  "title": "Property names should not be duplicated within a class or object literal ",
+  "title": "属性名不应在类或对象文本中复制 ",
   "type": "BUG",
   "status": "ready",
   "remediation": {

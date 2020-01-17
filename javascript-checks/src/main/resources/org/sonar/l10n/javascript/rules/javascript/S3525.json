@@ -1,5 +1,5 @@
 {
-  "title": "Class methods should be used instead of \"prototype\" assignments",
+  "title": "应该使用类方法而不是“prototype”赋值",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

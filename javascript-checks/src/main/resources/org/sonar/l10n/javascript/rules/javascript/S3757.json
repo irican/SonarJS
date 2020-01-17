@@ -1,5 +1,5 @@
 {
-  "title": "Arithmetic operations should not result in \"NaN\"",
+  "title": "算术运算不应该导致\"NaN\"",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

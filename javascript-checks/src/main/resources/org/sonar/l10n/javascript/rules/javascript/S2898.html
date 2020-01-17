@@ -1,6 +1,4 @@
-<p>While <code>:&lt;element_type&gt;</code> and <code>[type="&lt;element_type&gt;"]</code> can both be used in jQuery to select elements by their
-type, <code>[type="&lt;element_type&gt;"]</code> is far faster because it can take advantage of the native DOM <code>querySelectorAll()</code> method
-in modern browsers. </p>
+<p>虽然<code>:&lt;element_type&gt;</code> 和 <code>[type="&lt;element_type&gt;"]</code> 都可以在jQuery中使用它们的类型来选择元素，但是,<code>[type="&lt;element_type&gt;"]</code> 要快得多，因为它可以利用现代浏览器中的原生DOM <code>querySelectorAll()</code> 方法
 <p>This rule raises an issue when following selectors are used:</p>
 <ul>
   <li> <code>:checkbox</code> </li>
@@ -11,12 +9,12 @@ in modern browsers. </p>
   <li> <code>:reset</code> </li>
   <li> <code>:text</code> </li>
 </ul>
-<h2>Noncompliant Code Example</h2>
+<h2>不合规的代码示例</h2>
 <pre>
-var input = $( "form input:radio" ); // Noncompliant
+var input = $( "form input:radio" ); // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案 </h2>
 <pre>
-var input = $( "form input[type=radio]" ); // Compliant
+var input = $( "form input[type=radio]" ); // 合规
 </pre>
 

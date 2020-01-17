@@ -1,20 +1,19 @@
-<p>ECMAScript 2015 added the ability to use template literals instead of concatenation. Since their use is clearer and more concise, they are
-preferred in environments that support ECMAScript 2015.</p>
-<p>This rule raises an issue when a string is created from the result of two or more concatenations.</p>
-<h2>Noncompliant Code Example</h2>
+<p>ECMAScript 2015增加了使用模板文字而不是连接的功能。因为它们的使用更清晰、更简洁，所以在支持ECMAScript 2015的环境中更受欢迎。</p>
+<p>当由两个或多个连接的结果创建字符串时，此规则会引发问题。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function sayHello(name) {
-  console.log("hello " + name);  // ignored
+  console.log("hello " + name);  // 忽略
 }
 
 function madLib(verb, noun) {
-  console.log("I really " + verb + " one or two " + noun);  // Noncompliant
+  console.log("I really " + verb + " one or two " + noun);  // 不合规
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function sayHello(name) {
-  console.log(`hello ${name}`);  // no issue raised before, but this is better
+  console.log(`hello ${name}`);  // 之前没有提出过任何问题，但现在好多了
 }
 
 function madLib(verb, noun) {

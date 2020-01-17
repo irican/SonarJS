@@ -31,7 +31,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S106")
 public class ConsoleLoggingCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Replace this usage of console.%s by a logger.";
+  private static final String MESSAGE = "用记录器代替 console.%s 的用法。";
 
   private static final Set<String> LOG_METHODS = ImmutableSet.of("log", "warn", "error");
 

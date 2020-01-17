@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2814")
 public class RedeclaredSymbolCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Rename \"%s\" as this name is already used in declaration at line %s.";
+  private static final String MESSAGE = "重命名\"%s\"，因为此名称已在%s行的声明中使用。";
 
   @Override
   public void visitScript(ScriptTree tree) {

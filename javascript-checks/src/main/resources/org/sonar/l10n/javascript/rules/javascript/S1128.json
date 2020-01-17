@@ -1,5 +1,5 @@
 {
-  "title": "Unnecessary imports should be removed",
+  "title": "应该删除不必要的导入",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

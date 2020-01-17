@@ -1,12 +1,11 @@
-<p>Shared coding conventions allow teams to collaborate effectively. This rule raises an issue when the use of parentheses with an arrow function does
-not conform to the configured requirements.</p>
-<h2>Noncompliant Code Example</h2>
-<p>With the configured defaults forbidding parentheses</p>
+<p>共享的编码约定允许团队有效地协作。当使用带箭头函数的括号不符合配置要求时，此规则会引发问题。</p>
+<h2>不合规的代码示例</h2>
+<p>配置了禁止括号的默认值</p>
 <pre>
-var foo = (a) =&gt; { /* ... */ };  // Noncompliant; remove parens from arg
-var bar = (a, b) =&gt; { return 0; };  // Noncompliant; remove curly braces from body
+var foo = (a) =&gt; { /* ... */ };  //不合规; 从arg中删除parens
+var bar = (a, b) =&gt; { return 0; };  // 不合规; 从主体中移除花括号
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var foo = a =&gt; { /* ... */ };
 var bar = (a, b) =&gt; 0;

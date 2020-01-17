@@ -1,5 +1,5 @@
 {
-  "name": "Sonar way recommended",
+  "name": "Sonar 建议方式",
   "ruleKeys": [
     "ArrayAndObjectConstructors",
     "AssignmentWithinCondition",

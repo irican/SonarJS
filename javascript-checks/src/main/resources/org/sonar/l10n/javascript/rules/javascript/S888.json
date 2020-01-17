@@ -1,5 +1,5 @@
 {
-  "title": "Equality operators should not be used in \"for\" loop termination conditions",
+  "title": "相等运算符不应在\“for\”循环终止条件中使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
@@ -8,7 +8,7 @@
   },
   "tags": [
     "cwe",
-    "based-on-misra",
+    "misra",
     "cert",
     "suspicious"
   ],

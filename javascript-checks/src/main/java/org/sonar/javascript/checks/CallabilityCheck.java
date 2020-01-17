@@ -31,7 +31,7 @@ import org.sonar.plugins.javascript.api.tree.expression.CallExpressionTree;
 @Rule(key = "S2873")
 public class CallabilityCheck extends AbstractAnyPathSeCheck {
 
-  private static final String MESSAGE = "This expression might have a value which cannot be called; it might not be a function.";
+  private static final String MESSAGE = "该表达式可能具有无法调用的值；否则它可能不是函数。";
 
   @Override
   public void beforeBlockElement(ProgramState currentState, Tree element, ProgramPoint programPoint) {

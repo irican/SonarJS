@@ -29,7 +29,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2123")
 public class UselessIncrementCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this %s or correct the code not to waste it.";
+  private static final String MESSAGE = "删除此 %s 或更正代码以免浪费。";
 
   @Override
   public void visitAssignmentExpression(AssignmentExpressionTree assignment) {

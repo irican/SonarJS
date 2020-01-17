@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "EmptyBlock")
 public class EmptyBlockCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Either remove or fill this block of code.";
+  private static final String MESSAGE = "删除或填充此代码块";
 
   @Override
   public void visitBlock(BlockTree tree) {

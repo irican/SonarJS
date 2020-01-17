@@ -45,12 +45,12 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S2762")
 public class NotStoredSelectionCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Selection \"$( %s )\" is made %s times. It should be stored in a variable and reused.";
+  private static final String MESSAGE = "选项 \"$( %s )\" 已进行 %s次。 应该将其存储在变量中并重新使用。";
   private static final int DEFAULT = 2;
 
   @RuleProperty(
     key = "threshold",
-    description = "Number of allowed repetition before triggering an issue",
+    description = "触发问题之前可允许的重复次数",
     defaultValue = "" + DEFAULT)
   public int threshold = DEFAULT;
 

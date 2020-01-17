@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 public class PostMessageCheck extends DoubleDispatchVisitorCheck {
 
   private static final String POST_MESSAGE = "postMessage";
-  private static final String MESSAGE = "Make sure this cross-domain message is being sent to the intended domain.";
+  private static final String MESSAGE = "确保此跨域消息已发送到目标域。";
 
   @Override
   public void visitCallExpression(CallExpressionTree tree) {

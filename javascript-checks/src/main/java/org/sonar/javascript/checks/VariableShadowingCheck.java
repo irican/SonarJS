@@ -31,7 +31,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S1117")
 public class VariableShadowingCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "\"%s\" hides or potentially hides a variable declared in an outer scope at line %s.";
+  private static final String MESSAGE = "\"%s\"隐藏或可能隐藏在外部作用域中第%s行中声明的变量。";
 
   @Override
   public void visitScript(ScriptTree tree) {

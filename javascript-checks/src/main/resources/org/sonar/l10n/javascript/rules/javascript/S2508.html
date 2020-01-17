@@ -1,15 +1,14 @@
-<p>When using the Backbone.js framework, the names of model attributes should not contain spaces. This is because the Events object accepts
-space-delimited lists of events, so an attributes with spaces in the names could be misinterpreted.</p>
-<h2>Noncompliant Code Example</h2>
+<p>当使用Backbone.js框架时，模型属性的名称不应该包含空格。这是因为Events对象接受以空格分隔的事件列表，因此名称中带有空格的属性可能会被误解。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 Person = Backbone.Model.extend({
         defaults: {
-            'first name': 'Bob',      // Noncompliant
-            'birth date': new Date()  // Noncompliant
+            'first name': 'Bob',      // 不合规
+            'birth date': new Date()  // 不合规
         },
     });
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 Person = Backbone.Model.extend({
         defaults: {

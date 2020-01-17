@@ -56,7 +56,7 @@ import static org.sonar.plugins.javascript.api.tree.Tree.Kind.VAR_DECLARATION;
 @Rule(key = "S888")
 public class EqualInForLoopTerminationCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Replace '%s' operator with one of '<=', '>=', '<', or '>' comparison operators.";
+  private static final String MESSAGE = "将 '%s' 运算符替换为 '<=', '>=', '<', 或 '>' 比较运算符之一。";
 
   @Override
   public void visitForStatement(ForStatementTree tree) {

@@ -1,5 +1,5 @@
 {
-  "title": "Function constructors should not be used",
+  "title": "不应该使用函数构造函数",
   "type": "CODE_SMELL",
   "status": "deprecated",
   "remediation": {

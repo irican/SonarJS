@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "LabelPlacement")
 public class LabelPlacementCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this \"%s\" label.";
+  private static final String MESSAGE = "删除此 \"%s\" 标签";
 
   @Override
   public void visitLabelledStatement(LabelledStatementTree tree) {

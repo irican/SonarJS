@@ -1,32 +1,32 @@
-<p>Jump statements (<code>return</code>, <code>break</code> and <code>continue</code>) and <code>throw</code> expressions move control flow out of the
-current code block. So any statements that come after a jump are dead code.</p>
-<h2>Noncompliant Code Example</h2>
+<p>跳转语句(<code>return</code>, <code>break</code> 和 <code>continue</code>) 和 <code>throw</code>将控制流移出当前代码块。因此，跳转之后的任何语句都是死代码。
+</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function fun(a) {
   var i = 10;
   return i + a;
-  i++;             // Noncompliant; this is never executed
+  i++;             // 不合规; 这是绝对不会执行的
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function fun(int a) {
   var i = 10;
   return i + a;
 }
 </pre>
-<h2>Exceptions</h2>
-<p>This rule ignores unreachable <code>break</code> statements in <code>switch</code> clauses.</p>
+<h2>例外</h2>
+<p>该规则忽略了<code>switch</code>子句中的不可达<code>break</code>语句。</p>
 <pre>
 switch (x) {
   case 42:
      return 43;
-     break;   // Compliant
+     break;   // 合规的
   default:
     doSomething();
 }
 </pre>
-<p>Hoisted variables declarations without initialization are always considered reachable.</p>
+<p>没有初始化的挂起变量声明总是被认为是可访问的。</p>
 <pre>
 function bar() {
   return x = function() {
@@ -35,7 +35,7 @@ function bar() {
   var x;
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2004, 14.1 - There shall be no unreachable code </li>
   <li> MISRA C++:2008, 0-1-1 - A project shall not contain unreachable code </li>

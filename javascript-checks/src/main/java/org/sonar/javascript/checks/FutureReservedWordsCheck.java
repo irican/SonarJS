@@ -28,7 +28,7 @@ import org.sonar.plugins.javascript.api.tree.ScriptTree;
 @Rule(key = "FutureReservedWords")
 public class FutureReservedWordsCheck extends AbstractSymbolNameCheck {
 
-  private static final String MESSAGE = "Rename \"%s\" identifier to prevent potential conflicts with future evolutions of the JavaScript language.";
+  private static final String MESSAGE = "重命名 \"%s\" 标识符，以防止与JavaScript语言的未来版本发生潜在冲突。";
 
   private static final List<String> FUTURE_RESERVED_WORDS = ImmutableList.of(
     "implements",

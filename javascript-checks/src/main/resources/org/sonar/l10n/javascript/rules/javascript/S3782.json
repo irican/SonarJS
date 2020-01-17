@@ -1,5 +1,5 @@
 {
-  "title": "Arguments to built-in functions should match documented types",
+  "title": "内置函数的参数应该匹配文档化的类型",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

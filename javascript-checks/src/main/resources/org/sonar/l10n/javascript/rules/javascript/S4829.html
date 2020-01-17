@@ -1,25 +1,24 @@
-<p>Reading Standard Input is security-sensitive. It has led in the past to the following vulnerabilities:</p>
+<p>读取标准输入是安全敏感的。它在过去导致了以下漏洞:</p>
 <ul>
   <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2337">CVE-2005-2337</a> </li>
   <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11449">CVE-2017-11449</a> </li>
 </ul>
-<p>It is common for attackers to craft inputs enabling them to exploit software vulnerabilities. Thus any data read from the standard input (stdin)
-can be dangerous and should be validated.</p>
-<p>This rule flags code that reads from the standard input.</p>
-<h2>Ask Yourself Whether</h2>
+<p>攻击者通常会精心设计输入，使其能够利用软件漏洞。因此，从标准输入(stdin)读取的任何数据都可能是危险的，应该进行验证。</p>
+<p>此规则标记从标准输入中读取的代码。</p>
+<h2>问问你自己是否</h2>
 <ul>
-  <li> data read from the standard input is not sanitized before being used. </li>
+  <li> 从标准输入中读取的数据在使用之前没有经过过滤。 </li>
 </ul>
-<p>You are at risk if you answered yes to this question.</p>
-<h2>Recommended Secure Coding Practices</h2>
-<p><a href="https://www.owasp.org/index.php/Input_Validation_Cheat_Sheet">Sanitize</a> all data read from the standard input before using it.</p>
-<h2>Questionable Code Example</h2>
+<p>如果你对这个问题的回答是肯定的，那么你就有风险。</p>
+<h2>推荐的安全编码实践</h2>
+<p><a href="https://www.owasp.org/index.php/Input_Validation_Cheat_Sheet">过滤</a> 从标准输入中读取的所有数据，此过程在使用这些数据之前</p>
+<h2>有问题的代码示例</h2>
 <pre>
-// The process object is a global that provides information about, and control over, the current Node.js process
-// All uses of process.stdin are security-sensitive and should be reviewed
+// process对象是一个全局对象，它提供关于当前Node.js进程的信息，并对其进行控制
+// 过程的所有用途。stdin是安全敏感的，应该加以审查
 
 process.stdin.on('readable', () =&gt; {
-	const chunk = process.stdin.read(); // Questionable
+	const chunk = process.stdin.read(); // 有问题的
 	if (chunk !== null) {
 		dosomething(chunk);
 	}
@@ -27,12 +26,12 @@ process.stdin.on('readable', () =&gt; {
 
 const readline = require('readline');
 readline.createInterface({
-	input: process.stdin // Questionable
+	input: process.stdin // 有问题的
 }).on('line', (input) =&gt; {
 	dosomething(input);
 });
 </pre>
-<h2>See:</h2>
+<h2>请参阅:</h2>
 <ul>
   <li> <a href="https://cwe.mitre.org/data/definitions/20.html">MITRE, CWE-20</a> - Improper Input Validation </li>
 </ul>

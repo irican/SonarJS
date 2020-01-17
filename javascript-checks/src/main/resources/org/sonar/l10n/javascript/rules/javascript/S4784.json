@@ -1,14 +1,15 @@
 {
-  "title": "Using regular expressions is security-sensitive",
+  "title": "使用正则表达式是安全敏感的",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "tags": [
     "cwe",
-    "owasp-a1"
+    "owasp-a1",
+    "sans-top25-porous"
   ],
   "standards": [
     "CWE",
-    "OWASP Top 10"
+    "OWASP Top Ten"
   ],
   "defaultSeverity": "Critical",
   "ruleSpecification": "RSPEC-4784",

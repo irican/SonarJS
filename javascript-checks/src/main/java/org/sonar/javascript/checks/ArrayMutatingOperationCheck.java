@@ -37,7 +37,7 @@ public class ArrayMutatingOperationCheck extends AbstractAnyPathSeCheck {
 
   private static final String REVERSE = "reverse";
   private static final String SORT = "sort";
-  private static final String MESSAGE = "Move this array \"%s\" operation to a separate statement.";
+  private static final String MESSAGE = "将此数组 \"%s\" 操作移至单独的语句中";
 
   @Override
   public void beforeBlockElement(ProgramState currentState, Tree element, ProgramPoint programPoint) {

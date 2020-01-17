@@ -1,87 +1,81 @@
-<p>Formatting strings used as SQL queries is security-sensitive. It has led in the past to the following vulnerabilities:</p>
-<p> * <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-9019">CVE-2018-9019</a></p>
-<p> * <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7318">CVE-2018-7318</a></p>
-<p> * <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5611">CVE-2017-5611</a></p>
-<p>SQL queries often need to use a hardcoded SQL string with a dynamic parameter coming from a user request. Formatting a string to add those
-parameters to the request is a bad practice as it can result in an <a href="https://www.owasp.org/index.php/SQL_Injection">SQL injection</a>. The safe
-way to add parameters to a SQL query is to use SQL binding mechanisms.</p>
-<p>This rule flags the execution of SQL queries which are built using formatting of strings, even if there is no injection. This rule does not detect
-SQL injections. The goal is to guide security code reviews and to prevent a common bad practice.</p>
-<p>This rule raises an issue when any of the following NodeJS APIs are used:</p>
+<p>执行SQL查询是安全敏感的。它在过去导致了以下漏洞:</p>
+<ul>
+  <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-9019">CVE-2018-9019</a> </li>
+  <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7318">CVE-2018-7318</a> </li>
+  <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5611">CVE-2017-5611</a> </li>
+</ul>
+<p><a href="https://www.owasp.org/index.php/SQL_Injection">SQL 注入</a> 仍然是十大安全漏洞之一。执行SQL命令的应用程序应该中和这些命令中使用的任何外部提供的值。如果做不到这一点，攻击者可能会将更改查询的输入包括进来，从而执行非预期的命令，或者公开敏感数据。
+应该使用SQL绑定机制，而不是手工清理数据;它们可以自动执行全面的过滤。</p>
+<p>此规则标记SQL查询的执行，这些查询可能容易受到SQL注入的影响。目标是指导安全代码审查。</p>
+<p>当使用以下任何NodeJS api时，此规则会引发一个问题: </p>
 <ul>
   <li> <code>mysql.query()</code> </li>
   <li> <code>mysql2.query()</code> </li>
   <li> <code>pg.query()</code> </li>
   <li> <code>sequelize.query()</code> </li>
 </ul>
-<p>The following formatting methods will raise an issue:</p>
+<h2>问问你自己是否</h2>
 <ul>
-  <li> <code>"string" + "string"</code> concatenation </li>
-  <li> <code>`string ${var}`</code> templates </li>
-  <li> <code>string.concat()</code> </li>
-  <li> <code>string.replace()</code> </li>
+  <li> SQL查询包含来自用户或其他不可信源的任何未经过滤的输入。</li>
 </ul>
-<h2>Ask Yourself Whether</h2>
+<p>如果你对这个问题的回答是肯定的，那么你就有风险。</p>
+<h2>推荐的安全编码实践</h2>
 <ul>
-  <li> the SQL query is built using string formatting technics, such as concatenating variables. </li>
-  <li> some of the values are coming from an untrusted source and are not sanitized. </li>
+  <li>避免使用连接或格式化手动构建查询。如果无论如何都要这样做，那么在构建过程中不要包含用户输入。
+  </li>
+  <li> 尽可能使用 <a href="https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet">参数化查询、准备好的语句或存储过程。</a> </li>
+  <li> ORM框架应该优于原生数据库函数，因为它支持准备好的语句和绑定参数。 </li>
+  <li> 避免在存储过程或函数中执行包含不安全输入的SQL查询。 </li>
+  <li> <a href="https://www.owasp.org/index.php/Input_Validation_Cheat_Sheet">清除</a> 每个不安全输入。 </li>
 </ul>
-<p>You may be at risk if you answered yes to this question.</p>
-<h2>Recommended Secure Coding Practices</h2>
-<ul>
-  <li> Avoid building queries manually using formatting technics. If you do it anyway, do not include user input in this building process. </li>
-  <li> Use <a href="https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet">parameterized queries, prepared statements, or stored
-  procedures</a> whenever possible. </li>
-  <li> You may also use ORM frameworks such as Hibernate which, if used correctly, reduce injection risks. </li>
-  <li> Avoid executing SQL queries containing unsafe input in stored procedures or functions. </li>
-  <li> <a href="https://www.owasp.org/index.php/Input_Validation_Cheat_Sheet">Sanitize</a> every unsafe input. </li>
-</ul>
-<p>You can also reduce the impact of an attack by using a database account with low privileges.</p>
-<h2>Sensitive Code Example</h2>
-<pre>
-// === MySQL ===
-const mysql = require('mysql');
-const mycon = mysql.createConnection({ host: host, user: user, password: pass, database: db });
-mycon.connect(function(err) {
-  mycon.query('SELECT * FROM users WHERE id = ' + userinput, (err, res) =&gt; {}); // Sensitive
-});
-
-// === PostgreSQL ===
-const pg = require('pg');
-const pgcon = new pg.Client({ host: host, user: user, password: pass, database: db });
-pgcon.connect();
-pgcon.query('SELECT * FROM users WHERE id = ' + userinput, (err, res) =&gt; {}); // Sensitive
-</pre>
-<h2>Compliant Solution</h2>
-<pre>
-// === MySQL ===
-const mysql = require('mysql');
-const mycon = mysql.createConnection({ host: host, user: user, password: pass, database: db });
-mycon.connect(function(err) {
-  mycon.query('SELECT name FROM users WHERE id = ?', [userinput], (err, res) =&gt; {});
-});
-
-// === PostgreSQL ===
-const pg = require('pg');
-const pgcon = new pg.Client({ host: host, user: user, password: pass, database: db });
-pgcon.connect();
-pgcon.query('SELECT name FROM users WHERE id = $1', [userinput], (err, res) =&gt; {});
-</pre>
-<h2>Exceptions</h2>
-<p>This rule's current implementation does not follow variables. It will only detect SQL queries which are formatted directly in the function
-call.</p>
+<p>您还可以通过使用低权限的数据库帐户来减少攻击的影响。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 const sql = 'SELECT * FROM users WHERE id = ' + userinput;
-mycon.query(sql, (err, res) =&gt; {}); // Sensitive but no issue is raised.
+
+// === MySQL ===
+const mysql = require('mysql');
+const mycon = mysql.createConnection({ host: host, user: user, password: pass, database: db });
+mycon.connect(function(err) {
+  mycon.query(sql, (err, res) =&gt; {}); // 不合规
+});
+
+// === PostgreSQL ===
+const pg = require('pg');
+const pgcon = new pg.Client({ host: host, user: user, password: pass, database: db });
+pgcon.connect();
+pgcon.query(sql, (err, res) =&gt; {}); // 不合规
 </pre>
-<h2>See</h2>
+<h2>合规的解决方案</h2>
+<pre>
+// === MySQL ===
+const sql = 'SELECT name FROM users WHERE id = ?';
+const mysql = require('mysql');
+const mycon = mysql.createConnection({ host: host, user: user, password: pass, database: db });
+mycon.connect(function(err) {
+  mycon.query(sql, [userinput], (err, res) =&gt; {});
+});
+
+// === PostgreSQL ===
+const sql = 'SELECT name FROM users WHERE id = $1';
+const pg = require('pg');
+const pgcon = new pg.Client({ host: host, user: user, password: pass, database: db });
+pgcon.connect();
+pgcon.query(sql, [userinput], (err, res) =&gt; {});
+</pre>
+<h2>例外</h2>
+<p>如果数据库命令由硬编码字符串定义(没有连接)，则不会引发任何问题。</p>
+<pre>
+pgcon.query('SELECT name FROM users WHERE id = 42', (err, res) =&gt; {});
+</pre>
+<h2>请参阅</h2>
 <ul>
-  <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A1-Injection">OWASP Top 10 2017 Category A1</a> - Injection </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/89">MITRE, CWE-89</a> - Improper Neutralization of Special Elements used in an SQL Command </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/564.html">MITRE, CWE-564</a> - SQL Injection: Hibernate </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/20.html">MITRE, CWE-20</a> - Improper Input Validation </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/943.html">MITRE, CWE-943</a> - Improper Neutralization of Special Elements in Data Query Logic
   </li>
+  <li> OWASP Top 10 2017 Category A1 - Injection </li>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/PgIRAg">CERT, IDS00-J.</a> - Prevent SQL injection </li>
   <li> <a href="https://www.sans.org/top25-software-errors/#cat1">SANS Top 25</a> - Insecure Interaction Between Components </li>
   <li> Derived from FindSecBugs rules <a href="http://h3xstream.github.io/find-sec-bugs/bugs.htm#SQL_INJECTION_JPA">Potential SQL/JPQL Injection

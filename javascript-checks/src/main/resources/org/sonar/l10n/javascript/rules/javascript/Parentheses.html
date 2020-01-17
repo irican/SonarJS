@@ -1,16 +1,15 @@
-<p>The use of parentheses, even those not required to enforce a desired order of operations, can clarify the intent behind a piece of code. But
-redundant pairs of parentheses could be misleading, and should be removed. </p>
-<h2>Noncompliant Code Example</h2>
+<p>圆括号的使用，即使是那些不需要强制执行所需操作顺序的圆括号，也可以阐明一段代码背后的意图。但是多余的括号对可能会误导，应该删除。</p>
+<h2>不合格的代码示例</h2>
 <pre>
-let x = (y / 2 + 1);   //Compliant even if those parenthesis are useless for the compiler
+let x = (y / 2 + 1);   //即使那些括号对编译器毫无用处，也是合规的
 
-if (a &amp;&amp; ((x+y &gt; 0))) {  // Noncompliant
+if (a &amp;&amp; ((x+y &gt; 0))) {  // 不合规
   //...
 }
 
-return ((x + 1));  // Noncompliant
+return ((x + 1));  //不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 let x = (y / 2 + 1);
 

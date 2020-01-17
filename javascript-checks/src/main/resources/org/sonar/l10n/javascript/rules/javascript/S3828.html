@@ -1,6 +1,5 @@
-<p>The <code>yield</code> keyword is used in a generator function to return an <code>IteratorResult</code> to the caller. It has no other purpose, and
-if found outside such a function will raise a <code>ReferenceError</code> because it is then treated as an identifier.</p>
-<h2>Noncompliant Code Example</h2>
+<p>在生成器函数中使用<code>yield</code>关键字向调用者返回一个<code>IteratorResult</code>。它没有其他用途，如果在这样一个函数之外发现它，它将引发一个<code>ReferenceError</code>，因为它随后被视为一个标识符。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function foo() {
   for (var i = 0; i &lt; 5; i++) {
@@ -8,7 +7,7 @@ function foo() {
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function * foo() {
   for (var i = 0; i &lt; 5; i++) {

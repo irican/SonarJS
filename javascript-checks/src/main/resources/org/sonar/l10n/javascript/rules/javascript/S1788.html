@@ -1,22 +1,21 @@
-<p>The ability to define default values for function parameters can make a function easier to use. Default parameter values allow callers to specify
-as many or as few arguments as they want while getting the same functionality and minimizing boilerplate, wrapper code.</p>
-<p>But all function parameters with default values should be declared after the function parameters without default values. Otherwise, it makes it
-impossible for callers to take advantage of defaults; they must re-specify the defaulted values or pass <code>undefined</code> in order to "get to"
-the non-default parameters.</p>
-<h2>Noncompliant Code Example</h2>
+<p>为函数参数定义默认值的能力可以使函数更容易使用。默认参数值允许调用者指定任意多或少的参数，同时获得相同的功能并最小化样板文件和包装器代码。</p>
+<p>但是所有带有默认值的函数参数都应该在没有默认值的函数参数之后声明。
+否则，调用者就不可能利用默认值;它们必须重新指定默认值，或者传递<code>undefined</code>，以便 "get to"
+非默认参数。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-function multiply(a = 1, b) {  // Noncompliant
+function multiply(a = 1, b) {  // 不合规
   return a*b;
 }
 
-var x = multiply(42);  // returns NaN as b is undefined
+var x = multiply(42);  // 返回未定义的NaN
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function multiply(b, a = 1) {
   return a*b;
 }
 
-var x = multiply(42);  // returns 42 as expected
+var x = multiply(42);  // 预期返回42
 </pre>
 

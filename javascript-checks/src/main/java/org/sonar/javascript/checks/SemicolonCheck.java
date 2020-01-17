@@ -42,7 +42,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "Semicolon")
 public class SemicolonCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Add a semicolon at the end of this statement.";
+  private static final String MESSAGE = "在此语句的末尾添加分号。";
 
   private void checkEOS(Tree tree, @Nullable SyntaxToken semicolonToken) {
     if (semicolonToken == null) {

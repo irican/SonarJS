@@ -1,7 +1,7 @@
-<p>Boolean literals should be avoided in comparison expressions <code>==</code> and <code>!=</code> to improve code readability.</p>
-<p>This rule also reports on redundant boolean operations.</p>
-<p><em>Note that this rule requires Node.js to be available during analysis.</em></p>
-<h2>Noncompliant Code Example</h2>
+<p>为了提高代码可读性，在比较表达式 <code>==</code> 和 <code>!=</code> 中应该避免布尔值。</p>
+<p>此规则还报告冗余布尔操作。</p>
+<p><em>注意，此规则要求Node.js在分析期间可用。</em></p>
+<h2>不合规的代码示例</h2>
 <pre>
 let someValue = "0";
 // ...
@@ -10,7 +10,7 @@ if (someValue == true) { /* ... */ }
 if (someBooleanValue != true) { /* ... */ }
 doSomething(!false);
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 if (someValue &amp;&amp; someValue != "0") { /* ... */ }
 if (!someBooleanValue) { /* ... */ }

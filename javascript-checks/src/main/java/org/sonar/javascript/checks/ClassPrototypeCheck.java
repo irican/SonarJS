@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3525")
 public class ClassPrototypeCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Declare a \"%s\" class and move this declaration of \"%s\" into it.";
+  private static final String MESSAGE = "声明一个 \"%s\" 类，并将此 \"%s\" 声明移入该类。";
 
   @Override
   public void visitAssignmentExpression(AssignmentExpressionTree tree) {

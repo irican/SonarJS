@@ -1,20 +1,20 @@
-<p>The comma operator takes two expressions, executes them from left to right and returns the result of the second one. Use of this operator is
-generally detrimental to the readability and reliability of code, and the same effect can be achieved by other means.</p>
-<h2>Noncompliant Code Example</h2>
+<p>逗号操作符接受两个表达式，从左到右执行它们，并返回第二个表达式的结果。
+使用这个操作符通常不利于代码的可读性和可靠性，通过其他方法也可以达到同样的效果。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-i = a += 2, a + b;  // What's the value of i ?
+i = a += 2, a + b;  // i的值是多少?
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 a +=  2;
 i = a + b;
 </pre>
-<h2>Exceptions</h2>
-<p>Use of comma operator is tolerated in initialization and increment expressions of <code>for</code> loops.</p>
+<h2>例外</h2>
+<p>在 <code>for</code> 循环的初始化和递增表达式中，允许使用逗号运算符。</p>
 <pre>
 for(i = 0, j = 5; i &lt; 6; i++, j++) { ... }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2004, 12.10 - The comma operator shall not be used. </li>
   <li> MISRA C++:2008, 5-18-1 - The comma operator shall not be used. </li>

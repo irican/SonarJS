@@ -26,7 +26,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "WithStatement")
 public class WithStatementCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this use of \"with\".";
+  private static final String MESSAGE = "删除对\"with\"的使用";
 
   @Override
   public void visitWithStatement(WithStatementTree tree) {

@@ -1,8 +1,7 @@
-<p>The requirement for a final <code>default</code> clause is defensive programming. The clause should either take appropriate action, or contain a
-suitable comment as to why no action is taken.</p>
-<h2>Noncompliant Code Example</h2>
+<p>最终<code>default</code>子句的要求是防御性编程。该条款应该采取适当的行动，或者包含关于为什么不采取行动的适当评论。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-switch (param) {  //missing default clause
+switch (param) {  //缺少默认子句
   case 0:
     doSomething();
     break;
@@ -12,7 +11,7 @@ switch (param) {  //missing default clause
 }
 
 switch (param) {
-  default: // default clause should be the last one
+  default: // default子句应该是最后一个
     error();
     break;
   case 0:
@@ -23,7 +22,7 @@ switch (param) {
     break;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 switch (param) {
   case 0:
@@ -37,7 +36,7 @@ switch (param) {
     break;
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2004, 15.0 - The MISRA C <em>switch</em> syntax shall be used. </li>
   <li> MISRA C:2004, 15.3 - The final clause of a switch statement shall be the default clause </li>

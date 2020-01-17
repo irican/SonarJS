@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3512")
 public class StringConcatenationCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Convert this concatenation to the use of a template.";
+  private static final String MESSAGE = "将此连接转换为使用模板。";
 
   // with quote symbols
   private static final int MIN_LITERAL_LENGTH = 6;

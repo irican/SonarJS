@@ -1,17 +1,16 @@
-<p>The bitwise operators <code>&amp;</code>, <code>|</code> can be mistaken for the boolean operators <code>&amp;&amp;</code> and <code>||</code>.
+<p>位运算符 <code>&amp;</code>, <code>|</code> 可能会被误认为是布尔运算符 <code>&amp;&amp;</code> 和 <code>||</code>.
 </p>
-<p>This rule raises an issue when <code>&amp;</code> or <code>|</code> is used in a boolean context.</p>
-<h2>Noncompliant Code Example</h2>
+<p>当<code>&amp;</code> 或 <code>|</code> 在布尔上下文中使用时，该规则会引发一个问题。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-if (a &amp; b) { ... } // Noncompliant; &amp; used in error
+if (a &amp; b) { ... } // 不合规; &amp; 使用错误
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 if (a &amp;&amp; b) { ... }
 </pre>
-<h2>Exceptions</h2>
-<p>When a file contains other bitwise operations, (<code>^</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;&gt;</code>, <code>&gt;&gt;</code>,
-<code>~</code>, <code>&amp;=</code>, <code>^=</code>, <code>|=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code>, <code>&gt;&gt;&gt;=</code> and
-<code>&amp;</code> or <code>|</code> used with a numeric literal as the right operand) all issues in the file are ignored, because it is evidence that
-bitwise operations are truly intended in the file.</p>
+<h2>例外</h2>
+<p>当一个文件包含其他位操作时，(<code>^</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;&gt;</code>, <code>&gt;&gt;</code>,
+<code>~</code>, <code>&amp;=</code>, <code>^=</code>, <code>|=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code>, <code>&gt;&gt;&gt;=</code> 和
+<code>&amp;</code> 或 <code>|</code> 与数字型文本一起用作正确的操作数) 文件中的所有问题都将被忽略，因为这表明文件中确实有意使用位操作。</p>
 

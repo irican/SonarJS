@@ -28,7 +28,7 @@ import org.sonar.plugins.javascript.api.tree.expression.ExpressionTree;
 @Rule(key = "S2589")
 public class GratuitousConditionCheck extends AbstractAlwaysTrueOrFalseConditionCheck {
 
-  private static final String MESSAGE = "Refactor this code so that this expression does not always evaluate to %s.";
+  private static final String MESSAGE = "重构此代码，以使该表达式并非始终为 %s";
 
   @Override
   protected void redundantCondition(Tree condition, boolean isTruthy) {

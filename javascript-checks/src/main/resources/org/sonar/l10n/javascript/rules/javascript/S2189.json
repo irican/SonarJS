@@ -1,5 +1,5 @@
 {
-  "title": "Loops should not be infinite",
+  "title": "循环不应该是无限的",
   "type": "BUG",
   "status": "ready",
   "remediation": {

@@ -1,5 +1,4 @@
-<p>The following words may be used as keywords in future evolutions of the language, so using them as identifiers should be avoided to allow an easier
-adoption of those potential future versions:</p>
+<p>在未来的语言发展过程中，可以使用以下单词作为关键字，因此应避免使用它们作为标识符，以便更容易地采用这些潜在的未来版本:</p>
 <ul>
   <li> <code>await</code> </li>
   <li> <code>class</code> </li>
@@ -19,14 +18,13 @@ adoption of those potential future versions:</p>
   <li> <code>super</code> </li>
   <li> <code>yield</code> </li>
 </ul>
-<p>Use of these words as identifiers would produce an error in JavaScript <code>strict</code> mode code.</p>
-<h2>Noncompliant Code Example</h2>
+<p>使用这些单词作为标识符会在JavaScript <code>strict</code> 模式代码中产生错误。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-var package = document.getElementsByName("foo"); // Noncompliant
-var someData = { package: true };                 // Compliant, as it is not used as an identifier here
-</pre>
-<h2>Compliant Solution</h2>
+var package = document.getElementsByName("foo"); // 不合规
+var someData = { package: true };                 // 合规,因为这里不使用它作为标识符
+<h2>合规的解决方案</h2>
 <pre>
-var elements = document.getElementsByName("foo"); // Compliant
+var elements = document.getElementsByName("foo"); // 合规
 </pre>
 

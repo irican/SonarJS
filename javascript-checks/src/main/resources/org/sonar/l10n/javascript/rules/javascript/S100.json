@@ -1,5 +1,5 @@
 {
-  "title": "Function and method names should comply with a naming convention",
+  "title": "函数和方法的名称应该符合命名约定",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

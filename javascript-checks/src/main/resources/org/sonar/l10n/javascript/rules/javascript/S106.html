@@ -1,11 +1,11 @@
-<p>Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you
-run the risk of inadvertently exposing sensitive information, slowing down the browser, or even erroring-out the site for some users.</p>
-<h2>Noncompliant Code Example</h2>
+<p>调试语句在开发过程中始终很有用。 但是将它们包含在生产代码中-尤其是在运行客户端的代码中-并且您
+冒着无意中泄露敏感信息，降低浏览器速度甚至使某些用户错误访问网站的风险。</p>
+<h2>不兼容的代码示例</h2>
 <pre>
-console.log(password_entered); // Noncompliant
+console.log(password_entered); // 不合规
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
-  <li> <a href="https://www.securecoding.cert.org/confluence/x/RoElAQ">CERT, ERR02-J.</a> - Prevent exceptions while logging data </li>
+  <li> <a href="https://www.securecoding.cert.org/confluence/x/RoElAQ">CERT, ERR02-J.</a> - 记录数据时防止异常 </li>
 </ul>
 

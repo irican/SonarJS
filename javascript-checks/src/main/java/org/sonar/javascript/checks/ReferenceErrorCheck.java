@@ -38,7 +38,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3827")
 public class ReferenceErrorCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "\"%s\" does not exist. Change its name or declare it so that its usage doesn't result in a \"ReferenceError\".";
+  private static final String MESSAGE = "\"%s\"不存在。 更改其名称或对其进行声明，以使其使用时不会导致 \"ReferenceError\"。";
 
   private final ListMultimap<String, IdentifierTree> undeclaredIdentifiersByName = ArrayListMultimap.create();
   private final Set<String> excludedNames = new HashSet<>();

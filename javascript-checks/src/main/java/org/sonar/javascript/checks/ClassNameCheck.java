@@ -33,7 +33,7 @@ public class ClassNameCheck extends DoubleDispatchVisitorCheck {
 
   @RuleProperty(
       key = "format",
-      description = "Regular expression used to check the class names against.",
+      description = "用于检查类名的正则表达式。",
       defaultValue = "" + DEFAULT_FORMAT)
   public String format = DEFAULT_FORMAT;
 
@@ -44,7 +44,7 @@ public class ClassNameCheck extends DoubleDispatchVisitorCheck {
       if (className != null) {
         String name = className.name();
         if (!name.matches(format)) {
-          addIssue(className, String.format("Rename class \"%s\" to match the regular expression %s.", name, format));
+          addIssue(className, String.format("重命名类 \"%s\" 以匹配正则表达式%s。", name, format));
         }
       }
     }

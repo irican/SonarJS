@@ -35,7 +35,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3271")
 public class LocalStorageCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove all use of \"%s\"; use cookies or store the data on the server instead.";
+  private static final String MESSAGE = "取消所有对 \"%s\"的使用; 使用Cookie或将数据存储在服务器上。";
 
   private static final List<String> API_CALLS = ImmutableList.of(
     "getItem",

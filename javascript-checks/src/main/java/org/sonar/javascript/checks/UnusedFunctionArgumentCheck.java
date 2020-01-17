@@ -40,7 +40,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "UnusedFunctionArgument")
 public class UnusedFunctionArgumentCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove the unused function parameter \"%s\".";
+  private static final String MESSAGE = "删除未使用的功能参数\"%s\"。";
 
   private static class PositionComparator implements Comparator<Symbol> {
 

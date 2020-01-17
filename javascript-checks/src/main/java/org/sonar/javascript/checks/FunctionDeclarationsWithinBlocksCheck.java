@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "FunctionDeclarationsWithinBlocks")
 public class FunctionDeclarationsWithinBlocksCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Do not use function declarations within blocks.";
+  private static final String MESSAGE = "不要在块内使用函数声明";
 
   @Override
   public void visitBlock(BlockTree tree) {

@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "ConstructorFunctionsForSideEffects")
 public class ConstructorFunctionsForSideEffectsCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Either remove this useless object instantiation of \"%s\" or use it";
+  private static final String MESSAGE = "删除 \"%s\" 的无用对象实例，或使用此对象实例。";
 
   @Override
   public void visitExpressionStatement(ExpressionStatementTree tree) {

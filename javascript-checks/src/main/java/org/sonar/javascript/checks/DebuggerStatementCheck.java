@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 public class DebuggerStatementCheck extends DoubleDispatchVisitorCheck {
 
 
-  private static final String MESSAGE = "Remove this debugger statement.";
+  private static final String MESSAGE = "删除此调试器语句";
 
   @Override
   public void visitDebugger(DebuggerStatementTree tree) {

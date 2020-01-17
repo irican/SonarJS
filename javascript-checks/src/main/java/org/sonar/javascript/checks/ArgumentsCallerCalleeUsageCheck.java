@@ -82,19 +82,20 @@ public class ArgumentsCallerCalleeUsageCheck extends SubscriptionVisitorCheck {
 
   private void checkFunctionsProperty(Tree tree, String object, String property) {
     if (CALLER.equals(property)) {
-      addIssue(tree, "Remove this use of \"" + object + ".caller\".");
+      addIssue(tree, "删除对 \"" + object + ".caller\".的使用");
 
     } else if (ARGUMENTS.equals(property)) {
-      addIssue(tree, "Remove this use of \"" + object + ".arguments\".");
+      addIssue(tree, "删除对 \"" + object + ".arguments\".的使用");
     }
   }
 
   private void checkArgumentsProperty(Tree tree, String property) {
     if (CALLER.equals(property)) {
-      addIssue(tree, "Remove this use of \"arguments.caller\".");
+      addIssue(tree, "删除对 \"arguments.caller\".的使用");
+	                
 
     } else if (CALLEE.equals(property)) {
-      addIssue(tree, "Name the enclosing function instead of using the deprecated property \"arguments.callee\".");
+      addIssue(tree, "为外围函数命名，而不使用不推荐的 \"arguments.callee\".");
     }
   }
 

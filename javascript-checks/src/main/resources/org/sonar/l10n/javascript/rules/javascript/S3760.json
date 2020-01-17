@@ -1,5 +1,5 @@
 {
-  "title": "Arithmetic operators should only have numbers as operands",
+  "title": "算术运算符应该只有数字作为操作数",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

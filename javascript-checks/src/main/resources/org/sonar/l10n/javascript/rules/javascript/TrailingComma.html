@@ -1,13 +1,12 @@
-<p>Most browsers parse and discard a meaningless, trailing comma. Unfortunately, that's not the case for Internet Explorer below version 9, which
-throws a meaningless error. Therefore trailing commas should be eliminated.</p>
-<h2>Noncompliant Code Example</h2>
+<p>大多数浏览器解析并丢弃一个没有意义的尾随逗号。不幸的是，ie9以下的版本并非如此，它会抛出一个无意义的错误。因此，后面的逗号应该去掉。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var settings = {
     'foo'  : oof,
-    'bar' : rab,    // Noncompliant - trailing comma
+    'bar' : rab,    // 不合规 - 后面的逗号
 };
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var settings = {
     'foo'  : oof,

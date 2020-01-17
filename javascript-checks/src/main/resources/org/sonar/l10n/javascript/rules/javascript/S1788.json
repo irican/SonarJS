@@ -1,5 +1,5 @@
 {
-  "title": "Function parameters with default values should be last",
+  "title": "带有默认值的函数参数应该放在最后",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

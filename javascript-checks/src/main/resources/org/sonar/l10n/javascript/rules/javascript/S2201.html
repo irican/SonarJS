@@ -1,16 +1,16 @@
-<p>When the call to a function doesn't have any side effects, what is the point of making the call if the results are ignored? In such case, either
-the function call is useless and should be dropped or the source code doesn't behave as expected. </p>
-<p>To prevent generating any false-positives, this rule triggers an issues only on a predefined list of known objects &amp; functions. </p>
-<h2>Noncompliant Code Example</h2>
+<p>当调用一个函数没有任何副作用时，如果忽略了结果，那么调用这个函数又有什么意义呢?在这种情况下，要么函数调用无用，应该删除，要么源代码的行为不像预期的那样。 </p>
+<p>为防止生成任何误报,此规则仅在预定义的已知对象和函数列表上触发问题。 </p>
+<h2>不合规的代码示例</h2>
 <pre>
-'hello'.lastIndexOf('e'); // Noncompliant
+'hello'.lastIndexOf('e'); // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 let char = 'hello'.lastIndexOf('e');
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
+  <li> MISRA C:2012, 17.7 - The value returned by a function having non-void return type shall be used </li>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/9YIRAQ">CERT, EXP12-C.</a> - Do not ignore values returned by functions </li>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/9gEqAQ">CERT, EXP00-J.</a> - Do not ignore values returned by methods </li>
 </ul>

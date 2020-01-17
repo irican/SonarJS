@@ -34,7 +34,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2770")
 public class DeprecatedJQueryAPICheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this use of \"%s\", which is deprecated.";
+  private static final String MESSAGE = "删除不推荐使用的 \"%s\" ";
 
   // e.g. $.boxModel
   private static final List<String> JQUERY_PROPERTIES = ImmutableList.of(

@@ -1,11 +1,10 @@
-<p>Element selections that could be matched anywhere in the document can be very slow. That's why use of the universal selector, <code>*</code>,
-should be limited; it explicitly specifies that the match could be anywhere.</p>
-<h2>Noncompliant Code Example</h2>
+<p>可以在文档的任何地方匹配的元素选择可能非常慢。这就是为什么要限制使用通用选择器<code>*</code>;它显式地指定匹配项可以在任何位置。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-$( ".buttons &gt; *" );  // Noncompliant; extremely expensive
+$( ".buttons &gt; *" );  // 不合规; 非常慢
 </pre>
 <h2>Compliant Solution</h2>
 <pre>
-$( ".buttons" ).children(); // Compliant
+$( ".buttons" ).children(); // 合规
 </pre>
 

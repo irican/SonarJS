@@ -1,18 +1,18 @@
-<p>Doing an operation on a string without using the result of the operation is useless and is certainly due to a misunderstanding. </p>
-<h2>Noncompliant Code Example</h2>
+<p>对字符串执行操作而不使用操作的结果是无用的，而且肯定是由于误解造成的。 </p>
+<h2>不合规的代码示例</h2>
 <pre>
 var str = "..."
-str.toUpperCase(); // Noncompliant
+str.toUpperCase(); // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var str = "..."
 str = str.toUpperCase();
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/9gEqAQ">CERT, EXP00-J.</a> - Do not ignore values returned by methods </li>
 </ul>
-<h2>Deprecated</h2>
-<p>This rule is deprecated; use {rule:javascript:S2201} instead.</p>
+<h2>弃用</h2>
+<p>这条规则是不合宜的; 使用 {rule:javascript:S2201} .</p>
 

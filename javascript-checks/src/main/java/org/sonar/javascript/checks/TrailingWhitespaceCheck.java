@@ -34,7 +34,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "TrailingWhitespace")
 public class TrailingWhitespaceCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Remove the useless trailing whitespaces at the end of this line.";
+  private static final String MESSAGE = "删除此行末尾无用的尾随空格。";
 
   @Override
   public Set<Tree.Kind> nodesToVisit() {

@@ -1,5 +1,5 @@
 {
-  "title": "Setters should not return values",
+  "title": "setter不应该返回值",
   "type": "BUG",
   "status": "ready",
   "remediation": {

@@ -1,24 +1,24 @@
-<p>Extra semicolons (<code>;</code>) are usually introduced by mistake, for example because:</p>
+<p>额外的分号 (<code>;</code>) 通常是错误地引入的，例如:</p>
 <ul>
-  <li> It was meant to be replaced by an actual statement, but this was forgotten. </li>
-  <li> There was a typo which lead the semicolon to be doubled, i.e. <code>;;</code>. </li>
-  <li> There was a misunderstanding about where semicolons are required or useful. </li>
+  <li>它本来是要被一个实际的陈述所取代的，但是这个被遗忘了。 </li>
+  <li>由于输入错误导致分号加倍，即 <code>;;</code>. </li>
+  <li>对于分号在哪里是必需的或有用的存在着误解。</li>
 </ul>
-<h2>Noncompliant Code Example</h2>
+<h2>不合规的代码示例</h2>
 <pre>
-var x = 1;; // Noncompliant
+var x = 1;; // 不合规
 
 function foo() {
-};  // Noncompliant
+};  // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var x = 1;
 
 function foo() {
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2004, 14.3 - Before preprocessing, a null statement shall only occur on a line by itself; it may be followed by a comment provided that
   the first character following the null statement is a white-space character. </li>

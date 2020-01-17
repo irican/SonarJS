@@ -1,5 +1,5 @@
 {
-  "title": "\"find\" should be used to select the children of an element known by id",
+  "title": "应该使用\"find\"来选择id已知的元素的子元素",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

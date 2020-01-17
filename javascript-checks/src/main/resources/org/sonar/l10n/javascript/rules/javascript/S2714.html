@@ -1,10 +1,10 @@
-<p>Using element type in class selectors is slower than using only the class selector.</p>
-<h2>Noncompliant Code Example</h2>
+<p>在类选择器中使用元素类型比只使用类选择器要慢。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-var $products = $("div.products");    // Noncompliant - slow
+var $products = $("div.products");    // 不合规 - 慢
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
-var $products = $(".products");    // Compliant - fast
+var $products = $(".products");    // 合规 - 快
 </pre>
 

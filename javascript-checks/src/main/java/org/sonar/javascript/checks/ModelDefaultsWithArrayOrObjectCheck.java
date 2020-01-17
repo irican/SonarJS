@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2550")
 public class ModelDefaultsWithArrayOrObjectCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Make \"defaults\" a function.";
+  private static final String MESSAGE = "将 \"defaults\" 设为函数";
 
   @Override
   public void visitCallExpression(CallExpressionTree tree) {

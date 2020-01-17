@@ -1,24 +1,23 @@
-<p>You can easily call a JavaScript function with more arguments than the function needs, but the extra arguments will be just ignored by function
-execution.</p>
-<p><em>Note that this rule requires Node.js to be available during analysis.</em></p>
-<h2>Noncompliant Code Example</h2>
+<p>您可以很容易地调用一个JavaScript函数，它的参数比函数需要的多，但是额外的参数将被函数执行忽略。</p>
+<p><em>注意，此规则要求Node.js在分析期间可用。</em></p>
+<h2>不合规的代码示例</h2>
 <pre>
 function say(a, b) {
   print(a + " " + b);
 }
 
-say("hello", "world", "!"); // Noncompliant; last argument is not used
+say("hello", "world", "!"); // 不合规; 最后一个参数没有使用
 </pre>
-<h2>Exceptions</h2>
-<p>No issue is reported when <code>arguments</code> is used in the body of the function being called.</p>
+<h2>例外</h2>
+<p>当 <code>arguments</code>在被调用的函数体中使用时，没有报告任何问题。</p>
 <pre>
 function doSomething(a, b) {
   compute(arguments);
 }
 
-doSomething(1, 2, 3) // Compliant
+doSomething(1, 2, 3) // 合规
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2004, 16.6 - The number of arguments passed to a function shall match the number of parameters. </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/628.html">MITRE, CWE-628</a> - Function Call with Incorrectly Specified Arguments </li>

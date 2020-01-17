@@ -1,10 +1,10 @@
-<p>Defining a function inside of a loop can yield unexpected results. Such a function keeps references to the variables which are defined in outer
-scopes. All function instances created inside the loop therefore see the same values for these variables, which is probably not expected.</p>
-<h2>Noncompliant Code Example</h2>
+<p>在循环中定义一个函数可能会产生意想不到的结果。这样的函数保持对外部范围中定义的变量的引用。
+因此，在循环中创建的所有函数实例都可以看到这些变量的相同值，这可能不是期望的。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var funs = [];
 for (var i = 0; i &lt; 13; i++) {
-  funs[i] = function() { // Non-Compliant
+  funs[i] = function() { // 不合规
     return i;
   };
 }

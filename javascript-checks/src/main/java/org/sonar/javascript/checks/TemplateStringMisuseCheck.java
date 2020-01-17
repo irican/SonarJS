@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S3786")
 public class TemplateStringMisuseCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Replace the quotes (%s) with back-ticks (`).";
+  private static final String MESSAGE = "用反引号(`)替换引号(%s)。";
 
   @Override
   public Set<Kind> nodesToVisit() {

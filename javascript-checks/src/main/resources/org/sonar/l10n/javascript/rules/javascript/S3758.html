@@ -1,25 +1,23 @@
-<p>In a Zen-like manner, <code>NaN</code> isn't equal to anything, even itself. So comparisons (<code>&gt;, &lt;, &gt;=, &lt;=</code>) where one
-operand is <code>NaN</code> or evaluates to <code>NaN</code> always return <code>false</code>. Specifically, <code>undefined</code> and objects that
-cannot be converted to numbers evaluate to <code>NaN</code> when used in numerical comparisons.</p>
-<p>This rule raises an issue when there is at least one path through the code where one of the operands to a comparison is <code>NaN</code>,
-<code>undefined</code> or an <code>Object</code> which cannot be converted to a number.</p>
-<h2>Noncompliant Code Example</h2>
+<p>以一种类似禅宗的方式，<code>NaN</code>不等于任何东西，甚至本身。所以比较(<code> >， <， > =， < =</code>)，其中一个操作数是<code>NaN</code>或计算结果是<code>NaN</code>总是返回<code>false</code>。
+具体来说, <code>undefined</code> 和 <code>Object</code> 当用于数值比较时，不能转换为数值计算为 <code>NaN</code> 。</p>
+<p>当代码中至少有一条路径，其中比较的操作数之一是<code>NaN</code>，<code>undefined</code>，或者<code>Object</code>，不能转换为数字时，该规则就会产生问题。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-var x;  // x is currently "undefined"
+var x;  // x当前“未定义”
 if (someCondition()) {
   x = 42;
 }
 
-if (42 &gt; x) {  // Noncompliant; "x" might still be "undefined"
+if (42 &gt; x) {  // 不合规; “x”可能仍然是“未定义的”
   doSomething();
 }
 
 var obj = {prop: 42};
-if (obj &gt; 24) { // Noncompliant
+if (obj &gt; 24) { // 不合规
   doSomething();
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var x;
 if (someCondition()) {

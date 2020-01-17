@@ -37,7 +37,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S3317")
 public class FileNameDiffersFromClassCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Rename this file to \"%s\".";
+  private static final String MESSAGE = "将此文件重命名为 \"%s\".";
   private static final EnumSet<Symbol.Kind> CONSIDERED_KINDS = EnumSet.of(Symbol.Kind.CLASS, Symbol.Kind.CONST_VARIABLE, Symbol.Kind.FUNCTION);
 
   private boolean isOnlyExport = true;

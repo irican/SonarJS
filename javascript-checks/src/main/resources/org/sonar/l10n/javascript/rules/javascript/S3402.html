@@ -1,16 +1,14 @@
-<p>Use a <code>+</code> with two numbers and you'll get addition. But use it with a string and anything else, and you'll get concatenation. This could
-be confusing, especially if it's not obvious that one of the operands is a string. It is recommended to explicitly convert the non-string component to
-make it easier to understand to future maintainers.</p>
-<p>This rule raises an issue when <code>+</code> is used with a string and a non-string.</p>
-<h2>Noncompliant Code Example</h2>
+<p>使用带有两个数字的<code>+</code>，您将得到加法。但是将它与字符串和其他任何东西一起使用，就会得到串联。这可能会令人困惑，特别是如果其中一个操作数不是字符串的话。建议显式地转换非字符串组件，以便将来的维护者更容易理解。</p>
+<p>当<code>+</code>与字符串和非字符串一起使用时，该规则会引发一个问题。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function foo() {
   let x = 5 + 8;  // okay
   let z = "8"
-  return x + z;  // Noncompliant; yields string "138"
+  return x + z;  // 不合规; yields string "138"
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案 </h2>
 <pre>
 function foo() {
   let x = 5 + 8;

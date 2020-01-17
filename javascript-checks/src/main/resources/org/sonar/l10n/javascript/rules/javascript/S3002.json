@@ -1,5 +1,5 @@
 {
-  "title": "Unary operators \"+\" and \"-\" should not be used with objects",
+  "title": "一元运算符\"+\"和\"-\"不应与对象一起使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

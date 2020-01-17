@@ -1,5 +1,5 @@
 {
-  "title": "The base should be provided to \"parseInt\"",
+  "title": "基础文件应该提供给\"parseInt\"",
   "type": "BUG",
   "status": "ready",
   "remediation": {

@@ -1,13 +1,13 @@
-<p>When a variable is assigned an <code>undefined</code> or <code>null</code> value, it has no properties. Trying to access properties of such a
-variable anyway results in a <code>TypeError</code>, causing abrupt termination of the script if the error is not caught in a <code>catch</code>
-block. But instead of <code>catch</code>-ing this condition, it is best to avoid it altogether.</p>
-<h2>Noncompliant Code Example</h2>
+<p>当一个变量被分配一个 <code>undefined</code> or <code>null</code> 值时，它没有属性。无论如何，试图访问这样一个变量的属性都会导致 <code>TypeError</code>,
+如果在<code>catch</code>块中没有捕捉到错误，则会导致脚本的突然终止。但是，与其捕获这种情况下的
+<code>catch</code>-ing ，最好完全避免它。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 if (x === undefined) {
-  console.log(x.length); // Noncompliant; TypeError will be thrown
+  console.log(x.length); // 不合规; 将抛出TypeError
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> <a href="http://cwe.mitre.org/data/definitions/476.html">MITRE, CWE-476</a> - NULL Pointer Dereference </li>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/PAw">CERT, EXP34-C.</a> - Do not dereference null pointers </li>

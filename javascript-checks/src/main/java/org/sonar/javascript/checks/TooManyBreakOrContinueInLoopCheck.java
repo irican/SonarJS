@@ -46,7 +46,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "TooManyBreakOrContinueInLoop")
 public class TooManyBreakOrContinueInLoopCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Reduce the total number of \"break\" and \"continue\" statements in this loop to use one at most.";
+  private static final String MESSAGE = "减少此循环中\"break\"和\"continue\"语句的总和，最多使用一个。";
 
   private static class JumpTarget {
     private final String label;

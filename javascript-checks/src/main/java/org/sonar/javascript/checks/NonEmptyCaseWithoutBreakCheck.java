@@ -45,7 +45,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "NonEmptyCaseWithoutBreak")
 public class NonEmptyCaseWithoutBreakCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "End this switch case with an unconditional break, continue, return or throw statement.";
+  private static final String MESSAGE = "以无条件的break, continue, return or throw语句结束此 switch case。";
 
   @Override
   public void visitSwitchStatement(SwitchStatementTree tree) {

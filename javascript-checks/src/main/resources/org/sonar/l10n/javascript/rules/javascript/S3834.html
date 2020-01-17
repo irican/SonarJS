@@ -1,11 +1,10 @@
-<p><code>Symbol</code> is a primitive type introduced in ECMAScript2015. Its instances are mainly used as unique property keys.</p>
-<p>An instance can only be created by using <code>Symbol</code> as a function. Using <code>Symbol</code> with the <code>new</code> operator will raise
-a <code>TypeError</code>.</p>
-<h2>Noncompliant Code Example</h2>
+<p><code>Symbol</code> 是ECMAScript2015中引入的一种基本类型。它的实例主要用作惟一的属性键。</p>
+<p> 实例只能通过使用<code>符号</code>作为函数来创建。使用<code>符号</code>与<code>new</code>操作符将引发一个<code>TypeError</code>。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-const sym = new Symbol("foo");   // Noncompliant
+const sym = new Symbol("foo");   // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 const sym = Symbol("foo");
 </pre>

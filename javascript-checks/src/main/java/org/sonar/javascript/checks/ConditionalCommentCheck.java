@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "ConditionalComment")
 public class ConditionalCommentCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Refactor your code to avoid using Internet Explorer's conditional comments.";
+  private static final String MESSAGE = "重构代码以避免使用Internet Explorer条件注释。";
 
   @Override
   public Set<Tree.Kind> nodesToVisit() {

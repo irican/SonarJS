@@ -1,5 +1,5 @@
 {
-  "title": "Imports from the same modules should be merged",
+  "title": "应该合并来自相同模块的导入",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

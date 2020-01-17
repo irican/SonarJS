@@ -1,44 +1,42 @@
-<p>Unused parameters are misleading. Whatever the values passed to such parameters, the behavior will be the same.</p>
-<h2>Noncompliant Code Example</h2>
+<p>未使用的参数具有误导性。无论传递给这些参数的值是什么，行为都是相同的。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-function doSomething(a, b) { // "a" is unused
+function doSomething(a, b) { // "a" 是未使用的
   return compute(b);
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function doSomething(b) {
   return compute(b);
 }
 </pre>
-<h2>Exceptions</h2>
-<p>When writing function callbacks, some arguments might be required as part of the function signature, but not actually needed by the callback code.
-For instance, JQuery has the 'each' helper to iterate over arrays or objects, but using the counter 'i' should remain optional:</p>
+<h2>例外</h2>
+<p>在编写函数回调时，可能需要一些参数作为函数签名的一部分，但回调代码实际上并不需要这些参数。例如，JQuery有“each”帮助器来遍历数组或对象，但是使用计数器“i”应该是可选的:</p>
 <pre>
 $(["first", "last"]).each(function (i, value) {
   computeSomethingWithValue(value);
 });
 </pre>
-<p>So only unused arguments listed at the end of the argument list will be flagged with issues because they could be omitted from the function
-signature. Unused arguments which are followed by an argument that <em>is</em> used will be ignored.</p>
-<p>Examples :</p>
+<p>因此，只有在参数列表末尾列出的未使用的参数才会被标记为问题，因为它们可以从函数签名中省略。未使用的参数后面跟着<em>被</em> 使用的参数将被忽略。</p>
+<p>例外 :</p>
 <pre>
-var myFirsCallBackFunction = function (p1, p2, p3, p4) {  // p2 is ignored, but p4 is reported
+var myFirsCallBackFunction = function (p1, p2, p3, p4) {  // 忽略p2，但是报告p4
                                               return p1 + p3; }
 
-var mySecondCallBackFunction = function (p1, p2, p3, p4) {  // p1, p2 and p3 are ignored
+var mySecondCallBackFunction = function (p1, p2, p3, p4) {  // p1 p2 p3被忽略
                                               return p4; }
 
-var myThirdCallBackFunction = function (p1, p2, p3, p4) {  // p1 is ignored but p3 and p4 are reported
+var myThirdCallBackFunction = function (p1, p2, p3, p4) {  // p1被忽略，但p3和p4被报告
                                               return p2; }
 </pre>
-<p>Further, when <code>arguments</code> is used in the function body, no parameter is reported as unused. </p>
+<p>此外，当函数体中使用 <code>arguments</code> 时，没有参数报告为未使用。</p>
 <pre>
 function doSomething(a, b, c) {
   compute(arguments);
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C++:2008, 0-1-11 - There shall be no unused parameters (named or unnamed) in nonvirtual functions. </li>
   <li> MISRA C:2012, 2.7 - There should be no unused parameters in functions </li>

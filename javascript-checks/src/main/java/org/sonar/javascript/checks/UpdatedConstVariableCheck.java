@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3500")
 public class UpdatedConstVariableCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Correct this attempt to modify \"%s\" or use \"let\" in its declaration.";
+  private static final String MESSAGE = "更正修改\"%s\"的尝试，或者在其声明中使用\"let\"。";
 
   @Override
   public void visitScript(ScriptTree tree) {

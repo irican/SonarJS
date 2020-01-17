@@ -39,9 +39,9 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 public class ExpressionComplexityCheck extends SubscriptionVisitorCheck {
 
   private static final int DEFAULT = 3;
-  private static final String MESSAGE = "Reduce the number of conditional operators (%s) used in the expression (maximum allowed %s).";
+  private static final String MESSAGE = "减少表达式中使用的条件运算符 (%s) 的数目 (允许最大值为 %s).";
 
-  @RuleProperty(description = "Maximum number of allowed conditional operators in an expression", defaultValue = "" + DEFAULT)
+  @RuleProperty(description = "表达式中允许的条件运算符的最大数目", defaultValue = "" + DEFAULT)
   public int max = DEFAULT;
 
   private List<ExpressionComplexity> statementLevel = Lists.newArrayList();

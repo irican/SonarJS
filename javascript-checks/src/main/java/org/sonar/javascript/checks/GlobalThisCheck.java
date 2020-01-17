@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S2990")
 public class GlobalThisCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Remove the use of \"this\".";
+  private static final String MESSAGE = "取消对 \"this\"的使用";
   private int scopeLevel = 0;
 
   @Override

@@ -1,5 +1,5 @@
 {
-  "title": "Variables should be declared explicitly",
+  "title": "变量应该显式声明",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

@@ -44,7 +44,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "DuplicatePropertyName")
 public class DuplicatePropertyNameCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Rename or remove duplicate property name '%s'.";
+  private static final String MESSAGE = "重命名或删除重复的属性名称 '%s'";
 
   @Override
   public void visitObjectLiteral(ObjectLiteralTree tree) {

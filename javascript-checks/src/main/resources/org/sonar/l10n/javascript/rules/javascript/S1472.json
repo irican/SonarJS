@@ -1,5 +1,5 @@
 {
-  "title": "Function call arguments should not start on new lines",
+  "title": "函数调用参数不应该从新行开始",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

@@ -1,5 +1,5 @@
 {
-  "title": "Function parameters, caught exceptions and foreach variables should not be reassigned",
+  "title": "不应该重新分配函数参数、捕获的异常和foreach变量",
   "type": "BUG",
   "status": "ready",
   "remediation": {
@@ -7,7 +7,7 @@
     "constantCost": "5min"
   },
   "tags": [
-    "based-on-misra"
+    "misra"
   ],
   "defaultSeverity": "Minor",
   "ruleSpecification": "RSPEC-1226",

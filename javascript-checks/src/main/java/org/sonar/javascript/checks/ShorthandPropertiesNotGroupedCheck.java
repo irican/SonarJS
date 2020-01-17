@@ -32,11 +32,11 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3499")
 public class ShorthandPropertiesNotGroupedCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE_PATTERN = "Group all shorthand properties at the %s of this object declaration";
-  private static final String MESSAGE = "Group all shorthand properties at either the beginning or end of this object declaration.";
+  private static final String MESSAGE_PATTERN = "将此对象声明的 %s处的所有简写属性分组。";
+  private static final String MESSAGE = "在此对象声明的开头或结尾将所有简写属性分组。";
 
-  private static final String SECONDARY_MESSAGE_PATTERN = "Move to the %s.";
-  private static final String SECONDARY_MESSAGE = "Group at beginning or end.";
+  private static final String SECONDARY_MESSAGE_PATTERN = "移至%s";
+  private static final String SECONDARY_MESSAGE = "在开始或结束时分组。";
 
   @Override
   public void visitObjectLiteral(ObjectLiteralTree tree) {

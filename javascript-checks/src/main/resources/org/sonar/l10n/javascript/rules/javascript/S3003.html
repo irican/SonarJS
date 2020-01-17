@@ -1,14 +1,13 @@
-<p>The use of comparison operators (<code>&lt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>&gt;</code>) with strings is not likely to yield
-the expected results. Make sure the intention was to compare strings and not numbers.</p>
-<h2>Noncompliant Code Example</h2>
+<p>使用带字符串的比较运算符 (<code>&lt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>&gt;</code>) 不太可能产生预期的结果。确保目的是比较字符串而不是数字。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var appleNumber = "123";
 var orangeNumber = "45";
-if (appleNumber &lt; orangeNumber) {  // Noncompliant, this condition is true
+if (appleNumber &lt; orangeNumber) {  // 不合规, 这个条件成立
   alert("There are more oranges");
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var appleNumber = "123";
 var orangeNumber = "45";

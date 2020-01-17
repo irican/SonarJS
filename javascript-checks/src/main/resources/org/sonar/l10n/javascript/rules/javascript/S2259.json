@@ -1,5 +1,5 @@
 {
-  "title": "Properties of variables with \"null\" or \"undefined\" values should not be accessed",
+  "title": "不应该访问具有\"null\"或\"undefined\"值的变量的属性",
   "type": "BUG",
   "status": "ready",
   "remediation": {

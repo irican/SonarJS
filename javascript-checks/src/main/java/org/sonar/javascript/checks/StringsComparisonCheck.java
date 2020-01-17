@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.tree.expression.LiteralTree;
 @Rule(key = "S3003")
 public class StringsComparisonCheck extends AbstractAllPathSeCheck<BinaryExpressionTree> {
 
-  private static final String MESSAGE = "Convert operands of this use of \"%s\" to number type.";
+  private static final String MESSAGE = "将此\"%s\"用法的操作数转换为数字类型。";
 
   private static final Kind[] RELATIVE_OPERATIONS = {
     Kind.LESS_THAN,

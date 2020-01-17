@@ -1,5 +1,5 @@
 {
-  "title": "\"indexOf\" checks should not be for positive numbers",
+  "title": "\"indexOf\" 检查不应该针对正数",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

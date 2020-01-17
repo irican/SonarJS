@@ -1,21 +1,20 @@
-<p>If a boolean expression doesn't change the evaluation of the condition, then it is entirely unnecessary, and can be removed. If it is gratuitous
-because it does not match the programmer's intent, then it's a bug and the expression should be fixed.</p>
-<h2>Noncompliant Code Example</h2>
+<p>如果布尔表达式不改变条件的计算值，那么它完全没有必要，可以删除。如果它是免费的，因为它不符合程序员的意图，那么它是一个错误，表达式应该被修复。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 a = true;
-if (a) { // Noncompliant
+if (a) { // 不合规
   doSomething();
 }
 
-if (b &amp;&amp; a) { // Noncompliant; "a" is always "true"
+if (b &amp;&amp; a) { // 不合规; "a" 总是 "true"
   doSomething();
 }
 
-if (c || !a) { // Noncompliant; "!a" is always "false"
+if (c || !a) { // 不合规; "!a" 总是 "false"
   doSomething();
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 a = true;
 if (foo(a)) {
@@ -30,13 +29,11 @@ if (c) {
   doSomething();
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2004, 13.7 - Boolean operations whose results are invariant shall not be permitted. </li>
   <li> MISRA C:2012, 14.3 - Controlling expressions shall not be invariant </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/571">MITRE, CWE-571</a> - Expression is Always True </li>
-  <li> <a href="http://cwe.mitre.org/data/definitions/570">MITRE, CWE-570</a> - Expression is Always False </li>
-  <li> <a href="http://cwe.mitre.org/data/definitions/489">MITRE, CWE-489</a> - Leftover Debug Code </li>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/NYA5">CERT, MSC12-C.</a> - Detect and remove code that has no effect or is never
   executed </li>
 </ul>

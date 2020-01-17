@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "OctalNumber")
 public class OctalNumberCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Replace the value of the octal number (%s) by its decimal equivalent (%s).";
+  private static final String MESSAGE = "将八进制数 (%s)的值替换为其十进制等效值(%s)。";
 
   @Override
   public void visitLiteral(LiteralTree tree) {

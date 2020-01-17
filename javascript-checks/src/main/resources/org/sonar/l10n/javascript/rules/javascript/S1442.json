@@ -1,5 +1,5 @@
 {
-  "title": "\"alert(...)\" should not be used",
+  "title": "\"alert(...)\" 不应该被使用",
   "type": "VULNERABILITY",
   "status": "ready",
   "remediation": {
@@ -13,7 +13,7 @@
   ],
   "standards": [
     "CWE",
-    "OWASP Top 10"
+    "OWASP Top Ten"
   ],
   "defaultSeverity": "Minor",
   "ruleSpecification": "RSPEC-1442",

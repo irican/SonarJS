@@ -30,8 +30,8 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "SwitchWithoutDefault")
 public class SwitchWithoutDefaultCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String ADD_DEFAULT_MESSAGE = "Add a \"default\" clause to this \"switch\" statement.";
-  private static final String MOVE_DEFAULT_MESSAGE = "Move this \"default\" clause to the end of this \"switch\" statement.";
+  private static final String ADD_DEFAULT_MESSAGE = "在此\"switch\"语句中添加\"default\"子句。";
+  private static final String MOVE_DEFAULT_MESSAGE = "将此\"default\"子句移至该\"switch\"语句的末尾。";
 
   @Override
   public void visitSwitchStatement(SwitchStatementTree tree) {

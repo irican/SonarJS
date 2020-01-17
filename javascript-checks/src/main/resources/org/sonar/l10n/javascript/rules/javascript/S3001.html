@@ -1,17 +1,16 @@
-<p>The semantics of the <code>delete</code> operator are a bit tricky, and it can only be reliably used to remove properties from objects. Pass
-anything else to it, and you may or may not get the desired result.</p>
-<h2>Noncompliant Code Example</h2>
+<p><code>delete</code>操作符的语义有点复杂，它只能可靠地用于从对象中删除属性。把其他的东西传递给它，你可能得到也可能得不到想要的结果。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var x  = 1;
-delete x;       // Noncompliant
+delete x;       // 不合规
 
 function foo(){
 ..
 }
 
-delete foo;  // Noncompliant
+delete foo;  // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var obj = {
   x:1,

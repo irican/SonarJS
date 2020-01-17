@@ -1,16 +1,15 @@
-<p>Functions declared with the <code>set</code> keyword will automatically return the values they were passed. Thus any value explicitly returned from
-a setter will be ignored, and explicitly returning a value is an error.</p>
-<h2>Noncompliant Code Example</h2>
+<p>使用<code>set</code>关键字声明的函数将自动返回它们传递的值。因此，从setter显式返回的任何值都将被忽略，显式返回值是一个错误。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var person = {
   // ...
   set name(name) {
     this.name = name;
-    return 42;  // Noncompliant
+    return 42;  // 不合规
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var person = {
   // ...

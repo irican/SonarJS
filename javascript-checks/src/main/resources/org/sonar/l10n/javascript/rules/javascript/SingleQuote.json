@@ -1,5 +1,5 @@
 {
-  "title": "Single quotes should be used for string literals",
+  "title": "字符串文字应该使用单引号",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

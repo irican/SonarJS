@@ -1,13 +1,12 @@
-<p>Associative arrays allow you to store values in an array with either numeric or named indexes. But creating and populating an object is just as
-easy as an array, and more reliable if you need named members.</p>
-<h2>Noncompliant Code Example</h2>
+<p>关联数组允许将值存储在具有数值索引或命名索引的数组中。但是，创建和填充对象与数组一样简单，如果需要命名成员，则更可靠。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 let arr = [];
 arr[0] = 'a';
-arr['name'] = 'bob';  // Noncompliant
+arr['name'] = 'bob';  // 不合规
 arr[1] = 'foo';
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 let obj = {
   name: 'bob',

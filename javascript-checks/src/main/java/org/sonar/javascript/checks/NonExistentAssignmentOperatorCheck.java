@@ -35,7 +35,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S2757")
 public class NonExistentAssignmentOperatorCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Was \"%s=\" meant instead?";
+  private static final String MESSAGE = "请确定是否是 \"%s=\" 的意思。";
 
   @Override
   public Set<Kind> nodesToVisit() {

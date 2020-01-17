@@ -1,7 +1,7 @@
-<p>Duplicated string literals make the process of refactoring error-prone, since you must be sure to update all occurrences.</p>
-<p>On the other hand, constants can be referenced from many places, but only need to be updated in a single place.</p>
-<p><em>Note that this rule requires Node.js to be available during analysis.</em></p>
-<h2>Exceptions</h2>
-<p>To prevent generating some false-positives, literals having less than 10 characters are excluded as well as literals matching <code>/^\w*$/</code>.
-String literals inside import/export statements and JSX attributes are also ignored.</p>
+<p>重复的字符串文本使重构过程容易出错，因为必须确保更新所有发生的情况。</p>
+<p>另一方面，常量可以从许多地方引用，但只需要在一个地方进行更新。</p>
+<p><em>注意，此规则要求Node.js在分析期间可用。</em></p>
+<h2>例外</h2>
+<p>为了防止产生一些误报，排除了少于10个字符的文本以及匹配 <code>/^\w*$/</code>的文本。
+导入/导出语句和JSX属性中的字符串文本也将被忽略。</p>
 

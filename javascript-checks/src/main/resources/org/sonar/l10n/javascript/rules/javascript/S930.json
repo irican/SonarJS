@@ -1,5 +1,5 @@
 {
-  "title": "Function calls should not pass extra arguments",
+  "title": "函数调用不应该传递额外的参数",
   "type": "BUG",
   "status": "ready",
   "remediation": {
@@ -8,7 +8,7 @@
   },
   "tags": [
     "cwe",
-    "based-on-misra",
+    "misra",
     "cert"
   ],
   "standards": [

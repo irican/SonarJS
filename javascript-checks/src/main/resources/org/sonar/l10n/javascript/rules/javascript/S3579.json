@@ -1,5 +1,5 @@
 {
-  "title": "Array indexes should be numeric",
+  "title": "数组索引应该是数值型的",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

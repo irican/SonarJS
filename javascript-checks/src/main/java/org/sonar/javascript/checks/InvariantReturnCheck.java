@@ -46,7 +46,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3516")
 public class InvariantReturnCheck extends SeCheck {
 
-  private static final String MESSAGE = "Refactor this method to not always return the same value.";
+  private static final String MESSAGE = "重构此方法，使其不总是返回相同的值。";
 
   private Multimap<ReturnStatementTree, ValueConstraint> valuesPerReturn = ArrayListMultimap.create();
 

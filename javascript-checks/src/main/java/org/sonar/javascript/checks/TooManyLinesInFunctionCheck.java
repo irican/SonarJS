@@ -38,13 +38,13 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S138")
 public class TooManyLinesInFunctionCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "This function has %s lines, which is greater than the %s lines authorized. Split it into smaller functions.";
+  private static final String MESSAGE = "此函数具有%s行， 超过了授权的%s行。将其拆分为较小的函数。";
 
   private static final int DEFAULT = 200;
 
   @RuleProperty(
     key = "max",
-    description = "Maximum authorized lines in a function",
+    description = "函数中的授权行数上限。",
     defaultValue = "" + DEFAULT)
   public int max = DEFAULT;
 

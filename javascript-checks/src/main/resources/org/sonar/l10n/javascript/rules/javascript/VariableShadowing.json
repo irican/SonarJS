@@ -1,0 +1,18 @@
+{
+  "title": "变量不应该被隐藏",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "10min"
+  },
+  "tags": [
+    "misra",
+    "cert",
+    "suspicious"
+  ],
+  "defaultSeverity": "Critical",
+  "ruleSpecification": "RSPEC-1524",
+  "sqKey": "VariableShadowing",
+  "scope": "Main"
+}

@@ -1,16 +1,14 @@
-<p>The use of <code>find</code> allows <code>document.getElementById()</code> to be used for the top-level selection, and saves the jQuery Sizzle
-engine for where it's really needed. That makes the query faster, and your application more responsive.</p>
-<p>From the jQuery documentation:</p>
+<p>使用<code>find</code>允许<code>document.getElementById()</code>用于顶层选择，并将jQuery Sizzle引擎保存到真正需要它的地方。这使得查询更快，并且您的应用程序响应更快。</p>
+<p>来自jQuery文档:</p>
 <blockquote>
-  <p>Beginning your selector with an ID is always best.</p>
-  <p>The <code>.find()</code> approach is faster because the first selection is handled without going through the Sizzle selector engine – ID-only
-  selections are handled using <code>document.getElementById()</code>, which is extremely fast because it is native to the browser.</p>
+  <p>以ID开始选择器总是最好的。</p>
+  <p><code>.find()</code>方法更快，因为第一个选择是在不经过Sizzle选择器引擎的情况下处理的——只有id的选择是使用<code>document.getElementById()</code>()处理的，这是非常快的，因为它是浏览器原生的。</p>
 </blockquote>
-<h2>Noncompliant Code Example</h2>
+<h2>不合规的代码示例</h2>
 <pre>
 var $productIds = $("#products div.id"); // Noncompliant - a nested query for Sizzle selector engine
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var $productIds = $("#products").find("div.id"); // Compliant - #products is already selected by document.getElementById() so only div.id needs to go through Sizzle selector engine
 </pre>

@@ -1,13 +1,12 @@
-<p>A variable that is declared at function scope, but only used inside a single block should be declared in that block, and variables that are
-declared inside a block but used outside of it (which is possible with a <code>var</code>-style declaration) should be declared outside the block.</p>
-<h2>Noncompliant Code Example</h2>
+<p>在函数作用域声明但只在单个块内使用的变量应该在该块中声明，而在块内声明但在块外使用的变量(可以使用<code>var</code>样式的声明)应该在块外声明。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function doSomething(a, b) {
-  var i;  // Noncompliant; should be declared in if-block
+  var i;  // 不合规; 应该在if块中声明
   if (a &gt; b) {
     i = a;
     console.log(i);
-    var x = a - b;  // Noncompliant; should be declared outside if-block
+    var x = a - b;  // 不合规; 应该在if块外声明
   }
 
   if (a &gt; 4) {
@@ -17,7 +16,7 @@ function doSomething(a, b) {
   return a+b;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function doSomething(a, b) {
   var x = a - b;

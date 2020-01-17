@@ -29,7 +29,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "ArrayAndObjectConstructors")
 public class ArrayConstructorsCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use a literal instead of the Array constructor.";
+  private static final String MESSAGE = "使用文字而不是Array构造函数";
 
   @Override
   public void visitNewExpression(NewExpressionTree tree) {

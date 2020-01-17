@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3509")
 public class DefaultParameterSideEffectCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove the side effects from this default assignment of \"%s\".";
+  private static final String MESSAGE = "从该默认分配的 \"%s\" 中消除副作用。";
   private InitializedBindingElementTree currentParameterWithDefault = null;
 
   @Override

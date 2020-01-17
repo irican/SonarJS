@@ -1,5 +1,5 @@
 {
-  "title": "Writing cookies is security-sensitive",
+  "title": "使用cookie是安全敏感的",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "remediation": {
@@ -8,13 +8,14 @@
   },
   "tags": [
     "cwe",
+    "owasp-a1",
     "cert",
     "sans-top25-porous",
     "owasp-a3"
   ],
   "standards": [
     "CWE",
-    "OWASP Top 10",
+    "OWASP Top Ten",
     "SANS Top 25"
   ],
   "defaultSeverity": "Minor",
@@ -29,6 +30,7 @@
       807
     ],
     "OWASP": [
+      "A1",
       "A3"
     ]
   }

@@ -41,13 +41,13 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "NestedIfDepth")
 public class NestedControlFlowDepthCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Refactor this code to not nest more than %s if/for/while/switch/try statements.";
+  private static final String MESSAGE = "重构此代码，以使if/for/while/switch/try语句的嵌套次数不超过 %s。";
   private static final int DEFAULT_MAXIMUM_NESTING_LEVEL = 3;
   private Deque<SyntaxToken> stack = new ArrayDeque<>();
 
   @RuleProperty(
     key = "maximumNestingLevel",
-    description = "Maximum allowed \"if/for/while/switch/try\" statements nesting depth",
+    description = "允许 \"if/for/while/switch/try\" 语句的最大嵌套深度",
     defaultValue = "" + DEFAULT_MAXIMUM_NESTING_LEVEL)
   public int maximumNestingLevel = DEFAULT_MAXIMUM_NESTING_LEVEL;
 

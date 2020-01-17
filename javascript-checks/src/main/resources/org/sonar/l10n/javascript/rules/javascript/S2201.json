@@ -1,5 +1,5 @@
 {
-  "title": "Return values from functions without side effects should not be ignored",
+  "title": "不应该忽略没有副作用的函数的返回值",
   "type": "BUG",
   "status": "ready",
   "remediation": {
@@ -7,8 +7,8 @@
     "constantCost": "5min"
   },
   "tags": [
-    "cert",
-    "misra-c2012"
+    "misra",
+    "cert"
   ],
   "defaultSeverity": "Major",
   "ruleSpecification": "RSPEC-2201",

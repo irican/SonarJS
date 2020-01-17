@@ -26,7 +26,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "ConditionalOperator")
 public class ConditionalOperatorCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Convert this usage of the ternary operator to an \"if\"/\"else\" structure.";
+  private static final String MESSAGE = "将这种三元运算符的用法转换为 \"if\"/\"else\" 结构。";
 
   @Override
   public void visitConditionalExpression(ConditionalExpressionTree tree) {

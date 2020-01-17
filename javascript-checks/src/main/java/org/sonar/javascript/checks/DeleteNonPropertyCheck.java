@@ -34,7 +34,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3001")
 public class DeleteNonPropertyCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this \"delete\" operator or pass an object property to it.";
+  private static final String MESSAGE = "删除此 \"delete\" 运算符或将对象属性传递给它";
 
   @Override
   public void visitUnaryExpression(UnaryExpressionTree tree) {

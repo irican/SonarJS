@@ -1,32 +1,31 @@
-<p>An infinite loop is one that will never end while the program is running, i.e., you have to kill the program to get out of the loop. Whether it is
-by meeting the loop's end condition or via a <code>break</code>, every loop should have an end condition.</p>
-<h3>Known Limitations</h3>
+<p>无限循环是指程序运行时永远不会结束的循环，即，你必须杀死程序才能跳出循环。无论是通过满足循环的结束条件，还是通过 <code>break</code>，每个循环都应该有一个结束条件。</p>
+<h3>已知的限制</h3>
 <ul>
-  <li> False positives: when <code>yield</code> is used - <a href="https://github.com/SonarSource/SonarJS/issues/674">Issue #674</a>. </li>
-  <li> False positives: when an exception is raised by a function invoked within the loop. </li>
-  <li> False negatives: when a loop condition is based on an element of an array or object. </li>
+  <li> 误报:当 <code>yield</code> 被使用 - <a href="https://github.com/SonarSource/SonarJS/issues/674">Issue #674</a>. </li>
+  <li> 误报 :当循环中调用的函数引发异常时。 </li>
+  <li> 误报: 当循环条件基于数组或对象的元素时。 </li>
 </ul>
-<h2>Noncompliant Code Example</h2>
+<h2>不合规的代码示例</h2>
 <pre>
-for (;;) {  // Noncompliant; end condition omitted
+for (;;) {  // 不合规; 结束条件省略
   // ...
 }
 
 var j = 0;
-while (true) { // Noncompliant; constant end condition
+while (true) { // 不合规; 恒定的结束条件
   j++;
 }
 
 var k;
 var b = true;
-while (b) { // Noncompliant; constant end condition
+while (b) { // 不合规; 恒定的结束条件
   k++;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 
-while (true) { // break will potentially allow leaving the loop
+while (true) { // break可能允许离开循环
   if (someCondition) {
     break;
   }
@@ -46,7 +45,7 @@ while(true) {
   }
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/PYHfAw">CERT, MSC01-J.</a> - Do not use an empty infinite loop </li>
 </ul>

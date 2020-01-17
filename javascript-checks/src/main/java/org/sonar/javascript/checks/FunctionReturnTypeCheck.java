@@ -44,7 +44,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3800")
 public class FunctionReturnTypeCheck extends SeCheck {
 
-  private static final String MESSAGE = "Refactor this function to always return the same type.";
+  private static final String MESSAGE = "重构此函数以始终返回相同的类型";
 
   private static final Map<Constraint, String> TYPES = ImmutableMap.<Constraint, String>builder()
     .put(Constraint.STRING_PRIMITIVE, "String")

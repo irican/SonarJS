@@ -1,5 +1,5 @@
 {
-  "title": "Default parameters should not cause side effects",
+  "title": "默认参数不应该引起副作用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

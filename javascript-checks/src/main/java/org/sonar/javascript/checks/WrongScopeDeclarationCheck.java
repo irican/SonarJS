@@ -45,7 +45,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2392")
 public class WrongScopeDeclarationCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Move the declaration of \"%s\" to line %s.";
+  private static final String MESSAGE = "将 \"%s\"的声明移到第%s行。";
 
   @Override
   public void visitScript(ScriptTree tree) {
@@ -98,7 +98,7 @@ public class WrongScopeDeclarationCheck extends DoubleDispatchVisitorCheck {
   private static IdentifierTree getFirstIdentifier(Tree tree) {
     IdentifierVisitor identifierVisitor = new IdentifierVisitor();
     tree.accept(identifierVisitor);
-    Preconditions.checkNotNull(identifierVisitor.identifier, "Deepest common scope should contain at least one identifier");
+    Preconditions.checkNotNull(identifierVisitor.identifier, "最深的通用范围应至少包含一个标识符");
     return identifierVisitor.identifier;
   }
 

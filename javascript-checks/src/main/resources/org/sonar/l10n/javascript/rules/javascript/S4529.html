@@ -1,0 +1,84 @@
+<p>公开HTTP端点是安全敏感的。它在过去导致了以下漏洞:</p>
+<ul>
+  <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3072">CVE-2016-3072</a> </li>
+  <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3175">CVE-2015-3175</a> </li>
+  <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0218">CVE-2003-0218</a> </li>
+</ul>
+<p>HTTP端点是web服务的主要入口点。攻击者将利用任何漏洞，发送精心设计的报头(包括cookie)、正文和URI输入。不应该信任任何输入，并且对于所有返回的值(头、正文和状态代码)都应该非常小心。</p>
+<p>此规则标记创建HTTP端点的代码。它将安全代码评审引导到安全敏感代码。</p>
+<h2>问问你自己是否</h2>
+<ul>
+  <li> 输入在使用前没有经过过滤。这包括来自URI、header、body和cookie的任何值。 </li>
+  <li> 响应包含一些不安全的数据。例如，输入可以来自包含用户输入的数据库。检查响应的标题、cookie、主体和状态代码。 </li>
+  <li> 响应包含一些用户不应该访问的敏感信息。 </li>
+</ul>
+<p>没有访问控制可以阻止攻击者成功地执行禁止请求。</p>
+<ul>
+  <li> 攻击者可以通过分析返回的错误来获取敏感信息。例如，web服务可以通过在攻击者请求时返回403 (Forbidden)而不是404 (Not Found)来暴露用户帐户的存在。 </li>
+</ul>
+<p>如果你对其中任何一个问题的回答是肯定的，那么你就有风险。</p>
+<h2>推荐的安全编码实践</h2>
+<p>永远不要相信要求安全的任何部分。确保URI、头和主体正确 <a
+href="https://www.owasp.org/index.php/Input_Validation_Cheat_Sheet"></a> 在使用前经过过滤. 应该检查它们的内容、长度、编码、名称(例如:URL查询参数的名称)。
+验证这些值是否在预定义的白名单中。相反，即在给定的输入中搜索危险值，很容易漏掉一些值。</p>
+<p>在实现身份验证和权限逻辑时，不要完全依赖cookie。使用额外的保护，如 <a
+href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">CSRF</a> tokens when possible.</p>
+<p>不要在回复中暴露敏感信息。如果端点提供文件，则限制对专用目录的访问。 <a
+href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Cookies">保护敏感cookie</a> 这样客户端javascript就不能读取或修改它们。</p>
+<p>在响应中返回所有值之前，对它们进行清理，无论是在正文、头部还是状态代码中。应特别注意避免下列攻击:</p>
+<ul>跨站点脚本编制
+  <li> <a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">跨站点脚本编制(XSS)</a>, 这在HTML页面中包含不安全值时发生。 </li>
+  <li> <a href="https://www.owasp.org/index.php/Unvalidated_Redirects_and_Forwards_Cheat_Sheet">未验证的重定向</a> 当<code>Location</code>报头被破坏时，就会发生这种情况。</li>
+</ul>
+<p>将文件上载等安全敏感操作限制为经过身份验证的用户。</p>
+<p>当错误返回给客户机时要小心，因为它们可能提供敏感信息。当资源的存在是敏感的时，使用404 (Not Found)而不是403 (Forbidden)。</p>
+<h2>有问题的代码示例 </h2>
+<pre>
+// === NodeJS内置模块 ===
+const http = require('http');
+const https = require('https');
+
+// http.Server 和 https.Server 对象是安全敏感的，应该进行检查。
+
+const srv = new http.Server((req, res) =&gt; {}); // 有问题的
+srv.listen(3000);
+
+// http.createServer creates a new http.Server object.
+const srv = http.createServer((req, res) =&gt; {}); // 有问题的
+srv.listen(3000);
+
+const srv = new https.Server((req, res) =&gt; {}); // 有问题的
+srv.listen(3000);
+
+// https.createServer creates a new https.Server object.
+const srv = https.createServer((req, res) =&gt; {}); // 有问题的
+srv.listen(3000);
+</pre>
+<pre>
+// === ExpressJS ===
+const express = require('express');
+
+const app = express();
+// 所有的表达。公开端点的应用程序方法是安全敏感的，应该进行检查。
+// 例子:
+app.get('/', function (req, res) {}); // 有问题的
+app.post('/', function (req, res) {}); // 有问题的
+app.all('/', function (req, res) {}); // 有问题的
+app.listen(3000);
+</pre>
+<h2>请参阅</h2>
+<ul>
+  <li> <a href="http://cwe.mitre.org/data/definitions/20.html">MITRE, CWE-20</a> - Improper Input Validation </li>
+  <li> <a href="https://cwe.mitre.org/data/definitions/352.html">MITRE, CWE-352</a> - Cross-Site Request Forgery (CSRF) </li>
+  <li> <a href="https://cwe.mitre.org/data/definitions/79.html">MITRE, CWE-79</a> - Improper Neutralization of Input During Web Page Generation
+  ('Cross-site Scripting') </li>
+  <li> <a href="https://cwe.mitre.org/data/definitions/22.html">MITRE, CWE-22</a> - Improper Limitation of a Pathname to a Restricted Directory ('Path
+  Traversal') </li>
+  <li> OWASP Top 10 2017 Category A1 - Injection </li>
+  <li> OWASP Top 10 2017 Category A3 - Sensitive Data Exposure </li>
+  <li> OWASP Top 10 2017 Category A7 - Cross-Site Scripting (XSS) </li>
+  <li> <a href="https://www.sans.org/top25-software-errors/#cat1">SANS Top 25</a> - Insecure Interaction Between Components </li>
+  <li> <a href="https://www.sans.org/top25-software-errors/#cat2">SANS Top 25</a> - Risky Resource Management </li>
+  <li> <a href="https://www.sans.org/top25-software-errors/#cat3">SANS Top 25</a> - Porous Defenses </li>
+</ul>
+

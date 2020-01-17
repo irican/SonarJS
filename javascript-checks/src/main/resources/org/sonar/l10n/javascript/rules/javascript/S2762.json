@@ -1,5 +1,5 @@
 {
-  "title": "Selections should be stored",
+  "title": "应该存储选择",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

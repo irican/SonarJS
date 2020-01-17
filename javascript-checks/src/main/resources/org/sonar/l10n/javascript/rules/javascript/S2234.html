@@ -1,7 +1,5 @@
-<p>When the names of arguments in a function call match the names of the function parameters, it contributes to clearer, more readable code. However,
-when the names match, but are passed in a different order than the function parameters, it indicates a mistake in the parameter order which will
-likely lead to unexpected results.</p>
-<h2>Noncompliant Code Example</h2>
+<p>当函数调用中参数的名称与函数参数的名称匹配时，它有助于代码更清晰、更可读。但是，当名称匹配时，但是以不同于函数参数的顺序传递时，它指出参数顺序中的错误，这可能会导致意外的结果。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function divide(divisor, dividend) {
   return divisor/dividend;
@@ -11,11 +9,11 @@ function doTheThing() {
   var divisor = 15;
   var dividend = 5;
 
-  var result = divide(dividend, divisor);  // Noncompliant; operation succeeds, but result is unexpected
+  var result = divide(dividend, divisor);  // 不合规；操作成功，但结果出乎意料
   //...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function divide(divisor, dividend) {
   return divisor/dividend;

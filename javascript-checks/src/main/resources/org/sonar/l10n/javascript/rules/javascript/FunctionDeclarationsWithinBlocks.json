@@ -1,5 +1,5 @@
 {
-  "title": "Function declarations should not be made within blocks",
+  "title": "函数声明不应该在块中进行",
   "type": "BUG",
   "status": "ready",
   "remediation": {

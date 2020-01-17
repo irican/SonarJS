@@ -38,7 +38,7 @@ import org.sonar.plugins.javascript.api.tree.expression.ExpressionTree;
 @Rule(key = "S2201")
 public class ReturnValueNotIgnoredCheck extends AbstractAnyPathSeCheck {
 
-  private static final String MESSAGE = "The return value of \"%s\" must be used.";
+  private static final String MESSAGE = "必须使用\"%s\"的返回值";
 
   @Override
   public void beforeBlockElement(ProgramState currentState, Tree element, ProgramPoint programPoint) {

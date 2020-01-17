@@ -44,8 +44,8 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "UnreachableCode")
 public class UnreachableCodeCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Remove this code after the \"%s\" statement.";
-  private static final String MESSAGE_WITHOUT_KEYWORD = "Remove this unreachable code.";
+  private static final String MESSAGE = "在\"%s\"语句后删除此代码。";
+  private static final String MESSAGE_WITHOUT_KEYWORD = "删除此无法访问的代码。";
 
   @Override
   public Set<Kind> nodesToVisit() {

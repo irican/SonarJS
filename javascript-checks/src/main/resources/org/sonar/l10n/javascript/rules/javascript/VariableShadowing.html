@@ -1,0 +1,35 @@
+<p>重写外部范围中声明的变量会严重影响代码段的可读性，从而影响可维护性。
+此外，这可能导致维护人员引入bug，因为他们认为自己使用的是一个变量，但实际上使用的是另一个变量。</p>
+<h2>不合规的代码示例</h2>
+<pre>
+function foo() {
+  let x = bar(1);
+  if (x &gt; 0) {
+      let x = bar(2); // 不合规
+      console.log(x);
+  } else {
+     console.log("Wrong Value");
+  }
+}
+</pre>
+<h2>合规的解决方案</h2>
+<pre>
+function foo() {
+  let x = bar(1);
+  if (x &gt; 0) {
+      let y = bar(2);
+      console.log(y);
+  } else {
+     console.log("Wrong Value");
+  }
+}
+</pre>
+<h2>请参阅</h2>
+<ul>
+  <li> MISRA C:2004, 5.2 - Identifiers in an inner scope shall not use the same name as an identifier in an outer scope, and therefore hide that
+  identifier </li>
+  <li> MISRA C++:2008, 2-10-2 - Identifiers declared in an inner scope shall not hide an identifier declared in an outer scope </li>
+  <li> MISRA C:2012, 5.3 - An identifier declared in an inner scope shall not hide an identifier declared in an outer scope </li>
+  <li> <a href="https://www.securecoding.cert.org/confluence/x/VwE">CERT, DCL01-C.</a> - Do not reuse variable names in subscopes </li>
+</ul>
+

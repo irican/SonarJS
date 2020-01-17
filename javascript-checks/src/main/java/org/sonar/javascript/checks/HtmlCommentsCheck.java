@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "HtmlComments")
 public class HtmlCommentsCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Replace this HTML-style comment by a standard comment";
+  private static final String MESSAGE = "将此 HTML-style 的注释替换为标准注释";
 
   @Override
   public void visitNode(Tree tree) {

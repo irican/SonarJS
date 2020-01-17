@@ -1,6 +1,5 @@
-<p>Constructor functions, which create new object instances, must only be called with <code>new</code>. Non-constructor functions must not. Mixing
-these two usages could lead to unexpected results at runtime.</p>
-<h2>Noncompliant Code Example</h2>
+<p>创建新对象实例的构造函数只能用<code>new</code>调用。非构造函数不能。混合使用这两种方法可能会在运行时导致意想不到的结果。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function getNum() {
   return 5;
@@ -12,9 +11,9 @@ function Num(numeric, alphabetic) {
 }
 
 var myFirstNum = getNum();
-var my2ndNum = new getNum();  // Noncompliant. An empty object is returned, NOT 5
+var my2ndNum = new getNum();  // 不合规.返回一个空对象，而不是5
 
 var myNumObj1 = new Num();
-var myNumObj2 = Num();  // Noncompliant. undefined is returned, NOT an object
+var myNumObj2 = Num();  // 不合规. 返回undefined，而不是对象
 </pre>
 

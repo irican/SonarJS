@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "ForIn")
 public class ForInCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Restrict what this loop acts on by testing each property.";
+  private static final String MESSAGE = "通过测试每个属性来限制此循环的运行";
 
   @Override
   public void visitForObjectStatement(ForObjectStatementTree tree) {

@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 
 @Rule(key = "S3579")
 public class AssociativeArraysCheck extends DoubleDispatchVisitorCheck {
-  private static final String MESSAGE = "Make \"%s\" an object if it must have named properties; otherwise, use a numeric index here.";
+  private static final String MESSAGE = "如果对象必须具有命名属性，则使其形式为 \"%s\"。否则，请在此处使用数字索引。";
 
   @Override
   public void visitAssignmentExpression(AssignmentExpressionTree tree) {

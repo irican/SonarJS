@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "VariableDeclarationAfterUsage")
 public class VariableDeclarationAfterUsageCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Move the declaration of \"%s\" before this usage.";
+  private static final String MESSAGE = "在此用法之前移动 \"%s\"的声明";
 
   @Override
   public void visitScript(ScriptTree tree) {

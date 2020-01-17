@@ -1,5 +1,5 @@
 {
-  "title": "Multiline string literals should not be used",
+  "title": "不应该使用多行字符串文字",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

@@ -36,7 +36,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S905")
 public class UselessExpressionStatementCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Refactor or remove this statement.";
+  private static final String MESSAGE = "重构或删除这条语句";
 
   private static final Set<String> KNOWN_DIRECTIVES = ImmutableSet.of("use strict", "$:nomunge", "ngInject");
 

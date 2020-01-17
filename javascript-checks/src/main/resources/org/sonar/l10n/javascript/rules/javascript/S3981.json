@@ -1,5 +1,5 @@
 {
-  "title": "Collection sizes and array length comparisons should make sense",
+  "title": "集合大小和数组长度比较应该是有意义的",
   "type": "BUG",
   "status": "ready",
   "remediation": {

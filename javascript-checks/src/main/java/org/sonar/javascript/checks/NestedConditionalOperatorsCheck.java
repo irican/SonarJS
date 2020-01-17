@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3358")
 public class NestedConditionalOperatorsCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Extract this nested ternary operation into an independent statement.";
+  private static final String MESSAGE = "将此嵌套的三元运算提取为独立的语句。";
 
   private int nestingLevel;
 

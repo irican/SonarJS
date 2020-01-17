@@ -1,18 +1,18 @@
-<p>Once you've made a selection, you typically want to know whether it actually found anything. Since selectors <em>always</em> return an object (the
-set of selected DOM elements), the best way to see whether your selection found anything is to test the returned object's <code>.length</code>
-property. </p>
-<h2>Noncompliant Code Example</h2>
+<p>一旦你做出选择，你通常想知道它是否真的找到了什么。因为选择器 <em>always</em>
+返回一个对象(所选DOM元素的集合)，所以查看您的选择是否找到任何内容的最佳方法是测试返回对象的 <code>.length</code>
+属性。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-if ( $( "div.foo" ) ) {  // Noncompliant
-  // this code always runs, even when the selector didn't match any elements
+if ( $( "div.foo" ) ) {  // 不合规
+  // 这段代码总是运行，即使选择器不匹配任何元素
   // ...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
-// Testing whether a selection contains elements.
+// 测试选择项是否包含元素。
 if ( $( "div.foo" ).length &gt; 0) {
-  // this code only runs if elements were found
+  // 此代码仅在找到元素时才运行
   //  ...
 }
 </pre>

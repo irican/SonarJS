@@ -1,5 +1,5 @@
 {
-  "title": "\"yield\" expressions should not be used outside generators",
+  "title": "\"yield\"表达式不应该在生成器外部使用",
   "type": "BUG",
   "status": "ready",
   "remediation": {

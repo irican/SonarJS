@@ -1,32 +1,31 @@
-<p>This rule checks that a declaration doesn't use a name that is already in use. Indeed, it is possible to use the same symbol multiple times as
-either a variable or a function, but doing so is likely to confuse maintainers. Further it's possible that such reassignments are made in error, with
-the developer not realizing that the value of the variable is overwritten by the new assignment.</p>
-<p>This rule also applies to function parameters.</p>
-<h2>Noncompliant Code Example</h2>
+<p>此规则检查声明是否使用已使用的名称。实际上，可以将同一个符号作为变量或函数多次使用，但是这样做可能会使维护人员感到困惑。
+此外，这种重新分配可能是错误的，开发人员没有意识到变量的值被新赋值覆盖了。</p>
+<p>这个规则也适用于函数参数。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var a = 'foo';
-function a() {}   // Noncompliant
-console.log(a);   // prints "foo"
+function a() {}   // 不合规
+console.log(a);   // 打印 "foo"
 
 function myFunc(arg) {
-  var arg = "event"; // Noncompliant, argument value is lost
+  var arg = "event"; // 不合规, 参数值丢失
 }
 
-fun(); // prints "bar"
+fun(); // 打印 "bar"
 
 function fun() {
   console.log("foo");
 }
 
-fun(); // prints "bar"
+fun(); // 打印 "bar"
 
-function fun() {  // Noncompliant
+function fun() {  // 不合规
   console.log("bar");
 }
 
-fun(); // prints "bar"
+fun(); // 打印 "bar"
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var a = 'foo';
 function otherName() {}
@@ -36,18 +35,18 @@ function myFunc(arg) {
   var newName = "event";
 }
 
-fun(); // prints "foo"
+fun(); // 打印 "foo"
 
 function fun() {
   print("foo");
 }
 
-fun(); // prints "foo"
+fun(); // 打印 "foo"
 
 function printBar() {
   print("bar");
 }
 
-printBar(); // prints "bar"
+printBar(); // 打印 "bar"
 </pre>
 

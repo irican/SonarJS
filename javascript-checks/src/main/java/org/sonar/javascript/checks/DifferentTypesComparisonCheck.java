@@ -38,8 +38,8 @@ import org.sonar.plugins.javascript.api.tree.expression.BinaryExpressionTree;
 @Rule(key = "S3403")
 public class DifferentTypesComparisonCheck extends SeCheck {
 
-  private static final String MESSAGE_EQUAL = "Remove this \"===\" check; it will always be false. Did you mean to use \"==\"?";
-  private static final String MESSAGE_NOT_EQUAL = "Remove this \"!==\" check; it will always be true. Did you mean to use \"!=\"?";
+  private static final String MESSAGE_EQUAL = "删除此 \"===\" 检验; 它将始终为 false。 您是想使用 \"==\"吗?";
+  private static final String MESSAGE_NOT_EQUAL = "删除此 \"!==\" 检验; 它将始终为 true. 您是想使用 \"!=\"吗?";
 
   // For each string equality comparison tree this map contains true if types are different in all execution paths, true if types are alike in at least one execution path
   private Map<BinaryExpressionTree, Boolean> typeDifference = new HashMap<>();

@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "MultilineStringLiterals")
 public class MultilineStringLiteralsCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use string concatenation rather than line continuation.";
+  private static final String MESSAGE = "使用连续字符串而不是跨换行符继续字符串";
 
   @Override
   public void visitLiteral(LiteralTree tree) {

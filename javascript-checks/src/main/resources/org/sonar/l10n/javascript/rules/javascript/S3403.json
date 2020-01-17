@@ -1,5 +1,5 @@
 {
-  "title": "Strict equality operators should not be used with dissimilar types",
+  "title": "严格的相等运算符不应该用于不同类型",
   "type": "BUG",
   "status": "ready",
   "remediation": {

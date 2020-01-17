@@ -1,5 +1,5 @@
 {
-  "title": "Dynamically executing code is security-sensitive",
+  "title": "动态执行代码是安全敏感的",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "remediation": {
@@ -13,7 +13,7 @@
   ],
   "standards": [
     "CWE",
-    "OWASP Top 10"
+    "OWASP Top Ten"
   ],
   "defaultSeverity": "Critical",
   "ruleSpecification": "RSPEC-1523",

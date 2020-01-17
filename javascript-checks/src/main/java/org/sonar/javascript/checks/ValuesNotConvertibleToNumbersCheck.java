@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.tree.expression.ExpressionTree;
 @Rule(key = "S3758")
 public class ValuesNotConvertibleToNumbersCheck extends AbstractAnyPathSeCheck {
 
-  private static final String MESSAGE = "Re-evaluate the data flow; this operand of a numeric comparison could be %s.";
+  private static final String MESSAGE = "重新计算数据流； 用于数值比较的操作数可以为%s。";
 
   private static final Constraint CONVERTIBLE_TO_NUMBER = Constraint.ANY_NUMBER.or(Constraint.ANY_BOOLEAN).or(Constraint.DATE).or(Constraint.NULL);
 

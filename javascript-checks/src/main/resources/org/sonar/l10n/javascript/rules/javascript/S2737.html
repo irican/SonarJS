@@ -1,16 +1,15 @@
-<p>A <code>catch</code> clause that only rethrows the caught exception has the same effect as omitting the <code>catch</code> altogether and letting
-it bubble up automatically, but with more code and the additional detriment of leaving maintainers scratching their heads. </p>
-<p>Such clauses should either be eliminated or populated with the appropriate logic.</p>
-<p><em>Note that this rule requires Node.js to be available during analysis.</em></p>
-<h2>Noncompliant Code Example</h2>
+<p>只重新抛出捕获异常的<code>catch</code>子句的效果与完全省略<code>catch</code>并让它自动冒出来的效果是一样的，但是会有更多的代码，并且会给维护人员带来额外的麻烦。</p>
+<p>应该删除这些子句，或者用适当的逻辑填充它们。</p>
+<p><em>注意，此规则要求Node.js在分析期间可用。</em></p>
+<h2>不合规的代码示例</h2>
 <pre>
 try {
   doSomething();
-} catch (ex) {  // Noncompliant
+} catch (ex) {  // 不合规
   throw ex;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 try {
   doSomething();
@@ -19,7 +18,7 @@ try {
   throw ex;
 }
 </pre>
-<p>or</p>
+<p>或者</p>
 <pre>
 doSomething();
 </pre>

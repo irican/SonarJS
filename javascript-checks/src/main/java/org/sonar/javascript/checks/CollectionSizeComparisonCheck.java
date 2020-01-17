@@ -39,7 +39,7 @@ public class CollectionSizeComparisonCheck extends DoubleDispatchVisitorCheck {
       DotMemberExpressionTree leftOperand = ((DotMemberExpressionTree) tree.leftOperand());
       if (isLengthOrSizeProperty(leftOperand)) {
         String propertyName = leftOperand.property().name();
-        addIssue(tree, String.format("Fix this expression; %s of \"%s\" is always greater or equal to zero.", propertyName, CheckUtils.asString(leftOperand.object())));
+        addIssue(tree, String.format("修正这个表达式; \"%s\" 的%s始终大于等于0。", propertyName, CheckUtils.asString(leftOperand.object())));
       }
     }
     super.visitBinaryExpression(tree);

@@ -1,7 +1,6 @@
-<p>When an object is created with a setter for a property but without a getter for that property, the property is inaccessible and is thus
-useless.</p>
-<p>This rule also enforces the reverse situation (getter but no setter).</p>
-<h2>Noncompliant Code Example</h2>
+<p>当使用属性的setter创建对象而没有属性的getter时，属性是不可访问的，因此是无用的。</p>
+<p>此规则还强制执行相反的情况(getter但没有setter)。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var obj = {
     set foo(value) {
@@ -9,7 +8,7 @@ var obj = {
     }
 };
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var obj = {
     set foo(value) {
@@ -23,7 +22,7 @@ var obj = {
 <p>or </p>
 <pre>
 var obj = {
-    setFoo(value) {    // a standard method, not a setter
+    setFoo(value) {    // 标准方法，而不是setter
         this.fooval = value;
     }
 };

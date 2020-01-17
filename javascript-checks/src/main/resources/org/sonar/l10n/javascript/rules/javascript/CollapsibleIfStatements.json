@@ -1,5 +1,5 @@
 {
-  "title": "Collapsible \"if\" statements should be merged",
+  "title": "应该合并可折叠的\"if\" 语句",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

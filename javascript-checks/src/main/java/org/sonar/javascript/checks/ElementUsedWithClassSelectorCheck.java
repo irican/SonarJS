@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.tree.expression.CallExpressionTree;
 @Rule(key = "S2714")
 public class ElementUsedWithClassSelectorCheck extends AbstractJQuerySelectorOptimizationCheck {
 
-  private static final String MESSAGE = "Remove \"%s\" in this selector.";
+  private static final String MESSAGE = "删除此选择器中的 \"%s\" 。";
   private static final Pattern elementUsedWithClassSelectorPattern = Pattern.compile("(\\w+)\\.([\\w_-]+)");
 
   @Override

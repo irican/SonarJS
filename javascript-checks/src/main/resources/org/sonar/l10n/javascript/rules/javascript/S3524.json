@@ -1,5 +1,5 @@
 {
-  "title": "Braces and parentheses should be used consistently with arrow functions",
+  "title": "大括号和圆括号应该与箭头函数一致使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

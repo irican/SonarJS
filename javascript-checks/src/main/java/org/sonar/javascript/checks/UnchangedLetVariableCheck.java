@@ -39,7 +39,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3353")
 public class UnchangedLetVariableCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Make \"%s\" \"const\".";
+  private static final String MESSAGE = "使\"%s\" \"const\"";
 
   private Set<Symbol> ignoredSymbols;
 

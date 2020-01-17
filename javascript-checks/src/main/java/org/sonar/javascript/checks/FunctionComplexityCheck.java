@@ -39,13 +39,13 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "FunctionComplexity")
 public class FunctionComplexityCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Function has a complexity of %s which is greater than %s authorized.";
+  private static final String MESSAGE = "函数的复杂度 %s 大于可允许的复杂度 %s ";
 
   private static final int DEFAULT_MAXIMUM_FUNCTION_COMPLEXITY_THRESHOLD = 10;
 
   @RuleProperty(
     key = "maximumFunctionComplexityThreshold",
-    description = "The maximum authorized complexity in function",
+    description = "被授权的最大函数复杂度",
     defaultValue = "" + DEFAULT_MAXIMUM_FUNCTION_COMPLEXITY_THRESHOLD)
   private int maximumFunctionComplexityThreshold = DEFAULT_MAXIMUM_FUNCTION_COMPLEXITY_THRESHOLD;
 

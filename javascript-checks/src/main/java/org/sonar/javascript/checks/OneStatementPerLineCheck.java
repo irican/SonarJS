@@ -41,7 +41,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "OneStatementPerLine")
 public class OneStatementPerLineCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Reformat the code to have only one statement per line.";
+  private static final String MESSAGE = "重新格式化代码，使每一行只有一个语句。";
 
   private ListMultimap<Integer, StatementTree> statementsPerLine = ArrayListMultimap.create();
   private List<StatementTree> excludedStatements = new ArrayList<>();

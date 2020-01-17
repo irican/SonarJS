@@ -41,11 +41,11 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S1226")
 public class ReassignedParameterCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Introduce a new variable instead of reusing the %s \"%s\".";
+  private static final String MESSAGE = "引入一个新变量，而不是重新使用 %s \"%s\".";
 
-  private static final String FOREACH_VARIABLE = "foreach variable";
-  private static final String PARAMETER = "parameter";
-  private static final String CAUGHT_EXCEPTION = "caught exception";
+  private static final String FOREACH_VARIABLE = "foreach变量";
+  private static final String PARAMETER = "参数";
+  private static final String CAUGHT_EXCEPTION = "捕获的异常";
 
   @Override
   public void visitNode(Tree tree) {

@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2870")
 public class DeleteArrayElementCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this use of \"delete\".";
+  private static final String MESSAGE = "删除对 \"delete\"的使用";
 
   @Override
   public void visitUnaryExpression(UnaryExpressionTree tree) {

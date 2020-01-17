@@ -31,12 +31,12 @@ import org.sonar.plugins.javascript.api.visitors.LineIssue;
 @Rule(key = "LineLength")
 public class LineLengthCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Split this %s characters long line (which is greater than %s authorized).";
+  private static final String MESSAGE = "拆分此 %s 个字符的长句 (大于授权的 %s 个字符)";
   private static final int DEFAULT_MAXIMUM_LINE_LENGTH = 180;
 
   @RuleProperty(
     key = "maximumLineLength",
-    description = "The maximum authorized line length.",
+    description = "被授权的行的最大长度",
     defaultValue = "" + DEFAULT_MAXIMUM_LINE_LENGTH)
   public int maximumLineLength = DEFAULT_MAXIMUM_LINE_LENGTH;
 

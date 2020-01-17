@@ -1,5 +1,5 @@
 {
-  "title": "JavaScript parser failure",
+  "title": "JavaScript解析器故障",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

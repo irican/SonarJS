@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "DuplicateFunctionArgument")
 public class DuplicateFunctionArgumentCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Rename the duplicated function parameter \"%s\".";
+  private static final String MESSAGE = "重命名重复的函数参数 \"%s\"";
 
   @Override
   public void visitParameterList(ParameterListTree tree) {

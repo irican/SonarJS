@@ -37,7 +37,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 public class SpaceInModelPropertyNameCheck extends DoubleDispatchVisitorCheck {
 
   private static final String SET = "set";
-  private static final String MESSAGE = "Rename this property to remove the spaces.";
+  private static final String MESSAGE = "重命名此属性以去掉空格。";
 
   @Override
   public void visitCallExpression(CallExpressionTree tree) {

@@ -1,5 +1,5 @@
 {
-  "title": "Collection and array contents should be used",
+  "title": "应该使用集合和数组内容",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

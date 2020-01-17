@@ -1,5 +1,5 @@
 {
-  "title": "Generators should \"yield\" something",
+  "title": "G生成器应该\"yield\" 一些东西",
   "type": "BUG",
   "status": "ready",
   "remediation": {

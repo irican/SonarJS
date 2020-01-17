@@ -1,17 +1,17 @@
-<p>There's no reason to import modules you don't use; and every reason not to: doing so needlessly increases the load.</p>
-<p>Finally, importing a module twice is pointless and confusing.</p>
-<h2>Noncompliant Code Example</h2>
+<p>没有理由导入您不使用的模块;而每一个不这样做的理由都是:这样做毫无必要地增加了负担。</p>
+<p>最后，两次导入一个模块是没有意义和令人困惑的。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-import A from 'a';      // Noncompliant, A isn't used
+import A from 'a';      // 不合规，A没有被使用
 import { B1 } from 'b';
 
 console.log("My first JavaScript...");
 
-import { B1 } from 'b'; // Noncompliant, already imported
+import { B1 } from 'b'; // 不合规，已经被导入
 
 console.log(B1);
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 import { B1 } from 'b';
 

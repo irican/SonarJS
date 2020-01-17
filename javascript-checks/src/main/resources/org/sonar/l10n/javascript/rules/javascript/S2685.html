@@ -1,20 +1,19 @@
-<p>Both <code>arguments.caller</code> and <code>arguments.callee</code> make quite a few optimizations impossible so they were deprecated in latest
-versions of JavaScript. In fact, EcmaScript 5 forbids the use of both in <code>strict</code> mode, according to the docs:</p>
+<p> <code>arguments.caller</code> 和 <code>arguments.callee</code> 使许多的优化是不可能的，所以它们在最新版本的JavaScript中被禁用。
+事实上，根据文档，EcmaScript 5禁止在<code>strict</code>模式下使用这两种方法:</p>
 <blockquote>
-  Arguments objects for strict mode functions define non-configurable accessor properties named "caller" and "callee" which throw a TypeError
-  exception on access.
+ 严格模式函数的参数对象定义了名为“caller”和“callee”的不可配置访问器属性，这些属性在访问时抛出一个类型错误异常。
 </blockquote>
-<p>The same restriction applies to the function's <code>caller</code> and <code>arguments</code> properties in <code>strict</code> mode.</p>
-<h2>Noncompliant Code Example</h2>
+<p>同样的限制也适用于函数在<code>strict</code>模式的 <code>caller</code> 和 <code>arguments</code> 属性。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function whoCalled() {
-   if (arguments.caller == null)   //Noncompliant
+   if (arguments.caller == null)   //不合规
       console.log('I was called from the global scope.');
    else
-      console.log(arguments.caller + ' called me!');  // Noncompliant
+      console.log(arguments.caller + ' called me!');  // 不合规
 
-  console.log(whoCalled.caller);  // Noncompliant
-  console.log(whoCalled.arguments);  // Noncompliant
+  console.log(whoCalled.caller);  // 不合规
+  console.log(whoCalled.arguments);  // 不合规
 }
 </pre>
 

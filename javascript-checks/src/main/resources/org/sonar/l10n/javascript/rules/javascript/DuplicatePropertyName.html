@@ -1,23 +1,21 @@
-<p>JavaScript allows duplicate property names in classes and object literals, but only the last instance of a duplicated name determines the actual
-value that will be used for it. Therefore, changing values of other occurrences of a duplicated name will have no effect and may cause
-misunderstandings and bugs.</p>
-<p>Defining a <code>class</code> with a duplicated <code>constructor</code> will generate an error.</p>
-<p>Before ECMAScript 2015, using duplicate names will generate an error in JavaScript strict mode code.</p>
-<h2>Noncompliant Code Example</h2>
+<p>JavaScript允许在类和对象文本中使用重复的属性名，但只有重复名称的最后一个实例才确定将为其使用的实际值。因此，更改重复名称的其他出现的值将没有效果，并可能导致误解和错误。</p>
+<p>使用重复的 <code>constructor</code>定义一个<code>class</code> 将产生一个错误。</p>
+<p>在ECMAScript 2015之前，使用重复的名称会在JavaScript严格模式代码中产生错误。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var data = {
   "key": "value",
   "1": "value",
-  "key": "value", // Noncompliant - duplicate of "key"
-  'key': "value", // Noncompliant - duplicate of "key"
-  key: "value", // Noncompliant - duplicate of "key"
-  \u006bey: "value", // Noncompliant - duplicate of "key"
-  "\u006bey": "value", // Noncompliant - duplicate of "key"
-  "\x6bey": "value", // Noncompliant - duplicate of "key"
-  1: "value" // Noncompliant - duplicate of "1"
+  "key": "value", // 不合规 - 重复的 "key"
+  'key': "value", // 不合规 - 重复的 "key"
+  key: "value", // 不合规 - 重复的 "key"
+  \u006bey: "value", // 不合规 - 重复的 "key"
+  "\u006bey": "value", //不合规 - 重复的 "key"
+  "\x6bey": "value", // 不合规 - 重复的 "key"
+  1: "value" // 不合规 - 重复的 "1"
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var data = {
   "key": "value",

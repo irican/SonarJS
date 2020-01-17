@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S2583")
 public class ConditionalUnreachableCodeCheck extends AbstractAlwaysTrueOrFalseConditionCheck {
 
-  private static final String MESSAGE = "Change this condition so that it does not always evaluate to \"%s\"; some subsequent code is never executed.";
+  private static final String MESSAGE = "更改此条件，以便它不总是求值为 \"%s\"; 否则一些后续代码不会执行。";
 
   @Override
   protected void conditionWithDeadCode(Tree condition, boolean isTruthy, Set<Tree> deadCode) {

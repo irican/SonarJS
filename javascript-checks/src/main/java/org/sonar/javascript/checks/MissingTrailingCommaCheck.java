@@ -31,7 +31,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3723")
 public class MissingTrailingCommaCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Add a trailing comma to this item of the list.";
+  private static final String MESSAGE = "将尾随逗号添加到列表的此项。";
 
   @Override
   public void visitObjectLiteral(ObjectLiteralTree tree) {

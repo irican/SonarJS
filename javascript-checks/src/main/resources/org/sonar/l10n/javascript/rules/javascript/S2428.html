@@ -1,19 +1,18 @@
-<p>Object literal syntax, which initializes an object's properties inside the object declaration is cleaner and clearer than the alternative: creating
-an empty object, and then giving it properties one by one.</p>
-<p>An issue is raised when the following pattern is met:</p>
+<p>对象文本语法，它在对象声明中初始化对象的属性比另一种方法更干净、更清晰:创建一个空对象，然后逐个给它属性。</p>
+<p>当遇到以下模式时，就会出现问题:</p>
 <ul>
-  <li> An empty object is created. </li>
-  <li> A consecutive single-line statement adds a property to the created object. </li>
+  <li>创建一个空对象。</li>
+  <li> 连续的单行语句向创建的对象添加属性。</li>
 </ul>
-<p><em>Note that this rule requires Node.js to be available during analysis.</em></p>
-<h2>Noncompliant Code Example</h2>
+<p><em>注意，此规则要求Node.js在分析期间可用。</em></p>
+<h2>不合规的代码示例</h2>
 <pre>
-let person = {};  // Noncompliant
+let person = {};  // 不合规
 person.firstName = "John";
 person.middleInitial = "Q";
 person.lastName = "Public";
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 let person = {
   firstName: "John",

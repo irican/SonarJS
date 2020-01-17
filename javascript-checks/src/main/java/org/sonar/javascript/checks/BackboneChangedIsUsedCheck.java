@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2549")
 public class BackboneChangedIsUsedCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this update of the \"changed\" property.";
+  private static final String MESSAGE = "删除此 \"changed\" 属性的更新";
   private static final String CHANGED = "changed";
 
   @Override

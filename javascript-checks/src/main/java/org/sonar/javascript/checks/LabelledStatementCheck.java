@@ -30,7 +30,7 @@ public class LabelledStatementCheck extends DoubleDispatchVisitorCheck {
   @Override
   public void visitLabelledStatement(LabelledStatementTree tree) {
     if (!tree.statement().is(KindSet.LOOP_KINDS)) {
-      addIssue(tree.labelToken(), "Refactor the code to remove this label and the need for it.");
+      addIssue(tree.labelToken(), "重构代码以删除并且完全不使用标签。");
     }
     super.visitLabelledStatement(tree);
   }

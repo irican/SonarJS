@@ -1,20 +1,20 @@
-<p>For better readability, do not put more than one statement on a single line.</p>
-<h2>Noncompliant Code Example</h2>
+<p>为了更好的可读性，不要在一行中放置多个语句。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-foo(); bar(); // Noncompliant
+foo(); bar(); // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 foo();
 bar();
 </pre>
-<h2>Exceptions</h2>
-<p>Anonymous functions containing a single statement are ignored. Control flow statements with a single nested statement are ignored as well.</p>
+<h2>例外</h2>
+<p>包含一条语句的匿名函数将被忽略。带有单个嵌套语句的控制流语句也将被忽略。</p>
 <pre>
-onEvent(function() { doSomething(); });               // Compliant
-onEvent(function(p) { doSomething(); return p % 2; }); // Noncompliant
+onEvent(function() { doSomething(); });               // 合规
+onEvent(function(p) { doSomething(); return p % 2; }); // 不合规
 
-if (condition) doSomething();                         // Compliant
-if (condition) { doSomething(); }                     // Compliant
+if (condition) doSomething();                         // 合规
+if (condition) { doSomething(); }                     // 合规
 </pre>
 

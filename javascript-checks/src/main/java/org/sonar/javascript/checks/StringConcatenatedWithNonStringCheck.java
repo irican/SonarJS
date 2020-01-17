@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.tree.expression.ExpressionTree;
 @Rule(key = "S3402")
 public class StringConcatenatedWithNonStringCheck extends AbstractAllPathSeCheck<BinaryExpressionTree> {
 
-  private static final String MESSAGE = "Either make this concatenation explicit or cast one operand to a number.";
+  private static final String MESSAGE = "要么显式地进行此连接，要么将一个操作数强制转换为一个数字。";
 
   @Override
   BinaryExpressionTree getTree(Tree element) {

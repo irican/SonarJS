@@ -1,5 +1,5 @@
 {
-  "title": "Property getters and setters should come in pairs",
+  "title": "属性getter和setter应该成对出现",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

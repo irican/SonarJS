@@ -1,5 +1,5 @@
 {
-  "title": "Variables should be declared before they are used",
+  "title": "变量在使用之前应该声明",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

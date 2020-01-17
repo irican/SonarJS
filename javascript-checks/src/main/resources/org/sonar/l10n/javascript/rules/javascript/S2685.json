@@ -1,5 +1,5 @@
 {
-  "title": "\"arguments.caller\" and \"arguments.callee\" should not be used",
+  "title": "\"arguments.caller\" 和 \"arguments.callee\" 不应该被使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

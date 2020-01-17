@@ -1,16 +1,14 @@
-<p>Expressions with arithmetic (<code>/, *, %, ++, --, -, -=, *=, /=, %=, +=, +</code>), unary (<code>-</code>), or comparison operators (<code>&gt;,
-&lt;, &gt;=, &lt;=</code>) where one, or both, of the operands is a String, Boolean or Date value rely on implicit conversions. Both the
-maintainability and reliability levels of such a piece of code are questionable.</p>
-<h2>Noncompliant Code Example</h2>
+<p>算术表达式(<code>/， *， %， ++，——，-，-=，*=，/=，%=，+=，+</code>)，一元运算符(<code>-</code>)，或比较运算符(<code> >， <， > =， < =</code>)，其中一个或两个操作数是字符串，布尔值或日期值依赖于隐式转换。这样一段代码的可维护性和可靠性都值得怀疑。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 str = "80";
-quarter = str / 4; // Noncompliant
+quarter = str / 4; // 不合规
 
-if (str &lt; 10) { // Noncompliant
+if (str &lt; 10) { // 不合规
    // ...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 str = "80";
 parsedStr = parseInt(str);
@@ -20,10 +18,9 @@ if (parsedStr &lt; 10) {
   // ...
 }
 </pre>
-<h2>Exceptions</h2>
+<h2>例外</h2>
 <ul>
-  <li> Expressions using the binary <code>+</code> operator with at least one <code>String</code> operand are ignored because the <code>+</code>
-  operator will perform a concatenation in that case. </li>
-  <li> Comparisons where both operands are strings are ignored because a lexicographical comparison is performed in that case. </li>
+  <li> 使用具有至少一个<code>字符串</code>操作数的二进制<code>+</code>操作符的表达式将被忽略，因为在这种情况下，<code>+</code>操作符将执行连接。 </li>
+  <li> 如果两个操作数都是字符串，那么比较将被忽略，因为在这种情况下会执行词法比较。 </li>
 </ul>
 

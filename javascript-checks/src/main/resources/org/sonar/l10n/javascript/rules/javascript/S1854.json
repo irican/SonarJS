@@ -1,5 +1,5 @@
 {
-  "title": "Dead stores should be removed",
+  "title": "死存储应该被移除",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

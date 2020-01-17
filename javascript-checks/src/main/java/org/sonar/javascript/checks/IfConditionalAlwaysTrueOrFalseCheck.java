@@ -27,7 +27,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S1145")
 public class IfConditionalAlwaysTrueOrFalseCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this \"if\" statement.";
+  private static final String MESSAGE = "删除此 \"if\" 语句";
 
   @Override
   public void visitIfStatement(IfStatementTree tree) {

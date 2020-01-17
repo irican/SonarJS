@@ -1,5 +1,5 @@
 {
-  "title": "Calls should not be made to non-callable values",
+  "title": "不应该调用不可调用的值",
   "type": "BUG",
   "status": "ready",
   "remediation": {

@@ -1,5 +1,5 @@
 {
-  "title": "Variables and functions should not be declared in the global scope",
+  "title": "变量和函数不应该在全局范围内声明",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

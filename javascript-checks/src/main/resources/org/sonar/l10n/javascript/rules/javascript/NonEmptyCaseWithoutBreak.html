@@ -1,19 +1,18 @@
-<p>When the execution is not explicitly terminated at the end of a switch case, it continues to execute the statements of the following case. While
-this is sometimes intentional, it often is a mistake which leads to unexpected behavior. </p>
-<h2>Noncompliant Code Example</h2>
+<p>当执行未显式终止于切换用例的末尾时，它将继续执行下列用例的语句。虽然有时这是故意的，但这往往是一个错误，导致意想不到的行为。 </p>
+<h2>不合规的代码示例</h2>
 <pre>
 switch (myVariable) {
   case 1:
     foo();
     break;
-  case 2:  // Both 'doSomething()' and 'doSomethingElse()' will be executed. Is it on purpose ?
+  case 2:  // 同时执行 'doSomething()' 和 'doSomethingElse()'。这是故意的吗?
     doSomething();
   default:
     doSomethingElse();
     break;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 switch (myVariable) {
   case 1:
@@ -27,28 +26,28 @@ switch (myVariable) {
     break;
 }
 </pre>
-<h2>Exceptions</h2>
-<p>This rule is relaxed in the following cases:</p>
+<h2>例外</h2>
+<p>在下列情况下，可放宽这条规则:</p>
 <pre>
 switch (myVariable) {
-  case 0:                                // Empty case used to specify the same behavior for a group of cases.
+  case 0:                                // 空用例，用于为一组用例指定相同的行为。
   case 1:
     doSomething();
     break;
-  case 2:                                // Use of return statement
+  case 2:                                // 返回语句的使用
     return;
-  case 3:                               // Ends with comment when fall-through is intentional
+  case 3:                               // 如果是故意的，则以注释结束
     console.log("this case falls through")
     // fall through
-  case 4:                                // Use of throw statement
+  case 4:                                // 抛出语句的使用
     throw new IllegalStateException();
-  case 5:                                // Use of continue statement
+  case 5:                                // 继续语句的使用
     continue;
-  default:                               // For the last case, use of break statement is optional
+  default:                               // 对于最后一种情况，使用break语句是可选的
     doSomethingElse();
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2004, 15.0 - The MISRA C <em>switch</em> syntax shall be used. </li>
   <li> MISRA C:2004, 15.2 - An unconditional break statement shall terminate every non-empty switch clause </li>

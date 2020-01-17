@@ -1,5 +1,5 @@
 {
-  "title": "Template literal placeholder syntax should not be used in regular strings",
+  "title": "模板文字占位符语法不应该在常规字符串中使用",
   "type": "BUG",
   "status": "ready",
   "remediation": {

@@ -36,7 +36,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S3531")
 public class GeneratorWithoutYieldCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Add a \"yield\" statement to this generator.";
+  private static final String MESSAGE = "将 \"yield\" 语句添加到此生成器";
 
   private Deque<Boolean> hasYieldStack = new ArrayDeque<>();
 

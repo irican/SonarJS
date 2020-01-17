@@ -29,7 +29,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3498")
 public class ObjectLiteralShorthandCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use shorthand for %s \"%s\".";
+  private static final String MESSAGE = "为 %s \"%s\"使用简写";
 
   @Override
   public void visitPairProperty(PairPropertyTree tree) {

@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "ElseIfWithoutElse")
 public class ElseIfWithoutElseCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Add the missing \"else\" clause.";
+  private static final String MESSAGE = "添加缺少的 \"else\" 子句";
 
   @Override
   public void visitElseClause(ElseClauseTree tree) {

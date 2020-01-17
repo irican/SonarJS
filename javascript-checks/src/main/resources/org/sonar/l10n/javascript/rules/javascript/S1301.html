@@ -1,7 +1,7 @@
-<p><code>switch</code> statements are useful when there are many different cases depending on the value of the same expression.</p>
-<p>For just one or two cases however, the code will be more readable with <code>if</code> statements.</p>
-<p><em>Note that this rule requires Node.js to be available during analysis.</em></p>
-<h2>Noncompliant Code Example</h2>
+<p><code>switch</code> 语句在许多不同的情况下是有用的，这取决于同一个表达式的值。</p>
+<p>但是，对于一到两种情况，如果使用<code>if</code> 语句，代码将更具可读性。</p>
+<p><em>注意，此规则要求Node.js在分析期间可用。</em></p>
+<h2>不合规的代码示例</h2>
 <pre>
 switch (variable) {
   case 0:
@@ -12,7 +12,7 @@ switch (variable) {
     break;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 if (variable == 0) {
   doSomething();
@@ -20,8 +20,10 @@ if (variable == 0) {
   doSomethingElse();
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
+  <li> MISRA C:2004, 15.5 - Every switch statement shall have at least one case clause. </li>
+  <li> MISRA C++:2008, 6-4-8 - Every switch statement shall have at least one case-clause. </li>
   <li> MISRA C:2012, 16.6 - Every switch statement shall have at least two switch-clauses </li>
 </ul>
 

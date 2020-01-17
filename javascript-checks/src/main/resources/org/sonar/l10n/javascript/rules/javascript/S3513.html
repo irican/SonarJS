@@ -1,18 +1,15 @@
-<p>The magic of JavaScript is that you can pass arguments to functions that don't declare parameters, and on the other side, you can use those
-passed-in arguments inside the no-args <code>function</code>. </p>
-<p>But just because you can, that does't mean you should. The expectation and use of arguments inside functions that don't explicitly declare them is
-confusing to callers. No one should ever have to read and fully understand a function to be able to use it competently. </p>
-<p>If you don't want to name arguments explicitly, use the <code>...</code> syntax to specify that an a variable number of arguments is expected. Then
-inside the function, you'll be dealing with a first-class array, rather than an array-like structure.</p>
-<h2>Noncompliant Code Example</h2>
+<p>JavaScript的神奇之处在于，您可以将参数传递给不声明参数的函数，另一方面，您可以在no-args <code>函数</code>中使用这些传入的参数。 </p>
+<p>但仅仅因为你能，并不意味着你应该。函数中未显式声明参数的期望和使用会使调用者感到困惑。没有人必须阅读并完全理解一个函数才能胜任地使用它。 </p>
+<p>如果不想显式地命名参数，请使用<code>…</code>语法，指定需要一个可变数量的参数。然后在函数内部，您将处理一个一流的数组，而不是类似数组的结构。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function concatenate() {
-  let args = Array.prototype.slice.call(arguments);  // Noncompliant
+  let args = Array.prototype.slice.call(arguments);  // 不合规
   return args.join(', ');
 }
 
 function doSomething(isTrue) {
-  var args = Array.prototype.slice.call(arguments, 1); // Noncompliant
+  var args = Array.prototype.slice.call(arguments, 1); // 不合规
   if (!isTrue) {
     for (var arg of args) {
       ...
@@ -20,7 +17,7 @@ function doSomething(isTrue) {
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function concatenate(...args) {
   return args.join(', ');

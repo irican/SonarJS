@@ -34,7 +34,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S2692")
 public class IndexOfCompareToPositiveNumberCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "This check ignores index 0; consider using 'includes' method to make this check safe and explicit.";
+  private static final String MESSAGE = "该检查忽略索引 0; 考虑使用 'includes' 方法使此检查安全且正确。";
 
   @Override
   public Set<Kind> nodesToVisit() {

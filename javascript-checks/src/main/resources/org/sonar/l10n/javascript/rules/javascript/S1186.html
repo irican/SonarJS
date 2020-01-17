@@ -1,20 +1,20 @@
-<p>There are several reasons for a function not to have a function body:</p>
+<p>函数没有函数体有以下几个原因:</p>
 <ul>
-  <li> It is an unintentional omission, and should be fixed to prevent an unexpected behavior in production. </li>
-  <li> It is not yet, or never will be, supported. In this case an exception should be thrown in languages where that mechanism is available. </li>
-  <li> The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override. </li>
+  <li> 这是一种无意的遗漏，应该加以纠正，以防止生产中出现意外行为。 </li>
+  <li> 它还没有，或者永远不会得到支持。在这种情况下，应该在该机制可用的语言中抛出异常。 </li>
+  <li> 该方法是一个故意为空的覆盖。在这种情况下，嵌套注释应该解释空白覆盖的原因。 </li>
 </ul>
-<h2>Noncompliant Code Example</h2>
+<h2>不合规的代码示例</h2>
 <pre>
 function foo() {
 }
 
 var foo = () =&gt; {};
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function foo() {
-    // This is intentional
+    // 这是故意的
 }
 
 var foo = () =&gt; {

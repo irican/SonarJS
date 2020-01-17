@@ -35,11 +35,11 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S2611")
 public class UntrustedContentCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Remove this content from an untrusted source.";
+  private static final String MESSAGE = "从不受信任的来源中删除此内容。";
 
   @RuleProperty(
     key = "domainsToIgnore",
-    description = "Comma-delimited list of domains to ignore. Regexes may be used, e.g. (.*\\.)?example\\.com,foo\\.org"
+    description = "可忽略以逗号分隔的域列表。可以使用正则表达式，例如 (.*\\.)?example\\.com,foo\\.org"
   )
   public String domainsToIgnore = "";
   private List<Pattern> patterns = null;

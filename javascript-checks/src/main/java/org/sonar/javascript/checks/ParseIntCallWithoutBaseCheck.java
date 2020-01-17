@@ -29,7 +29,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2427")
 public class ParseIntCallWithoutBaseCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Add the base to this \"parseInt\" call.";
+  private static final String MESSAGE = "将基数添加到此 \"parseInt\" 调用中。";
 
   @Override
   public void visitCallExpression(CallExpressionTree tree) {

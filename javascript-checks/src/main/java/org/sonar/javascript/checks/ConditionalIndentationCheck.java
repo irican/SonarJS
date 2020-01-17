@@ -34,7 +34,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3973")
 public class ConditionalIndentationCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use curly braces or indentation to denote the code conditionally executed by this \"%s\".";
+  private static final String MESSAGE = "使用花括号或缩进来表示被此 \"%s\" 条件执行的代码。";
 
   @Override
   public void visitIfStatement(IfStatementTree tree) {

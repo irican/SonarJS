@@ -1,28 +1,27 @@
-<p>A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value
-only to then overwrite it or throw it away, could indicate a serious error in the code. Even if it's not an error, it is at best a waste of resources.
-Therefore all calculated values should be used.</p>
-<h2>Noncompliant Code Example</h2>
+<p>当为局部变量分配了一个后续指令无法读取的值时，就会发生死存储。计算或检索一个值，然后将其覆盖或丢弃，这可能表明代码中存在严重错误。
+即使这不是一个错误，充其量也只是浪费资源。因此，应使用所有计算值。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-i = a + b; // Noncompliant; calculation result not used before value is overwritten
+i = a + b; // 不合规; 值被覆盖前计算结果未使用
 i = compute();
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 i = a + b;
 i += compute();
 </pre>
-<h2>Exceptions</h2>
-<p>This rule ignores initializations to -1, 0, 1, <code>null</code>, <code>undefined</code>, <code>true</code>, <code>false</code>, <code>""</code>,
-<code>[]</code> and <code>{}</code>. </p>
-<p>This rule also ignores variables declared with object destructuring using rest syntax (used to exclude some properties from object):</p>
+<h2>例外</h2>
+<p>这个规则忽略对 -1, 0, 1, <code>null</code>, <code>undefined</code>, <code>true</code>, <code>false</code>, <code>""</code>,
+<code>[]</code> and <code>{}</code>的初始化. </p>
+<p>这个规则也忽略了使用rest语法声明的对象析构的变量(用于从对象中排除一些属性):</p>
 <pre>
-let {a, b, ...rest} = obj; // 'a' and 'b' are ok
+let {a, b, ...rest} = obj; // 'a' 和 'b' 都可以
 doSomething(rest);
 
-let [x1, x2, x3] = arr;    // but 'x1' is noncompliant, as omitting syntax can be used: "let [, x2, x3] = arr;"
+let [x1, x2, x3] = arr;    // 但是 'x1' 是不合规的, 因为可以使用省略语法: "let [, x2, x3] = arr;"
 doSomething(x2, x3);
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> <a href="http://cwe.mitre.org/data/definitions/563.html">MITRE, CWE-563</a> - Assignment to Variable without Use ('Unused Variable') </li>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/QYA5">CERT, MSC13-C.</a> - Detect and remove unused values </li>

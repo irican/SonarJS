@@ -43,7 +43,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S1994")
 public class ForLoopConditionAndUpdateCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "This loop's stop condition tests \"%s\" but the incrementer updates \"%s\".";
+  private static final String MESSAGE = "此循环的停止条件测试 \"%s\" ，但增量器更新 \"%s\"。";
 
   @Override
   public void visitForStatement(ForStatementTree forStatement) {

@@ -51,15 +51,15 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3854")
 public class SuperInvocationCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE_SUPER_ONLY_IN_DERIVED_CLASS_CONSTRUCTOR = "super() can only be invoked in a derived class constructor.";
+  private static final String MESSAGE_SUPER_ONLY_IN_DERIVED_CLASS_CONSTRUCTOR = "super()只能在派生类构造函数中调用。";
 
-  private static final String MESSAGE_SUPER_REQUIRED_IN_ANY_DERIVED_CLASS_CONSTRUCTOR = "super() must be invoked in any derived class constructor.";
+  private static final String MESSAGE_SUPER_REQUIRED_IN_ANY_DERIVED_CLASS_CONSTRUCTOR = "必须在任何一个派生类构造函数中调用super()。";
 
-  private static final String MESSAGE_SUPER_BEFORE_THIS_OR_SUPER = "super() must be invoked before \"this\" or \"super\" can be used.";
+  private static final String MESSAGE_SUPER_BEFORE_THIS_OR_SUPER = "必须先调用super()才能使用\"this\"或 \"super\"。";
 
-  private static final String MESSAGE_SUPER_WITH_CORRECT_NUMBER_OF_ARGUMENTS = "super() must be invoked with %s argument%s.";
+  private static final String MESSAGE_SUPER_WITH_CORRECT_NUMBER_OF_ARGUMENTS = "super()必须与%s参数%s一起调用。";
 
-  private static final String MESSAGE_SUPER_INVOKED_ONCE = "super() can only be invoked once.";
+  private static final String MESSAGE_SUPER_INVOKED_ONCE = "super()只能调用一次。";
 
   /**
    * The invocations of super() in the current method or function.

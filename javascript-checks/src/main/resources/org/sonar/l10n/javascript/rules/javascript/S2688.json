@@ -1,5 +1,5 @@
 {
-  "title": "\"NaN\" should not be used in comparisons",
+  "title": "不应该在比较中使用\"NaN\" ",
   "type": "BUG",
   "status": "ready",
   "remediation": {

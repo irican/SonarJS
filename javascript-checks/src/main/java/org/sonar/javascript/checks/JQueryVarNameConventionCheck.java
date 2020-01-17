@@ -33,13 +33,13 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2713")
 public class JQueryVarNameConventionCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Rename variable \"%s\" to match the regular expression %s.";
+  private static final String MESSAGE = "重命名变量 \"%s\" 以匹配正则表达式 %s.";
 
   private static final String DEFAULT_FORMAT = "^\\$[a-z][a-zA-Z0-9]*$";
 
   @RuleProperty(
     key = "format",
-    description = "Regular expression used to check the variable names against",
+    description = "用于检查变量名的正则表达式",
     defaultValue = "" + DEFAULT_FORMAT)
   private String format = DEFAULT_FORMAT;
 

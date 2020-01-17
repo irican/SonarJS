@@ -34,7 +34,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2424")
 public class BuiltInObjectOverriddenCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this override of \"%s\".";
+  private static final String MESSAGE = "删除对 \"%s\" 的覆盖。";
 
   private static final Set<Usage.Kind> ILLEGAL_USAGE_KINDS = EnumSet.of(
     Kind.DECLARATION,

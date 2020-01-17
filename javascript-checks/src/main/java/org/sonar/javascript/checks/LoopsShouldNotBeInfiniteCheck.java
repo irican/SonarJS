@@ -271,14 +271,14 @@ public class LoopsShouldNotBeInfiniteCheck extends SeCheck {
     @Override
     public void visitForStatement(ForStatementTree tree) {
       if (tree.condition() == null) {
-        addIssue(tree.forKeyword(), "Add an end condition for this loop.").secondary(new IssueLocation(tree.firstSemicolonToken(), tree.secondSemicolonToken(), null));
+        addIssue(tree.forKeyword(), "为此循环添加结束条件。").secondary(new IssueLocation(tree.firstSemicolonToken(), tree.secondSemicolonToken(), null));
       } else {
         createIssue(tree.forKeyword(), tree.condition());
       }
     }
 
     private void createIssue(Tree keyword, ExpressionTree condition) {
-      LoopsShouldNotBeInfiniteCheck.this.addIssue(keyword, "Correct this loop's end condition as to not be invariant.")
+      LoopsShouldNotBeInfiniteCheck.this.addIssue(keyword, "更正此循环的结束条件，使其不是不变的。")
         .secondary(new IssueLocation(condition, null));
     }
 

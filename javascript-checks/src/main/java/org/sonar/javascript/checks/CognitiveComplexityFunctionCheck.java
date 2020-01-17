@@ -42,12 +42,13 @@ import static org.sonar.plugins.javascript.api.tree.Tree.Kind.SCRIPT;
 @Rule(key = "S3776")
 public class CognitiveComplexityFunctionCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Refactor this function to reduce its Cognitive Complexity from %s to the %s allowed.";
+  private static final String MESSAGE = "重构此功能以将其认知复杂度从%s降低到可以允许的%s。";
   private static final int DEFAULT_THRESHOLD = 15;
 
   @RuleProperty(
     key = "threshold",
     description = "The maximum authorized complexity.",
+	             //最大授权的复杂度。
     defaultValue = "" + DEFAULT_THRESHOLD)
   private int threshold = DEFAULT_THRESHOLD;
 

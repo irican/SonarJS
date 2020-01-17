@@ -1,0 +1,95 @@
+<p>发送HTTP请求是安全敏感的。它在过去导致了以下漏洞:</p>
+<ul>
+  <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8150">CVE-2014-8150</a> </li>
+  <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1000007">CVE-2018-1000007</a> </li>
+  <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0660">CVE-2010-0660</a> </li>
+</ul>
+<p>HTTP请求有不同种类的漏洞:</p>
+<ul>
+  <li>它发送可能被拦截或危险的数据。 </li>
+  <li> it receives a response which might have been crafted by an attacker. </li>
+  <li> 当每个请求打开一个套接字并触发发送方和接收方的一些处理时，可能会发送太多的请求，从而耗尽双方的资源。 </li>
+</ul>
+<p>此规则标记发起HTTP请求的代码。目标是指导安全代码审查。</p>
+<h2>问问你自己是否</h2>
+<ul>
+  <li> http连接是否加密。 </li>
+  <li> 不允许收件人接收您发送的某些数据。</li>
+  <li> 发送的数据可能很危险(例如:它包含未经验证的用户输入)。 </li>
+  <li> 可能会发送数量不受控制的请求。例如，每次用户执行一个操作时都可能发送一个请求，而这个操作并不受限制。 </li>
+</ul>
+<p>如果你对其中任何一个问题的回答是肯定的，那么你就有风险。</p>
+<h2>推荐的安全编码实践</h2>
+<ul>
+  <li>首先，如果所有HTTP连接都有可能被窃听，那么加密它们是非常重要的。尽可能使用HTTPS。 </li>
+  <li> 确保控制发送请求的uri以及发送的请求数量。否则，您的软件可能会被用来攻击其他服务。 </li>
+  <li> 避免发送敏感信息，无论是在URL、头部还是正文中。如果部分数据来自不受信任的源，例如用户输入，请事先对其进行清理。 </li>
+  <li> 在以任何方式使用响应之前，验证和清理响应。 </li>
+</ul>
+<h2>有问题的代码示例</h2>
+<pre>
+// === 内置NodeJS模块 ===
+const http = require('http');
+http.request(url, (res) =&gt; {}); // 有问题的
+http.get(url, (res) =&gt; {}); // 有问题的
+
+const https = require('https');
+https.request(url, (res) =&gt; {}); // 有问题的
+https.get(url, (res) =&gt; {}); // 有问题的
+</pre>
+<pre>
+// === 请求NodeJS模块 ===
+const request = require('request');
+// 所有发出HTTP请求的请求方法都是安全敏感的，应该进行检查。
+// 例子:
+request(url, function (error, res, body) {}); // 有问题的
+request.get(url); // 有问题的
+</pre>
+<pre>
+// === Axios模块 ===
+const axios = require('axios');
+// 所有发出HTTP请求的Axios方法都是安全敏感的，应该进行检查。
+// Example:
+axios.get(url) // 有问题的
+  .then(function (res) {});
+</pre>
+<pre>
+// === 浏览器的XMLHttpRequest ===
+var xmlhttp = null;
+if (window.XMLHttpRequest) {
+  xmlhttp = new XMLHttpRequest(); // 现代浏览器
+} else {
+  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); // 非常旧的IE浏览器
+}
+xmlhttp.onreadystatechange = function() {};
+xmlhttp.open("GET", url, false); // 有问题的
+xmlhttp.send();
+</pre>
+<pre>
+// === 在现代浏览器中，获取API ===
+window.fetch(url) // 有问题的
+  .then(function(res) {});
+</pre>
+<pre>
+// === 在旧的IE浏览器中，XDomainRequest ===
+var xdr = new XDomainRequest();
+xdr.open("GET", url);
+xdr.send();
+</pre>
+<pre>
+// === 在浏览器中,jQuery ===
+// 所有发出HTTP请求的jQuery方法都是安全敏感的，应该进行检查。
+// 例子:
+$.ajax({ url: url }) // 有问题的
+  .done(function(data) {});
+$.get(url, function(data) {}); // 有问题的
+</pre>
+<h2>请参阅</h2>
+<ul>
+  <li> <a href="http://cwe.mitre.org/data/definitions/20">MITRE, CWE-20</a> - Improper Input Validation </li>
+  <li> <a href="http://cwe.mitre.org/data/definitions/400">MITRE, CWE-400</a> - Uncontrolled Resource Consumption ('Resource Exhaustion') </li>
+  <li> <a href="https://cwe.mitre.org/data/definitions/200.html">MITRE, CWE-200</a> - Information Exposure </li>
+  <li> OWASP Top 10 2017 Category A1 - Injection </li>
+  <li> OWASP Top 10 2017 Category A3 - Sensitive Data Exposure </li>
+</ul>
+

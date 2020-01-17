@@ -1,5 +1,5 @@
 {
-  "title": "Assignments should not be made from within sub-expressions",
+  "title": "不应该从子表达式中进行赋值",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
@@ -8,7 +8,7 @@
   },
   "tags": [
     "cwe",
-    "based-on-misra",
+    "misra",
     "cert",
     "suspicious"
   ],

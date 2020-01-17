@@ -1,5 +1,5 @@
 {
-  "title": "\"import\" should be used to include external code",
+  "title": "应该使用\"import\" 来包含外部代码",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

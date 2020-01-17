@@ -1,22 +1,21 @@
-<p>When the keyword <code>this</code> is used outside of an object, it refers to the global <code>this</code> object, which is the same thing as the
-<code>window</code> object in a standard web page. Such uses could be confusing to maintainers. Instead, simply drop the <code>this</code>, or replace
-it with <code>window</code>; it will have the same effect and be more readable.</p>
-<h2>Noncompliant Code Example</h2>
+<p>当关键字<code>this</code>在对象外部使用时，它指的是全局<code>this</code>对象，这与标准web页面中的<code>window</code>对象相同。这样的使用可能会让维护人员感到困惑。
+相反，只需删除<code>this</code>，或替换为<code>window</code>;它将有同样的效果，更易于阅读。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-this.foo = 1;   // Noncompliant
-console.log(this.foo); // Noncompliant
+this.foo = 1;   // 不合规
+console.log(this.foo); // 不合规
 
 function MyObj() {
-  this.foo = 1; // Compliant
+  this.foo = 1; // 合规
 }
 
 MyObj.func1 = function() {
-  if (this.foo == 1) { // Compliant
+  if (this.foo == 1) { // 合规
     // ...
   }
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 foo = 1;
 console.log(foo);

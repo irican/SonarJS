@@ -1,8 +1,8 @@
-<p>On the principle that clearer code is better code, you should explicitly <code>import</code> the things you want to use in a module. Using
-<code>import *</code> imports everything in the module, and runs the risk of confusing maintainers. Similarly, <code>export * from "module";</code>
-imports and then re-exports everything in the module, and runs the risk of confusing not just maintainers but also users of the module.</p>
-<h2>Noncompliant Code Example</h2>
+<p>根据“代码越清晰越好”的原则，您应该显式地 <code>import</code> 您希望在模块中使用的东西。使用
+<code>import *</code> 导入模块中的所有内容，可能会混淆维护人员。类似地， <code>export * from "module";</code>
+导入并重新导出模块中的所有内容，这样做不仅会让维护人员感到困惑，还会让模块的用户感到困惑。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-import * as Imported from "aModule";  // Noncompliant
+import * as Imported from "aModule";  // 不合规
 </pre>
 

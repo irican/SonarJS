@@ -1,5 +1,5 @@
 {
-  "title": "Comparison operators should not be used with strings",
+  "title": "比较运算符不应与字符串一起使用",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

@@ -1,5 +1,5 @@
 {
-  "title": "Wildcard imports should not be used",
+  "title": "不应该使用通配符导入",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

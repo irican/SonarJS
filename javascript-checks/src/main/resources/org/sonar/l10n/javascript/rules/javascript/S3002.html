@@ -1,17 +1,15 @@
-<p>The unary operators <code>+</code> and <code>-</code> can be used to convert some value types to numeric values. But not every value can be
-converted to a <code>Number</code> type; use it with an object, and result will be <code>NaN</code> (Not A Number). This can be confusing to
-maintainers.</p>
-<h2>Noncompliant Code Example</h2>
+<p>一元运算符<code>+</code>和<code>-</code>可用于将某些值类型转换为数值。但并不是每个值都可以转换为<code>Number</code> type;将其与对象一起使用，结果将是<code>NaN</code>(不是数字)。这可能会使维护人员感到困惑。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var obj = {x : 1};
-doSomethingWithNumber(+obj);    // Noncompliant
+doSomethingWithNumber(+obj);    // 不合规
 
 function foo(){
   return 1;
 }
-doSomethingWithNumber(-foo);    // Noncompliant
+doSomethingWithNumber(-foo);    // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var obj = {x : 1};
 doSomethingWithNumber(+obj.x);
@@ -24,12 +22,12 @@ doSomethingWithNumber(-foo());
 var str = '42';
 doSomethingWithNumber(+str);
 </pre>
-<h2>Exceptions</h2>
-<p>Unary <code>+</code> and <code>-</code> can be used with objects corresponding to primitive types, and <code>+</code> can be used with
-<code>Date</code>.</p>
+<h2>例外</h2>
+<p>一元<code>+</code> 和 <code>-</code> c可与对应原始类型的对象使用,  <code>+</code> 可与
+<code>Date</code>使用.</p>
 <pre>
 var b = new Boolean(true);
-doSomethingWithNumber(-b);  // Compliant
-var timestamp = +new Date();  // Compliant
+doSomethingWithNumber(-b);  // 合规
+var timestamp = +new Date();  // 合规
 </pre>
 

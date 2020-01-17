@@ -1,18 +1,18 @@
-<p>The <code>==</code> and <code>!=</code> operators do type coercion before comparing values. This is bad because it can mask type errors. For
-example, it evaluates <code>' \t\r\n' == 0</code> as <code>true</code>.</p>
-<p>It is best to always use the side-effect-less <code>===</code> and <code>!==</code> operators instead.</p>
-<h2>Noncompliant Code Example</h2>
+<p><code>==</code> 和 <code>!=</code> 操作符在比较值之前执行类型强制。这很糟糕，因为它可以掩盖类型错误。 
+例如，它计算 <code>' \t\r\n' == 0</code> 为 <code>true</code>.</p>
+<p>最好总是使用无副作用的 <code>===</code> 和 <code>!==</code> 操作符。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-if (var == 'howdy') {...} // Noncompliant
+if (var == 'howdy') {...} // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 if (var === 'howdy') {...}
 </pre>
-<h2>Exceptions</h2>
-<p>Even if testing the equality of a variable against null doesn't do exactly what most JavaScript developers believe, usage of <code>==</code> or
-<code>!=</code> is tolerated in such context. In the following case, if <code>foo</code> hasn't been initialized, its default value is not
-<code>null</code> but <code>undefined</code>. Nevertheless <code>undefined == null</code>, so JavaScript developers get the expected behavior.</p>
+<h2>例外</h2>
+<p>即使测试变量对null的相等性并不能像大多数JavaScript开发人员认为的那样，使用<code>==</code> 或
+<code>!=</code> 在这种上下文中是可容忍的。在下面的例子中，如果<code>foo</code> 没有被初始化，那么它的默认值不是
+<code>null</code> 而是 <code>undefined</code>.尽管如此， <code>undefined == null</code>, 因此JavaScript开发人员获得了预期的行为。</p>
 <pre>
 if(foo == null) {...}
 </pre>

@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S881")
 public class IncrementDecrementInSubExpressionCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Extract this %s operation into a dedicated statement.";
+  private static final String MESSAGE = "将此 %s 操作提取到专用语句中";
 
   @Override
   public void visitExpressionStatement(ExpressionStatementTree tree) {

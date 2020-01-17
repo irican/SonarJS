@@ -28,7 +28,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "StrictMode")
 public class StrictModeCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use of JavaScript strict mode may result in unexpected behaviour in some browsers.";
+  private static final String MESSAGE = "在某些浏览器中，使用JavaScript严格模式可能会导致意外行为。";
 
   @Override
   public void visitExpressionStatement(ExpressionStatementTree tree) {

@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2703")
 public class VariableDeclarationWithoutVarCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Add the \"let\", \"const\" or \"var\" keyword to this declaration of \"%s\" to make it explicit.";
+  private static final String MESSAGE = "将\"let\", \"const\" 或 \"var\" 关键字添加到 \"%s\" 的声明中，以使这个声明为显式声明。";
 
   private static final Set<String> EXCLUDED_NAMES = ImmutableSet.of("exports", "module");
 

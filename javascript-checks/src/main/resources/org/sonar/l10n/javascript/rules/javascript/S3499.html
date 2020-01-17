@@ -1,16 +1,15 @@
-<p>Grouping all the shorthand declarations together in an object makes the declaration as a whole more readable. This rule accepts shorthand
-declarations grouped at either the beginning or end of an object.</p>
-<h2>Noncompliant Code Example</h2>
+<p>将所有简写声明组合到一个对象中，使声明整体更具可读性。此规则接受在对象的开始或结束处分组的简写声明。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 let obj1 = {
   foo,
   a: 1,
-  color,  // Noncompliant
+  color,  // 不合规
   b: 2,
-  judyGarland  // Noncompliant
+  judyGarland  // 不合规
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 let obj1 = {
   foo,
@@ -20,7 +19,7 @@ let obj1 = {
   b: 2
 }
 </pre>
-<p>or </p>
+<p>或 </p>
 <pre>
 let obj1 = {
   a: 1,

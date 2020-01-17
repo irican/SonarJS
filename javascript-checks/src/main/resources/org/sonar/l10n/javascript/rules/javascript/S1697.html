@@ -1,7 +1,6 @@
-<p>When either the equality operator in a test for <code>null</code> or <code>undefined</code>, or the logical operator that follows it is reversed,
-the code has the appearance of safely null-testing the object before dereferencing it. Unfortunately the effect is just the opposite - the object is
-null-tested and then dereferenced only if it is <code>null</code>/<code>undefined</code>, leading to a guaranteed <code>TypeError</code>.</p>
-<h2>Noncompliant Code Example</h2>
+<p>当<code>null</code> 或 <code>undefined</code>测试中的相等运算符，或后面的逻辑运算符被反转时，代码在解引用对象之前看起来是安全的空测试对象。不幸的是，效果正好相反——对象是
+只有当 <code>null</code>/<code>undefined</code>时，才进行空测试，然后解引用，从而保证<code>TypeError</code>.</p>
+<h2>不合规的代码示例</h2>
 <pre>
 if (str == null &amp;&amp; str.length == 0) {
   console.log("String is empty");
@@ -37,6 +36,6 @@ if (str == undefined || str.length &gt; 0) {
   console.log("String is not empty");
 }
 </pre>
-<h2>Deprecated</h2>
-<p>This rule is deprecated; use {rule:javascript:S2259} instead.</p>
+<h2>弃用</h2>
+<p>这条规则是不合宜的; 使用 {rule:javascript:S2259} 。</p>
 

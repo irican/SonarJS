@@ -1,6 +1,5 @@
-<p>Labels are not commonly used, and many developers do not understand how they work. Moreover, their usage makes the control flow harder to follow,
-which reduces the code's readability.</p>
-<h2>Noncompliant Code Example</h2>
+<p>标签并不常用，许多开发人员不了解它们是如何工作的。此外，它们的使用使得控制流更难遵循，从而降低了代码的可读性。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 myLabel: {
   let x = doSomething();
@@ -10,13 +9,13 @@ myLabel: {
   doSomethingElse();
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 let x = doSomething();
 if (x &lt;= 0) {
   doSomethingElse();
 }
 </pre>
-<h2>Exceptions</h2>
-<p>Labeled loops are ignored.</p>
+<h2>例外</h2>
+<p>标记的循环将被忽略。</p>
 

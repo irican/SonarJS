@@ -35,7 +35,8 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "CurlyBraces")
 public class AlwaysUseCurlyBracesCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Add curly braces around the nested statement(s) in this \"%s\" block.";
+  private static final String MESSAGE = "在此 \"%s\" 块中的嵌套语句周围添加花括号";
+									   
 
   @Override
   public Set<Kind> nodesToVisit() {

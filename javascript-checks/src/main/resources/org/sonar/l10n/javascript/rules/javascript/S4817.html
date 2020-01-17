@@ -1,44 +1,43 @@
-<p>Executing XPATH expressions is security-sensitive. It has led in the past to the following vulnerabilities:</p>
+<p>执行XPATH表达式是安全敏感的。它在过去导致了以下漏洞:</p>
 <ul>
   <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6272">CVE-2016-6272</a> </li>
   <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9149">CVE-2016-9149</a> </li>
   <li> <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4837">CVE-2012-4837</a> </li>
 </ul>
-<p>User provided data such as URL parameters should always be considered as untrusted and tainted. Constructing XPath expressions directly from
-tainted data enables attackers to inject specially crafted values that changes the initial meaning of the expression itself. Successful XPath
-injections attacks can read sensitive information from the XML document.</p>
-<h2>Ask Yourself Whether</h2>
+<p>用户提供的数据，如URL参数，应该始终被认为是不可信的和受污染的。直接从受污染的数据构造XPath表达式使攻击者能够注入专门设计的值来更改表达式本身的初始含义。成功的XPath
+注入攻击可以从XML文档中读取敏感信息。</p>
+<h2>问问你自己是否</h2>
 <ul>
-  <li> the XPATH expression might contain some unsafe input coming from a user. </li>
+  <li> XPATH表达式可能包含来自用户的一些不安全输入。 </li>
 </ul>
-<p>You are at risk if you answered yes to this question.</p>
-<h2>Recommended Secure Coding Practices</h2>
-<p>Sanitize any user input before using it in an XPATH expression.</p>
-<h2>Questionable Code Example</h2>
+<p>如果你对这个问题的回答是肯定的，那么你就有风险。</p>
+<h2>推荐的安全编码实践</h2>
+<p>在XPATH表达式中使用任何用户输入之前对其进行过滤。</p>
+<h2>有问题的代码示例</h2>
 <pre>
-// === Server side ===
+// === 服务器端 ===
 
 var xpath = require('xpath');
 var xmldom = require('xmldom');
 
 var doc = new xmldom.DOMParser().parseFromString(xml);
-var nodes = xpath.select(userinput, doc); // Questionable
-var node = xpath.select1(userinput, doc); // Questionable
+var nodes = xpath.select(userinput, doc); // 有问题的
+var node = xpath.select1(userinput, doc); // 有问题的
 </pre>
 <pre>
-// === Client side ===
+// === 客户端 ===
 
 // Chrome, Firefox, Edge, Opera, and Safari use the evaluate() method to select nodes:
-var nodes = document.evaluate(userinput, xmlDoc, null, XPathResult.ANY_TYPE, null); // Questionable
+var nodes = xmlDoc.evaluate(userinput, xmlDoc, null, XPathResult.ANY_TYPE, null); // 有问题的
 
 // Internet Explorer uses its own methods to select nodes:
-var nodes = xmlDoc.selectNodes(userinput); // Questionable
-var node = xmlDoc.SelectSingleNode(userinput); // Questionable
+var nodes = xmlDoc.selectNodes(userinput); // 有问题的
+var node = xmlDoc.SelectSingleNode(userinput); // 有问题的
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
-  <li> <a href="https://www.owasp.org/index.php/Top_10-2017_A1-Injection">OWASP Top 10 2017 Category A1</a> - Injection </li>
   <li> <a href="http://cwe.mitre.org/data/definitions/643">MITRE, CWE-643</a> - Improper Neutralization of Data within XPath Expressions </li>
+  <li> OWASP Top 10 2017 Category A1 - Injection </li>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/BwLEAw">CERT, IDS53-J.</a> - Prevent XPath Injection </li>
 </ul>
 

@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3834")
 public class SymbolUsedAsConstructorCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this \"new\" operator.";
+  private static final String MESSAGE = "删除此\"new\"运算符";
 
   private static final String SYMBOL = "Symbol";
 

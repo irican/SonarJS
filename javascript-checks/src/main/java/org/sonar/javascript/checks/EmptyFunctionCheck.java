@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S1186")
 public class EmptyFunctionCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Add a nested comment explaining why this function is empty or complete the implementation.";
+  private static final String MESSAGE = "添加一个嵌套注释解释此函数为空的原因或实现它。";
 
   @Override
   public void visitFunctionDeclaration(FunctionDeclarationTree tree) {

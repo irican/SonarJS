@@ -1,5 +1,5 @@
 {
-  "title": "Debugger statements should not be used",
+  "title": "不应该使用调试器语句",
   "type": "VULNERABILITY",
   "status": "ready",
   "remediation": {
@@ -13,7 +13,7 @@
   ],
   "standards": [
     "CWE",
-    "OWASP Top 10"
+    "OWASP Top Ten"
   ],
   "defaultSeverity": "Minor",
   "ruleSpecification": "RSPEC-1525",

@@ -43,12 +43,12 @@ public class MultilineBlockCurlyBraceCheck extends DoubleDispatchVisitorCheck {
     Kind.WHILE_STATEMENT
   };
 
-  public static final String IF_PRIMARY_MESSAGE = "This line will not be executed conditionally; "
-    + "only the first line of this %s-line block will be. The rest will execute unconditionally.";
-  public static final String LOOP_PRIMARY_MESSAGE = "This line will not be executed in a loop; "
-    + "only the first line of this %s-line block will be. The rest will execute only once.";
-  public static final String IF_SECONDARY_MESSAGE = "not conditionally executed";
-  public static final String LOOP_SECONDARY_MESSAGE = "not executed in a loop";
+  public static final String IF_PRIMARY_MESSAGE = "该行将不会有条件地执行; "
+    + "仅此 %s行的代码块的第一行会被有条件地执行。 其余部分将无条件执行。";
+  public static final String LOOP_PRIMARY_MESSAGE = "该行不会循环执行; "
+    + "仅此 %s行的代码块的第一行会循环执行。 其余仅执行一次。";
+  public static final String IF_SECONDARY_MESSAGE = "没有条件执行";
+  public static final String LOOP_SECONDARY_MESSAGE = "没有循环执行";
 
   @Override
   public void visitModule(ModuleTree module) {

@@ -37,7 +37,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S1788")
 public class DefaultParametersNotLastCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Move parameter%s \"%s\" after parameters without default value.";
+  private static final String MESSAGE = "将参数%s \"%s\" 移动到没有默认值的参数之后。";
 
   @Override
   public Set<Kind> nodesToVisit() {

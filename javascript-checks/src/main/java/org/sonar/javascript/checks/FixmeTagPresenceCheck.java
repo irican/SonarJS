@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 public class FixmeTagPresenceCheck extends SubscriptionVisitorCheck {
 
   private static final String PATTERN = "FIXME";
-  private static final String MESSAGE = "Take the required action to fix the issue indicated by this comment.";
+  private static final String MESSAGE = "采取所需的操作解决此评论所指示的问题";
 
   private final CommentContainsPatternChecker checker = new CommentContainsPatternChecker(this, PATTERN, MESSAGE);
 

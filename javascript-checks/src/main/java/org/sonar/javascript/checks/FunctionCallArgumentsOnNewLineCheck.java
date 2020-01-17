@@ -28,7 +28,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S1472")
 public class FunctionCallArgumentsOnNewLineCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Make those call arguments start on line %s";
+  private static final String MESSAGE = "使这些调用参数从第 %s 行开始";
 
   @Override
   public void visitCallExpression(CallExpressionTree tree) {

@@ -1,14 +1,13 @@
-<p>In JavaScript, the semicolon (<code>;</code>) is optional as a statement separator, but omitting semicolons can be confusing, and lead to
-unexpected results because a semicolon is implicitly inserted at the end of each line.</p>
-<h2>Noncompliant Code Example</h2>
+<p>在JavaScript中，分号(<code>;</code>)作为语句分隔符是可选的，但是省略分号可能会造成混淆，并导致意外的结果，因为分号隐式地插入到每一行的末尾。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function fun() {
-  return  // Noncompliant. ';' implicitly inserted at end of line
-       5   // Noncompliant. ';' implicitly inserted at end of line
+  return  // 不合规. ';'隐式插入到行尾
+       5   // 不合规. ';'隐式插入到行尾
 }
-print(fun());  // prints "undefined", not "5"
+print(fun());  // 打印“undefined”，而不是“5”
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function fun() {
   return 5;

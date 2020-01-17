@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2138")
 public class UndefinedAssignmentCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use null instead.";
+  private static final String MESSAGE = "请改用null。";
 
   @Override
   public void visitInitializedBindingElement(InitializedBindingElementTree tree) {

@@ -1,5 +1,5 @@
 {
-  "title": "Octal values should not be used",
+  "title": "不应使用八进制值",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
@@ -7,7 +7,7 @@
     "constantCost": "5min"
   },
   "tags": [
-    "based-on-misra",
+    "misra",
     "cert",
     "pitfall"
   ],

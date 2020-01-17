@@ -39,7 +39,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S2376")
 public class GetterSetterCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Provide a %s matching this %s for '%s'.";
+  private static final String MESSAGE = "提供与该 %s 相匹配的 %s 作为 '%s'";
 
   @Override
   public void visitObjectLiteral(ObjectLiteralTree tree) {

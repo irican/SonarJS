@@ -1,5 +1,5 @@
 {
-  "title": "Unchanged variables should be marked \"const\"",
+  "title": "未更改的变量应该标记为 \"const\"",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

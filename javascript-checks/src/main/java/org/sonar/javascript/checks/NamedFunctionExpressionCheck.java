@@ -26,7 +26,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "NamedFunctionExpression")
 public class NamedFunctionExpressionCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Make this function anonymous by removing its name: 'function() {...}'.";
+  private static final String MESSAGE = "通过删除其名称来使该函数匿名: 'function() {...}'。";
 
   @Override
   public void visitFunctionExpression(FunctionExpressionTree tree) {

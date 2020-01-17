@@ -38,12 +38,12 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2999")
 public class NewOperatorMisuseCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Replace %s with a constructor function.";
+  private static final String MESSAGE = "将 %s替换为构造函数。";
   public static final boolean CONSIDER_JSDOC = false;
 
   @RuleProperty(
     key = "considerJSDoc",
-    description = "Consider only functions with @constructor tag as constructor functions",
+    description = "仅将带有 @constructor标记的函数视为构造函数",
     defaultValue = "" + CONSIDER_JSDOC)
   public boolean considerJSDoc = CONSIDER_JSDOC;
 

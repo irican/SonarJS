@@ -1,10 +1,9 @@
-<p>Restricting the number of <code>break</code> and <code>continue</code> statements in a loop is done in the interest of good structured programming.
+<p>在一个循环中限制<code>break</code>和<code>continue</code>语句的数量是为了实现良好的结构化编程。
 </p>
-<p>One <code>break</code> and <code>continue</code> statement is acceptable in a loop, since it facilitates optimal coding. If there is more than one,
-the code should be refactored to increase readability.</p>
-<h2>Noncompliant Code Example</h2>
+<p>一个<code>break</code>和<code>continue</code>语句在循环中是可接受的，因为它有助于优化编码。如果不止一个，则应该重构代码以提高可读性。</p>
+<h2>不合规的代码示例</h2>
 <pre>
-for (var i = 1; i &lt;= 10; i++) {  // Noncompliant - 2 continue - one might be tempted to add some logic in between
+for (var i = 1; i &lt;= 10; i++) {  // 不合规 - 2 continue -人们可能会忍不住在这两者之间添加一些逻辑
   if (i % 2 == 0) {
     continue;
   }

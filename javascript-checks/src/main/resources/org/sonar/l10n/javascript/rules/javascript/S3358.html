@@ -1,14 +1,13 @@
-<p>Just because you <em>can</em> do something, doesn't mean you should, and that's the case with nested ternary operations. Nesting ternary operators
-results in the kind of code that may seem clear as day when you write it, but six months later will leave maintainers (or worse - future you)
-scratching their heads and cursing.</p>
-<p>Instead, err on the side of clarity, and use another line to express the nested operation as a separate statement.</p>
-<h2>Noncompliant Code Example</h2>
+<p>仅仅因为你能做某件事，并不意味着你应该做，这就是嵌套三元运算的情况。
+嵌套三元运算符导致的代码在编写时看起来很清晰，但是六个月后，维护者(或者更糟的是，将来的您)会感到困惑和想要痛骂。</p>
+<p>相反，为了清晰起见，应该使用另一行来将嵌套操作表示为单独的语句.</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function getTitle(p) {
-  return p.gender == "male" ? "Mr. " : p.isMarried() ? "Mrs. " : "Miss ";  // Noncompliant
+  return p.gender == "male" ? "Mr. " : p.isMarried() ? "Mrs. " : "Miss ";  // 不合规
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function getTitle(p) {
   if (p.gender == "male") {

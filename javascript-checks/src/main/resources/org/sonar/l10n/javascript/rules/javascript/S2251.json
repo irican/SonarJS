@@ -1,5 +1,5 @@
 {
-  "title": "A \"for\" loop update clause should move the counter in the right direction",
+  "title": "一个\"for\"循环更新子句应该将计数器移动到正确的方向",
   "type": "BUG",
   "status": "ready",
   "remediation": {

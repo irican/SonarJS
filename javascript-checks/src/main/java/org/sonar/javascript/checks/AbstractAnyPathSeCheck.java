@@ -64,12 +64,12 @@ public abstract class AbstractAnyPathSeCheck extends SeCheck {
    */
   @Override
   public final PreciseIssue addIssue(Tree tree, String message) {
-    throw new UnsupportedOperationException("Use one of 'addUniqueIssue' methods");
+    throw new UnsupportedOperationException("使用 'addUniqueIssue' 方法之一");
   }
 
   @Override
   public final <T extends Issue> T addIssue(T issue) {
-    throw new UnsupportedOperationException("Use one of 'addUniqueIssue' methods");
+    throw new UnsupportedOperationException("使用 'addUniqueIssue' 方法之一");
   }
 
   /**

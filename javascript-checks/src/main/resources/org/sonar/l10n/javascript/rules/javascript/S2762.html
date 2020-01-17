@@ -1,21 +1,19 @@
-<p>jQuery doesn't cache elements for you. If you've made a selection that you might need to make again, you should save the selection in a variable
-rather than making the selection repeatedly.</p>
-<h2>Noncompliant Code Example</h2>
-<p>With the default threshold of 2</p>
+<p>jQuery不会为您缓存元素。如果您已经进行了可能需要再次进行的选择，则应该将选择保存到变量中，而不是重复进行选择。</p>
+<h2>不合规的代码示例</h2>
+<p>默认阈值为2</p>
 <pre>
 $( "p" ).hide();
-$( "p" ).show();  // Noncompliant
+$( "p" ).show();  // 不合规
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var paragraph = $( "p" );
 
 paragraph.hide();
 paragraph.show();
 </pre>
-<h2>Exceptions</h2>
-<p>Stored selections are not updated when the DOM changes. Since variables may need to updated this rule ignores selections that are repeated during
-an assignment.</p>
+<h2>例外</h2>
+<p>当DOM更改时，不会更新存储的选择。因为变量可能需要更新，所以这个规则忽略了在赋值过程中重复的选择。</p>
 <pre>
 var paragraph = $("p");
 

@@ -1,5 +1,5 @@
 {
-  "title": "Files should not have too many lines",
+  "title": "文件不应该有太多行",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

@@ -1,5 +1,5 @@
 {
-  "title": "Values not convertible to numbers should not be used in numeric comparisons",
+  "title": "不能转换为数字的值不应用于数值比较",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

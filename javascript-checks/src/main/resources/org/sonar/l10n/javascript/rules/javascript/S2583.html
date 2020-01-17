@@ -1,19 +1,18 @@
-<p>Conditional expressions which are always <code>true</code> or <code>false</code> can lead to dead code. Such code is always buggy and should never
-be used in production.</p>
-<h2>Noncompliant Code Example</h2>
+<p>总是<code>true</code>或<code>false</code>的条件表达式可以导致死代码。这样的代码总是有bug，不应该在生产中使用。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 a = false;
-if (a) { // Noncompliant
-  doSomething(); // never executed
+if (a) { // 不合规
+  doSomething(); // 没有执行
 }
 
-if (!a || b) { // Noncompliant; "!a" is always "true", "b" is never evaluated
+if (!a || b) { // 不合规; "!a"总是“true”，“b”从不求值
   doSomething();
 } else {
-  doSomethingElse(); // never executed
+  doSomethingElse(); // 从不执行
 }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2004, 13.7 - Boolean operations whose results are invariant shall not be permitted. </li>
   <li> MISRA C:2012, 14.3 - Controlling expressions shall not be invariant </li>

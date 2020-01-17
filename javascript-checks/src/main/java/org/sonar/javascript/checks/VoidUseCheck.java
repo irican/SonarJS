@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S3735")
 public class VoidUseCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Remove \"void\" operator";
+  private static final String MESSAGE = "删除\"void\" 运算符";
 
   @Override
   public Set<Kind> nodesToVisit() {

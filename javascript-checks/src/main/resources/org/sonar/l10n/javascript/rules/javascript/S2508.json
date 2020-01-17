@@ -1,5 +1,5 @@
 {
-  "title": "The names of model properties should not contain spaces",
+  "title": "模型属性的名称不应该包含空格",
   "type": "BUG",
   "status": "ready",
   "remediation": {

@@ -36,23 +36,23 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S3524")
 public class ArrowFunctionConventionCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE_ADD_PARAMETER = "Add parentheses around the parameter of this arrow function.";
-  private static final String MESSAGE_ADD_BODY = "Add curly braces and \"return\" to this arrow function body.";
-  private static final String MESSAGE_REMOVE_PARAMETER = "Remove parentheses around the parameter of this arrow function.";
-  private static final String MESSAGE_REMOVE_BODY = "Remove curly braces and \"return\" from this arrow function body.";
+  private static final String MESSAGE_ADD_PARAMETER = "在此箭头函数的参数周围添加括号。";
+  private static final String MESSAGE_ADD_BODY = "将花括号和 \"return\" 添加到此箭头函数主体。";
+  private static final String MESSAGE_REMOVE_PARAMETER = "删除此箭头函数的参数周围的括号。";
+  private static final String MESSAGE_REMOVE_BODY = "从箭头函数主体中删除花括号和\"return\" 。";
 
   private static final boolean DEFAULT_PARAMETER_PARENS = false;
   private static final boolean DEFAULT_BODY_BRACES = false;
 
   @RuleProperty(
     key = "parameter_parens",
-    description = "True to require parentheses around parameters. False to forbid them for single parameter.",
+    description = "如果为True，则参数周围需要括号。False，则禁止它们用于单个参数。",
     defaultValue = "" + DEFAULT_PARAMETER_PARENS)
   private boolean parameterParens = DEFAULT_PARAMETER_PARENS;
 
   @RuleProperty(
     key = "body_braces",
-    description = "True to require curly braces around function body. False to forbid them for single-return bodies.",
+    description = "如果为True，则要求函数主体周围使用花括号。False，则禁止它们返回单项机构。",
     defaultValue = "" + DEFAULT_BODY_BRACES)
   private boolean bodyBraces = DEFAULT_BODY_BRACES;
 

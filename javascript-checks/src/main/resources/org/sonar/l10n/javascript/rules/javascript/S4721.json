@@ -1,5 +1,5 @@
 {
-  "title": "Executing OS commands is security-sensitive",
+  "title": "执行操作系统命令是安全敏感的",
   "type": "SECURITY_HOTSPOT",
   "status": "ready",
   "remediation": {
@@ -8,24 +8,19 @@
   },
   "tags": [
     "cwe",
-    "owasp-a1",
     "sans-top25-insecure"
   ],
   "standards": [
     "CWE",
-    "OWASP Top 10",
     "SANS Top 25"
   ],
   "defaultSeverity": "Critical",
   "ruleSpecification": "RSPEC-4721",
   "sqKey": "S4721",
-  "scope": "Main",
+  "scope": "All",
   "securityStandards": {
     "CWE": [
       78
-    ],
-    "OWASP": [
-      "A1"
     ]
   }
 }

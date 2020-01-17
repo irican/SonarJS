@@ -1,7 +1,7 @@
-<p>Most checks against an <code>indexOf</code> call against a string or array compare it with -1 because 0 is a valid index. Any checks which look for
-values &gt;0 ignore the first element, which is likely a bug. If you're merely checking the presence of the string, consider using
-<code>includes</code> instead. Before using&nbsp;<code>includes</code> method make sure that your browser version is supporting it.</p>
-<h2>Noncompliant Code Example</h2>
+<p>大多数针对字符串或数组的<code>indexOf</code> 调用的检查都将其与-1进行比较，因为0是一个有效的索引。
+任何查找值>0的检查都会忽略第一个元素，这可能是一个bug。如果只是检查字符串是否存在，可以考虑使用
+<code>includes</code> 。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var color = "blue";
 var name = "ishmael";
@@ -9,14 +9,14 @@ var number = 123;
 
 var arr = [color, name];
 
-if (arr.indexOf("blue") &gt; 0) { // Noncompliant
+if (arr.indexOf("blue") &gt; 0) { // 不合规
   // ...
 }
-if (name.indexOf("ish") &gt; 0) { // Noncompliant
+if (arr[0].indexOf("ish") &gt; 0 { // 不合规
   // ...
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var color = "blue";
 var name = "ishmael";
@@ -27,15 +27,8 @@ var arr = [color, name];
 if (arr.indexOf("blue") &gt;= 0) {
   // ...
 }
-if (name.includes("ish")) {
+if (arr[0].includes("ish")) {
   // ...
 }
 </pre>
-<h2>See</h2>
-<ul>
-  <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes">String.prototype.includes()</a>
-  documentation at MDN </li>
-  <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">Array.prototype.includes()</a>
-  documentation at MDN </li>
-</ul>
 

@@ -1,13 +1,12 @@
-<p>If a local variable or a local function is declared but not used, it is dead code and should be removed. Doing so will improve maintainability
-because developers will not wonder what the variable or function is used for.</p>
-<h2>Noncompliant Code Example</h2>
+<p>如果声明了局部变量或局部函数，但没有使用它，那么它就是死代码，应该被删除。这样做将提高可维护性，因为开发人员不会想知道变量或函数的用途。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 function numberOfMinutes(hours) {
-  var seconds = 0;   // seconds is never used
+  var seconds = 0;   // seconds从不使用
   return hours * 60;
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function numberOfMinutes(hours) {
   return hours * 60;

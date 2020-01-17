@@ -35,7 +35,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "PrimitiveWrappers")
 public class PrimitiveWrappersCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Use a literal value for this.";
+  private static final String MESSAGE = "为此使用字面值";
 
   private static final Map<String, Kind> ALLOWED_ARGUMENT_PER_WRAPPER = ImmutableMap.of(
     "Boolean", Kind.BOOLEAN_LITERAL,

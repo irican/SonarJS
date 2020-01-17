@@ -1,10 +1,8 @@
-<p>The use of the <code>with</code> keyword produces an error in JavaScript strict mode code. However, that's not the worst that can be said against
-<code>with</code>.</p>
-<p>Using <code>with</code> allows a short-hand access to an object's properties - assuming they're already set. But use <code>with</code> to access
-some property not already set in the object, and suddenly you're catapulted out of the object scope and into the global scope, creating or overwriting
-variables there. Since the effects of <code>with</code> are entirely dependent on the object passed to it, <code>with</code> can be dangerously
-unpredictable, and should never be used.</p>
-<h2>Noncompliant Code Example</h2>
+<p><code>with</code> 关键字的使用会在JavaScript严格模式代码中产生错误。 但是，对于
+<code>with</code>来说，这还不是最糟糕的。</p>
+<p>使用 <code>with</code> 允许对对象的属性进行简短的访问——假设它们已经设置好了。 但是使用 <code>with</code> 来访问对象中尚未设置的一些属性，然后您突然跳出对象范围，进入全局范围，在其中创建或覆盖变量, 将在这里创建或覆盖变量。
+因为<code>with</code> 的效果完全依赖于传递给它的对象， <code>with</code> 可能是危险的不可预测的，永远不应该使用。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 var x = 'a';
 
@@ -12,13 +10,13 @@ var foo = {
   y: 1
 }
 
-with (foo) {  // Noncompliant
-  y = 4;  // updates foo.x
-  x = 3;  // does NOT add a foo.x property; updates x var in outer scope
+with (foo) {  // 不合规
+  y = 4;  // 更新 foo.x
+  x = 3;  // 不增加 foo.x 属性; 在外部范围内更新x变量
 }
-print(foo.x + " " + x); // shows: undefined 3
+print(foo.x + " " + x); // 显示:未定义的3
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var x = 'a';
 
@@ -29,6 +27,6 @@ var foo = {
 foo.y = 4;
 foo.x = 3;
 
-print(foo.x + " " + x); // shows: 3 a
+print(foo.x + " " + x); // 显示: 3 a
 </pre>
 

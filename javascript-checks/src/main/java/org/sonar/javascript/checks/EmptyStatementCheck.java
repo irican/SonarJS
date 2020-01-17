@@ -35,7 +35,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S1116")
 public class EmptyStatementCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this empty statement.";
+  private static final String MESSAGE = "删除此空语句";
 
   /**
    * The empty statements for which no issue is raised.

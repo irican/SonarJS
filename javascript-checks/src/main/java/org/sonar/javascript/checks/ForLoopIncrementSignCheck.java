@@ -37,7 +37,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2251")
 public class ForLoopIncrementSignCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "\"%s\" is %s and will never reach \"stop condition\".";
+  private static final String MESSAGE = "\"%s\" 是 %s ，并且始终不会达到 \"stop condition\".";
 
   @Override
   public void visitForStatement(ForStatementTree forStatement) {
@@ -107,7 +107,7 @@ public class ForLoopIncrementSignCheck extends DoubleDispatchVisitorCheck {
     }
 
     public double value() {
-      Preconditions.checkState(value != null, "This ForLoopIncrement has no value");
+      Preconditions.checkState(value != null, "此 ForLoopIncrement 没有价值");
       return value;
     }
 

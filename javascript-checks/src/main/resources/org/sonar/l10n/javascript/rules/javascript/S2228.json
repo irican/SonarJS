@@ -1,0 +1,20 @@
+{
+  "title": "不应该使用控制台日志记录",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "user-experience",
+    "owasp-a3"
+  ],
+  "standards": [
+    "OWASP Top Ten"
+  ],
+  "defaultSeverity": "Minor",
+  "ruleSpecification": "RSPEC-2228",
+  "sqKey": "S2228",
+  "scope": "Main"
+}

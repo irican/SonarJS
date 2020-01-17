@@ -1,13 +1,11 @@
-<p>The fact that JavaScript is not a strongly typed language allows developers a lot of freedom, but that freedom can be dangerous if you go too far
-with it. </p>
-<p>Specifically, it is syntactically acceptable to invoke any expression as though its value were a function. But a <code>TypeError</code> may be
-raised if you do.</p>
-<h2>Noncompliant Code Example</h2>
+<p>JavaScript不是强类型语言这一事实给开发人员提供了很大的自由，但是如果使用得太过火，这种自由可能是危险的。</p>
+<p>具体地说，从语法上讲，调用任何表达式都可以接受，就好像它的值是一个函数一样。但是如果您这样做，可能会引发<code>TypeError</code>。</p>
+<h2>不合规的代码示例</h2>
 <pre>
 foo = 1;
-foo();   // Noncompliant; TypeError
+foo();   // 不合规; TypeError
 
 foo = undefined;
-foo();  // Noncompliant; TypeError
+foo();  // 不合规; TypeError
 </pre>
 

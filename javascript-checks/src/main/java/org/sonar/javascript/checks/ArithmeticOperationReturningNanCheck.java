@@ -42,7 +42,7 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3757")
 public class ArithmeticOperationReturningNanCheck extends SeCheck {
 
-  private static final String MESSAGE = "Change the expression which uses this operand so that it can't evaluate to \"NaN\" (Not a Number).";
+  private static final String MESSAGE = "更改使用此操作数的表达式，以使其不会得到 \"NaN\" (非数字)";
 
   private static final Constraint NUMBER_LIKE_OBJECT = Constraint.NUMBER_OBJECT.or(Constraint.BOOLEAN_OBJECT).or(Constraint.DATE);
   private static final Constraint UNDEFINED_OR_NON_NUMBER_OBJECT = Constraint.UNDEFINED.or(Constraint.OBJECT.and(NUMBER_LIKE_OBJECT.not()));

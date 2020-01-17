@@ -161,9 +161,9 @@ public class OpenCurlyBracesAtEOLCheck extends SubscriptionVisitorCheck {
   private void issueIfLineMismatch(SyntaxToken curlyBrace, SyntaxToken target) {
     CodeLine curlyBraceLine = new CodeLine(curlyBrace.line());
     if (curlyBraceLine.isJustBelow(target.line())) {
-      addIssue(new PreciseIssue(this, new IssueLocation(curlyBrace, "Move this open curly brace to the end of the previous line.")));
+      addIssue(new PreciseIssue(this, new IssueLocation(curlyBrace, "将此打开的花括号移动到上一行的末尾。")));
     } else if (curlyBraceLine.isFarBelow(target.line())) {
-      addIssue(new PreciseIssue(this, new IssueLocation(curlyBrace, "Move this open curly brace to the end of line " + target.line() + ".")));
+      addIssue(new PreciseIssue(this, new IssueLocation(curlyBrace, "将此打开的花括号移动到行尾 " + target.line() + "。")));
     }
   }
 

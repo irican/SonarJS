@@ -30,7 +30,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S1135")
 public class TodoTagPresenceCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Complete the task associated to this TODO comment.";
+  private static final String MESSAGE = "完成与此TODO注释关联的任务。";
   private static final String PATTERN = "TODO";
 
   private final CommentContainsPatternChecker checker = new CommentContainsPatternChecker(this, PATTERN, MESSAGE);

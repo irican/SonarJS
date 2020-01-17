@@ -32,7 +32,7 @@ import org.sonar.plugins.javascript.api.visitors.TreeVisitorContext;
 
 public abstract class EslintBasedCheck implements JavaScriptCheck {
 
-  private static final IllegalStateException EXCEPTION = new IllegalStateException("No issue should be created for EslintBasedCheck");
+  private static final IllegalStateException EXCEPTION = new IllegalStateException("不应为EslintBasedCheck创建问题");
 
   public abstract String eslintKey();
 

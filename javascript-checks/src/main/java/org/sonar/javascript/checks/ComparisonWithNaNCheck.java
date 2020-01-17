@@ -35,7 +35,7 @@ import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 @Rule(key = "S2688")
 public class ComparisonWithNaNCheck extends SubscriptionVisitorCheck {
 
-  private static final String MESSAGE = "Use a test of the format \"a %s a\" instead.";
+  private static final String MESSAGE = "改用 \"a %s a\" 格式的验证。";
   private static final String NAN = "NaN";
 
   @Override

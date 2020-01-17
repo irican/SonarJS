@@ -1,8 +1,8 @@
-<p>Any statement or block of statements can be identified by a label, but those labels should be used only on <code>while</code>,
-<code>do-while</code> and <code>for</code> statements. Using labels in any other context leads to unstructured, confusing code. </p>
-<h2>Noncompliant Code Example</h2>
+<p>任何语句或语句块都可以用标签标识，但是这些标签只能用于 <code>while</code>,
+<code>do-while</code> 和 <code>for</code> 语句。 在任何其他上下文中使用标签都会导致非结构化、混乱的代码。 </p>
+<h2>不合规的代码示例</h2>
 <pre>
-myLabel:if (i % 2 == 0) {  // Noncompliant
+myLabel:if (i % 2 == 0) {  // 不合规
   if (i == 12) {
     print("12");
     break myLabel;
@@ -10,9 +10,9 @@ myLabel:if (i % 2 == 0) {  // Noncompliant
   print("Odd number, but not 12");
 }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案 </h2>
 <pre>
-myLabel:for (i = 0; i &lt; 10; i++) {   // Compliant
+myLabel:for (i = 0; i &lt; 10; i++) {   // 合规
   print("Loop");
   break myLabel;
 }

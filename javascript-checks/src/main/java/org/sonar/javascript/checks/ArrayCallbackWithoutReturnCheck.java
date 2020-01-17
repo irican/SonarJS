@@ -49,7 +49,7 @@ import org.sonar.plugins.javascript.api.visitors.IssueLocation;
 @Rule(key = "S3796")
 public class ArrayCallbackWithoutReturnCheck extends AbstractAnyPathSeCheck {
 
-  private static final String MESSAGE = "Add a \"return\" statement to this callback.";
+  private static final String MESSAGE = "在此回调中添加一个 \"return\" 语句";
 
   private static final Set<String> METHODS_WITH_CALLBACK = ImmutableSet.of(
     "every",

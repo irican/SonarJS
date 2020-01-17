@@ -1,23 +1,22 @@
-<p><code>continue</code> is an unstructured control flow statement. It makes code less testable, less readable and less maintainable. Structured
-control flow statements such as <code>if</code> should be used instead.</p>
-<h2>Noncompliant Code Example</h2>
+<p><code>continue</code> 是一个非结构化的控制流语句。它降低了代码的可测试性、可读性和可维护性。应该使用诸如 <code>if</code> 之类的结构化控制流语句。</p>
+<h2>不合规的代码示例</h2>
 <pre>
   for (i = 0; i &lt; 10; i++) {
     if (i == 5) {
-      continue;  /* Noncompliant */
+      continue;  /* 不合规 */
     }
     alert("i = " + i);
   }
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
   for (i = 0; i &lt; 10; i++) {
-    if (i != 5) {  /* Compliant */
+    if (i != 5) {  /* 合规 */
       alert("i = " + i);
     }
   }
 </pre>
-<h2>See</h2>
+<h2>请参阅</h2>
 <ul>
   <li> MISRA C:2004, 14.5 - The continue statement shall not be used. </li>
 </ul>

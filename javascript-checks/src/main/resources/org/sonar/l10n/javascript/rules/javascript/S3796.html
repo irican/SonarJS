@@ -1,6 +1,5 @@
-<p>Arrays in JavaScript have several methods for filtering, mapping or folding that require a callback. Not having a return statement in such a
-callback function is most likely a mistake.</p>
-<p>This rule applies for the following methods of an array:</p>
+<p>JavaScript中的数组有几种过滤、映射或折叠方法，需要回调。在这样的回调函数中没有return语句很可能是一个错误。</p>
+<p>这个规则适用于数组的以下方法:</p>
 <ul>
   <li> <code>Array.from</code> </li>
   <li> <code>Array.prototype.every</code> </li>
@@ -13,13 +12,13 @@ callback function is most likely a mistake.</p>
   <li> <code>Array.prototype.some</code> </li>
   <li> <code>Array.prototype.sort</code> </li>
 </ul>
-<h2>Noncompliant Code Example</h2>
+<h2>不合规的代码示例</h2>
 <pre>
 var merged = arr.reduce(function(a, b) {
   a.concat(b);
-}); // Noncompliant: No return statement
+}); // 不合规: 没有返回语句
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 var merged = arr.reduce(function(a, b) {
   return a.concat(b);

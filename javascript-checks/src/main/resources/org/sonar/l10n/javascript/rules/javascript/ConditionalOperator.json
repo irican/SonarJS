@@ -1,5 +1,5 @@
 {
-  "title": "The ternary operator should not be used",
+  "title": "不应该使用三元运算符",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

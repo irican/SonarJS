@@ -34,7 +34,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "TrailingComma")
 public class TrailingCommaCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Remove this trailing comma.";
+  private static final String MESSAGE = "删除该尾随逗号。";
 
   @Override
   public void visitObjectLiteral(ObjectLiteralTree tree) {

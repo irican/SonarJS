@@ -40,8 +40,8 @@ import org.sonar.plugins.javascript.api.visitors.PreciseIssue;
 @Rule(key = "S3686")
 public class InconsistentFunctionCallCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Correct the use of this function; on line %s it was called with%s \"new\".";
-  private static final String SECONDARY_MESSAGE = "Called with%s \"new\"";
+  private static final String MESSAGE = "更正此函数的用法；在 %s 行中，它被%s \"new\"调用";
+  private static final String SECONDARY_MESSAGE = "用%s \"new\"调用";
 
   private Set<Symbol> hasIssue = new HashSet<>();
 

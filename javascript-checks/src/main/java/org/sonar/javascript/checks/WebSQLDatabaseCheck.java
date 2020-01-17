@@ -31,7 +31,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S2817")
 public class WebSQLDatabaseCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Convert this use of a Web SQL database to another technology";
+  private static final String MESSAGE = "把对Web SQL数据库的使用转换为另一种技术";
 
   private static final String OPEN_DATABASE = "openDatabase";
 

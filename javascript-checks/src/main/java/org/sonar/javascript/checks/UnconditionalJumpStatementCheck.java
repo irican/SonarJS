@@ -65,7 +65,7 @@ public class UnconditionalJumpStatementCheck extends SubscriptionVisitorCheck {
     IterationStatementTree loopTree = (IterationStatementTree) parent;
     if (tree.is(Kind.CONTINUE_STATEMENT) || (!parent.is(Kind.FOR_IN_STATEMENT) && !isInfiniteFor(loopTree) && !canExecuteMoreThanOnce(loopTree))) {
       SyntaxToken keyword = tree.firstToken();
-      addIssue(keyword, String.format("Remove this \"%s\" statement or make it conditional", keyword.text()));
+      addIssue(keyword, String.format("删除此\"%s\"语句或使其成为条件", keyword.text()));
     }
   }
 

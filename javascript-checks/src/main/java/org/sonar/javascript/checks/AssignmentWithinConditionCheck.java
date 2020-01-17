@@ -31,7 +31,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "AssignmentWithinCondition")
 public class AssignmentWithinConditionCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Extract the assignment of \"%s\" from this expression.";
+  private static final String MESSAGE = "从此表达式中提取 \"%s\" 的赋值";
 
   private static final Kinds[] ALLOWED_PARENT_KINDS = {
     KindSet.LOOP_KINDS,

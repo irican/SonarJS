@@ -1,7 +1,6 @@
-<p>If a function does not return anything, it makes no sense to use its output. Specifically, passing it to another function, or assigning its
-"result" to a variable is probably a bug because such functions return <code>undefined</code>, which is probably not what was intended.</p>
-<p><em>Note that this rule requires Node.js to be available during analysis.</em></p>
-<h2>Noncompliant Code Example</h2>
+<p>如果一个函数不返回任何东西，那么使用它的输出就没有任何意义。具体来说，将其传递给另一个函数或将其“结果”分配给变量可能是一个错误，因为这样的函数返回<code>undefined</code>，这可能不是预期的结果。</p>
+<p><em>注意，此规则要求Node.js在分析期间可用。</em></p>
+<h2>不合规的代码示例</h2>
 <pre>
 function foo() {
   console.log("Hello, World!");
@@ -9,7 +8,7 @@ function foo() {
 
 a = foo();
 </pre>
-<h2>Compliant Solution</h2>
+<h2>合规的解决方案</h2>
 <pre>
 function foo() {
   console.log("Hello, World!");

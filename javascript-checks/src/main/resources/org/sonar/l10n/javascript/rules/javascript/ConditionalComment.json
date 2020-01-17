@@ -1,5 +1,5 @@
 {
-  "title": "Internet Explorer's conditional comments should not be used",
+  "title": "不应该使用Internet Explorer的条件注释",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {

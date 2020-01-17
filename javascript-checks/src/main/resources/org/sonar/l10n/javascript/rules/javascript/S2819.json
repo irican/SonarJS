@@ -1,5 +1,5 @@
 {
-  "title": "Cross-document messaging domains should be carefully restricted",
+  "title": "应该谨慎地限制跨文档消息传递域",
   "type": "VULNERABILITY",
   "status": "ready",
   "remediation": {
@@ -11,7 +11,7 @@
     "owasp-a7"
   ],
   "standards": [
-    "OWASP Top 10"
+    "OWASP Top Ten"
   ],
   "defaultSeverity": "Critical",
   "ruleSpecification": "RSPEC-2819",

@@ -1,5 +1,5 @@
 {
-  "title": "\"switch\" statements should have \"default\" clauses",
+  "title": "\"switch\" 语句应该以 \"default\" 子句结束",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
@@ -8,7 +8,7 @@
   },
   "tags": [
     "cwe",
-    "based-on-misra",
+    "misra",
     "cert"
   ],
   "standards": [
@@ -17,10 +17,5 @@
   "defaultSeverity": "Critical",
   "ruleSpecification": "RSPEC-131",
   "sqKey": "SwitchWithoutDefault",
-  "scope": "All",
-  "securityStandards": {
-    "CWE": [
-      478
-    ]
-  }
+  "scope": "All"
 }

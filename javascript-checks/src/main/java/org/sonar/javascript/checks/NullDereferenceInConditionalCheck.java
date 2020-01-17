@@ -33,7 +33,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 @Rule(key = "S1697")
 public class NullDereferenceInConditionalCheck extends DoubleDispatchVisitorCheck {
 
-  private static final String MESSAGE = "Either reverse the equality operator in the \"%s\" null test, or reverse the logical operator that follows it.";
+  private static final String MESSAGE = "在 \"%s\"空测试中反转相等运算符，或者反转其后的逻辑运算符。";
 
   @Override
   public void visitBinaryExpression(BinaryExpressionTree tree) {
